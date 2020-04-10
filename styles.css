@@ -63,14 +63,15 @@ p {
     padding: 16px 20px;
     text-decoration: none;
     font-size: 22px;
-    height: 27px;
+    height: auto;
 }
 
 .nav-top a:hover,
 .nav-drop:hover .nav-drop-btn {
     color: black;
-    background-color: skyblue;
+    background-color: lightblue;
     border-radius: 20px;
+    text-decoration: none;
 }
 
 .nav-drop {
@@ -110,7 +111,7 @@ p {
 
 .nav-drop-content a:hover {
     color: black;
-    background-color: skyblue;
+    background-color: lightblue;
     border-radius: 20px;
 }
 
@@ -184,16 +185,46 @@ p {
 }
 
 
+/* Projects */
+
+.projects_img {
+    width: 250px;
+    border-radius: 30px;
+}
+
+.projects_para {
+    font-size: 22px;
+}
+
+
+/* More */
+
+.more_img {
+    width: 300px;
+    border-radius: 30px;
+}
+
+.more_para {
+    margin-top: 10px;
+    font-size: 22px;
+    height: 100px;
+}
+
+
 /* Footer */
 
 .foot {
     text-align: center;
+    height: 120px;
+    background-color: lightgray;
+    margin-top: 40px;
 }
 
 .foot-contact {
     font-size: 24px;
-    padding: 4px 16px;
+    padding: 16px 16px 4px 16px;
     margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 .foot-links {
@@ -203,7 +234,7 @@ p {
 .foot-links a {
     font-size: 28px;
     color: black;
-    padding: 20px 16px;
+    padding: 0px 16px;
     text-decoration: none;
 }
 
