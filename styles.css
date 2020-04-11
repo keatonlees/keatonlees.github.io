@@ -11,8 +11,16 @@ p {
     margin: 0;
 }
 
+h3 {
+    text-align: left;
+}
+
 .text-align-center {
     text-align: center;
+}
+
+.row {
+    margin-top: 20px;
 }
 
 .page-button {
@@ -194,6 +202,7 @@ p {
 
 .projects_para {
     font-size: 22px;
+    text-align: left;
 }
 
 
