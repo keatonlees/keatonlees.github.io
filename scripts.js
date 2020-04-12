@@ -1,3 +1,4 @@
+// script for responsive website
 var x = document.getElementById("navTop");
 
 function nav_toggle() {
@@ -8,8 +9,24 @@ function nav_toggle() {
     }
 }
 
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 100) {
-        console.log("OK");
-    }
+// script for having navbar appear as user scrolls down
+// $(window).scroll(function() {
+//     if ($(window).scrollTop() > 100) {
+//         console.log("OK");
+//     }
+// });
+
+// script for smooth scrolling
+$(document).ready(function() {
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1000, function() {
+                window.location.hash = hash;
+            });
+        }
+    });
 });

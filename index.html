@@ -4,7 +4,7 @@
 <head>
     <meta charset="ISO-8859-1">
     <title>Keaton Lees</title>
-    <link rel="icon" href="images/Logo_black.PNG" type="image/x-icon">
+    <link rel="icon" href="images/Logo_blue.PNG" type="image/x-icon">
 
     <meta name="description" content="Keaton Lees - My Personal Website">
 
@@ -23,11 +23,11 @@
     <header>
         <div class="nav-top" id="navTop">
             <div class="nav-bg">
-                <a href="index.html">Home</a>
+                <a href="#home"><img src="images/Logo_black.PNG" class="nav-home-icon">Home</a>
                 <div class="nav-right">
-                    <a href="">About</a>
-                    <a href="">Projects</a>
-                    <div class="nav-drop">
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <!-- <div class="nav-drop">
                         <button class="nav-drop-btn">More
 					</button>
                         <div class="nav-drop-content">
@@ -35,7 +35,7 @@
                             <a href="">Solidworks</a>
                             <a href="">Travel</a>
                         </div>
-                    </div>
+                    </div> -->
                     <a href="#">Resume</a>
                 </div>
                 <a href="javascript:void(0);" class="nav-icon" onclick="nav_toggle()">&#9776;</a>
@@ -44,17 +44,17 @@
     </header>
 
     <!-- Main Background Image -->
-    <img src="images/keaton_taiwan.JPG" class="main-bg">
+    <img src="images/keaton_taiwan.JPG" class="main-bg" id="home">
 
     <!-- Intro -->
-    <div class="text-align-center">
+    <div id="about" class="text-align-center">
         <h1 class="large-text">Hi! I'm Keaton</h1>
         <p class="intro-para">I am a Systems Design Engineering student at the University of Waterloo. I am a... In my spare time I can be found...</p>
         <a href="about.html" class="page-button">More About Me</a>
     </div>
 
     <!-- Projects -->
-    <div class="text-align-center">
+    <div id="projects" class="text-align-center">
         <h1 class="large-text">My Projects</h1>
         <div class="container">
             <div class="row">
@@ -79,7 +79,7 @@
     </div>
 
     <!-- More -->
-    <div class="text-align-center ">
+    <!-- <div class="text-align-center ">
         <h1 class="large-text ">More</h1>
         <div class="container ">
             <div class="row ">
@@ -103,7 +103,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- Footer With Links -->
     <footer>
