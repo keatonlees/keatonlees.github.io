@@ -11,9 +11,9 @@ function nav_toggle() {
 
 // script for having navbar appear as user scrolls down
 // $(window).scroll(function() {
-//     if ($(window).scrollTop() > 100) {
-//         console.log("OK");
-//     }
+//     if ($(window).scrollTop() > 50) {
+
+// 	}
 // });
 
 // script for smooth scrolling

@@ -51,10 +51,12 @@ h3 {
     z-index: 1;
     position: fixed;
     width: 100%;
+    padding: 0px 250px;
+    background-color: #F7F9F9;
 }
 
 .nav-home-icon {
-    width: 30px;
+    width: 26px;
     padding-bottom: 5px;
     padding-right: 5px;
 }
@@ -138,6 +140,9 @@ h3 {
 }
 
 @media screen and (max-width: 700px) {
+    .nav-top {
+        padding: 0px 0px;
+    }
     .nav-top .nav-right a,
     .nav-top .nav-drop-btn {
         display: none;
@@ -147,7 +152,8 @@ h3 {
         float: right;
     }
     .nav-top.responsive {
-        position: relative;
+        position: fixed;
+        background-color: #F7F9F9;
     }
     .nav-top.responsive .nav-icon {
         position: absolute;
@@ -198,22 +204,12 @@ h3 {
 
 .intro-para {
     font-size: 30px;
-    padding: 0px 50px;
+    padding: 0px 100px;
     margin-bottom: 20px;
 }
 
 
 /* Projects */
-
-.projects_img {
-    width: 250px;
-    border-radius: 30px;
-}
-
-.projects_para {
-    font-size: 22px;
-    text-align: left;
-}
 
 
 /* More */
