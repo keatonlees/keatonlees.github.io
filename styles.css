@@ -11,9 +11,10 @@ p {
     margin: 0;
 }
 
-html {
+
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 h3 {
     text-align: left;
@@ -23,12 +24,8 @@ h3 {
     text-align: center;
 }
 
-.row {
-    margin-top: 20px;
-}
-
 .page-button {
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
     color: inherit;
     padding: 10px;
@@ -41,6 +38,10 @@ h3 {
     text-decoration: none;
     color: black;
     background-color: lightblue;
+}
+
+.card-body {
+    height: 220px;
 }
 
 
@@ -139,7 +140,12 @@ h3 {
     display: block;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 950px) {
+    .intro-para {
+        font-size: 20px;
+        padding: 0px 10px;
+        margin-bottom: 20px;
+    }
     .nav-top {
         padding: 0px 0px;
     }
@@ -206,6 +212,11 @@ h3 {
     font-size: 30px;
     padding: 0px 100px;
     margin-bottom: 20px;
+}
+
+.intro-img {
+    height: 350px;
+    border-radius: 20px;
 }
 
 
