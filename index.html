@@ -2,137 +2,85 @@
 <html lang="en">
 
 <head>
-    <!-- TITLE AND ICON -->
     <title>Keaton Lees</title>
     <link rel="icon" href="images/Logo_blue.PNG" type="image/x-icon">
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, intial-scale=1">
-    <meta name="description" content="Keaton Lees - My Personal Website">
 
-    <!-- MY SHEETS -->
     <link href="styles.css" type="text/css" rel="stylesheet">
-    <link href="styles-nav.css" type="text/css" rel="stylesheet">
 
-    <!-- FONTS AND ICONS -->
-    <link href="https://fonts.googleapis.com/css?family=Sen&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- BOOTSTRAP -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <!-- JS Scripts -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 </head>
 
-<body>
+<body class="page-fade-in">
 
-    <!-- NAVIGATION -->
-    <header>
-        <div class="nav-top" id="navTop">
-            <div class="nav-bg">
-                <a href="#home"><img src="images/Logo_black.PNG" class="nav-home-icon">Home</a>
-                <div class="nav-right">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <!-- <div class="nav-drop">
-                        <button class="nav-drop-btn">More
-					</button>
-                        <div class="nav-drop-content">
-                            <a href="">3D-Prints</a>
-                            <a href="">Solidworks</a>
-                            <a href="">Travel</a>
-                        </div>
-                    </div> -->
-                    <a href="images/KeatonLees.pdf" target="_blank">Resume</a>
-                </div>
-                <a href="javascript:void(0);" class="nav-icon" onclick="nav_toggle()">&#9776;</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- MAIN IMAGE -->
-    <img src="images/keaton_taiwan.JPG" class="main-bg" id="home">
-
-    <!-- INTRO -->
-    <div id="about" class="text-align-center">
-        <h1 class="large-text">Hi! I'm Keaton</h1>
-        <p class="intro-para">I'm a Systems Design Engineering student at the University of Waterloo.</p>
-        <p class="intro-para">I'm an enthusiastic learner who loves to work on numerous projects. Systems Design Engineering has opened my eyes to the possibility of different engineering fields, each contributing to the future of engineering in their own way. I am someone
-            who loves to both work with software and hardware as I believe that both are equally important; I enjoy combining both aspects in order to achieve a final end goal.</p>
-        <p class="intro-para">Outside of school, you can find me working on 3D-design and 3D-printing my own creations, Arduino electronics projects, going to the gym, track and field, volleyball, or playing the piano and drums. I am also fond of travelling and exploring the
-            world; I have been to Taiwan, Australia, Southeast Asia, France, and UK.
-        </p>
-
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-md navbar-light navbar-bg fixed-top">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="images/keaton_track.JPG" class="intro-img">
-                </div>
-                <div class="col-md-4">
-                    <img src="images/australia.jpg" class="intro-img">
-                </div>
-                <div class="col-md-4">
-                    <img src="images/keaton_wakeboard.jpg" class="intro-img">
-                </div>
+            <a class="navbar-brand hvr-grow" href="#bg-image"><img src="images/Logo_blue.PNG" class="navbar-logo""></a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-responsive">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-responsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link hvr-underline-from-left" href="#bg-image">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-left" href="#about-me">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-left" href="#my-projects">Projects</a>
+                    </li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle hvr-underline-from-left" id="navbar-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                        <div class="dropdown-menu" aria-labelledby="navbar-dropdown">
+                            <a class="dropdown-item" href="#">3D-Printing</a>
+                            <a class="dropdown-item" href="#">SolidWorks</a>
+                            <a class="dropdown-item" href="#">Travel</a>
+                        </div>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link hvr-underline-from-left" href="images/KeatonLees.pdf" target="_blank">Resume</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
 
-        <!-- <a href="about.html" class="page-button">More About Me</a> -->
+    <!-- Background image -->
+    <div id="bg-image" class="photo-text margin-below">
+        <h1><span class="name-typing-text"></span><span class="typing-cursor">&nbsp;</span></h1>
+        <h2><span class="description-typing-text"></span><span class="typing-cursor">&nbsp;</span></h2>
     </div>
 
-    <!-- PROJECTS -->
-    <div id="projects" class="text-align-center">
-        <h1 class="large-text">My Projects</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/work-in-progress.png" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="text-center">Arduino Quadcopter</h3>
-                            <p class="text-center projects-p">A project I am currently working on. Using Solidworks, 3D-Printing and Arduino, I am designing and constructing an auto-stabilizing quadcopter.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/work-in-progress.png" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="text-center">Custom Samsung Watchface</h3>
-                            <p class="text-center projects-p">A project I am currently working on. Using Samsung's Designer Software, and integrated APIs, I am designing my own watchface.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/donkey_kong.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="text-center">Donkey Kong</h3>
-                            <p class="text-center projects-p">I recreated the 80s Donkey Kong game using Java, HTML, and an external gyroscopic interface.</p>
-                            <a href="https://github.com/keatonlees/donkey-kong" target="_blank" class="page-button">Project Page</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- About me -->
+    <div id="about-me" class="container text-center margin-below">
+        <hr class="hr-text" data-content="About Me">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+                <p class="about-me-p ">I'm an enthusiastic learner who loves to work on numerous projects. Systems Design Engineering has opened my eyes to the possibility of different engineering fields, each contributing to the future of engineering in their own way. I am
+                    someone who loves to both work with software and hardware as I believe that both are equally important; I enjoy combining both aspects in order to achieve a final end goal. <br><br> Outside of school, you can find me working on 3D-design
+                    and 3D-printing my own creations, Arduino electronics projects, going to the gym, track and field, volleyball, or playing the piano and drums. I am also fond of travelling and exploring the world; I have been to Taiwan, Australia,
+                    Southeast Asia, France, and UK.</p>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/first_robotics.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="text-center">FIRST Robotics</h3>
-                            <p class="text-center projects-p">Captain and co-competition driver for our FIRST Robotics Team that competed at the Western National Competition.</p>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4">
+                <div class="about-me">
+                    <div id="about-slideshow">
+                        <div>
+                            <img src="images/keaton_track.JPG">
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card">
-                        <img src="images/3d_printing.jpg" class="card-img-top">
-                        <div class="card-body">
-                            <h3 class="text-center">3D-Printing</h3>
-                            <p class="text-center projects-p">From having my own personal 3D-printer, I have designed and printed many objects for people.</p>
-                            <a href="https://www.instagram.com/kleez3dprints/" target="_blank" class="page-button">Project Page</a>
+                        <div>
+                            <img src="images/australia.jpg">
+                        </div>
+                        <div>
+                            <img src="images/keaton_wakeboard.jpg">
                         </div>
                     </div>
                 </div>
@@ -140,42 +88,83 @@
         </div>
     </div>
 
-    <!-- More -->
-    <!-- <div class="text-align-center ">
-        <h1 class="large-text ">More</h1>
-        <div class="container ">
-            <div class="row ">
-                <div class="col-lg-4 ">
-                    <h3>3D-Printing</h3>
-                    <img src="images/placeholder.jpg " class="more_img ">
-                    <p class="more_para ">I do a bit of 3D-Printing in my spare time.</p>
-                    <a href=" " class="page-button ">3D-Printing</a>
+    <!-- My projects -->
+    <div id="my-projects" class="container text-center margin-below ">
+        <hr class="hr-text " data-content="My Projects ">
+        <div class="row">
+            <div class="wrapper col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
+                <div class="overlay-card ">
+                    <img src="images/work-in-progress.png ">
+                    <div class="overlay-info ">
+                        <h1>Arduino Quadcopter</h1>
+                        <p>Using SolidWorks, 3D-printing, and Arduino electronics and programming, I am constructing an auto-stabilizing quadcopter drone.</p>
+                    </div>
                 </div>
-                <div class="col-lg-4 ">
-                    <h3>Solidworks</h3>
-                    <img src="images/placeholder.jpg " class="more_img ">
-                    <p class="more_para ">Some of my Solidworks files</p>
-                    <a href=" " class="page-button ">Solidworks</a>
+            </div>
+            <div class="wrapper col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
+                <div class="overlay-card ">
+                    <img src="images/puppr.jpg ">
+                    <div class="overlay-info ">
+                        <h1>puppr | ToHacks 2020</h1>
+                        <p>A platform to connect socially-isolated users with dogs in need.</p>
+                        <button class="button " onclick="window.open( 'https://devpost.com/software/puppr', '_blank') ">View Project</button>
+                    </div>
                 </div>
-                <div class="col-lg-4 ">
-                    <h3>Travel</h3>
-                    <img src="images/placeholder.jpg " class="more_img ">
-                    <p class="more_para ">I have travelled many places in the world!</p>
-                    <a href=" " class="page-button ">Travel</a>
+            </div>
+            <div class="wrapper col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
+                <div class="overlay-card ">
+                    <img src="images/watchface.png ">
+                    <div class="overlay-info ">
+                        <h1>Samsung Watchface</h1>
+                        <p>Using Samsung's GalaxyWatchDesigner software, I designed and created my own dynamic watchface.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
+                <div class="overlay-card ">
+                    <img src="images/donkey_kong.jpg ">
+                    <div class="overlay-info ">
+                        <h1>Donkey Kong Game</h1>
+                        <p>A recreation of the classic 80's arcade game using Java with integrated gyroscopic controls.</p>
+                        <button class="button " onclick="window.open( 'https://github.com/keatonlees/donkey-kong', '_blank') ">View Project</button>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
+                <div class="overlay-card ">
+                    <img src="images/first_robotics.jpg ">
+                    <div class="overlay-info ">
+                        <h1>FIRST Robotics</h1>
+                        <p>Was captain and co-competition driver of the team that competed at the FIRST Western National Competition.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="wrapper col-xs-12 col-sm-12 col-md-6 col-lg-4 ">
+                <div class="overlay-card ">
+                    <img src="images/3d_printing.jpg ">
+                    <div class="overlay-info ">
+                        <h1>3D-Printing</h1>
+                        <p>I have designed numerous objects and items, in which I founded kleez3dprints.</p>
+                        <button class="button " onclick="window.open( 'https://www.instagram.com/kleez3dprints/?hl=en', '_blank') ">View Prints</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
 
-    <!-- LINKED FOOTER -->
+    <!-- Footer -->
     <footer>
-        <div class="foot ">
-            <p class="foot-contact ">Let's Talk!</p>
-            <div class="foot-links ">
-                <a href="mailto:keatslees@yahoo.com?Subject=Let 's Talk!"><i class="fa fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/keatonlees" target="_blank"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/keatonlees" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://instagram.com/kleez3dprints" target="_blank"><i class="fa fa-instagram"></i></a>
+        <div class="container text-center">
+            <hr class="hr-text " data-content="Let's Connect!">
+            <div class="row">
+                <div class="col-12 connect">
+                    <a class="hvr-grow" href="mailto:keatslees@yahoo.com?Subject=Let 's Talk!"><i class="fa fa-envelope"></i></a>
+                    <a class="hvr-grow" href="https://www.linkedin.com/in/keatonlees" target="_blank"><i class="fa fa-linkedin"></i></a>
+                    <a class="hvr-grow" href="https://github.com/keatonlees" target="_blank"><i class="fa fa-github"></i></a>
+                    <a class="hvr-grow" href="https://instagram.com/kleez3dprints" target="_blank"><i class="fa fa-instagram" id="insta" aria-hidden="true"></i></a>
+                    <h3>Coded by Keaton Lees</h3>
+                    <h3>May 2020</h3>
+                </div>
             </div>
         </div>
     </footer>
