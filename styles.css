@@ -130,7 +130,7 @@ body {
 
 #bg-image {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-image: url('images/keaton_taiwan.JPG');
     background-position: center center;
     background-size: cover;
