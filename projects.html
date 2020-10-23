@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>About Me</title>
+    <title>Keaton Lees | Projects</title>
     <link rel="icon" href="images/preloader-text.png" type="image/x-icon">
 
     <meta charset="utf-8">
@@ -67,6 +67,12 @@
                     <h1>Drone</h1>
                 </div>
             </div>
+            <!-- <div id="icon-rethink" class="icon-rethink">
+                <img src="/images/icon_rethink2.png" style="width: 200px;">
+                <div class="icon-hover-title">
+                    <h1>Rethink</h1>
+                </div>
+            </div> -->
             <div id="icon-puppr" class="icon-puppr">
                 <img src="/images/icon_puppy.png" style="width: 200px;">
                 <div class="icon-hover-title">
@@ -129,13 +135,13 @@
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="images/keaton_taiwan.JPG" alt="First slide">
+                            <img class="d-block w-100" src="images/projects_drone1.jpg" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="images/keaton_track.JPG" alt="Second slide">
+                            <img class="d-block w-100" src="images/projects_drone3.png" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="images/keaton_wakeboard.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="images/projects_drone4.png" alt="Third slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#drone-carousel" role="button" data-slide="prev">
@@ -149,17 +155,31 @@
                 </div>
             </div>
 
-            <p>She counted. One. She could hear the steps coming closer. Two. Puffs of breath could be seen coming from his mouth. Three. He stopped beside her. Four. She pulled the trigger of the gun. She reached her goal, exhausted. Even more chilling
-                to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work? You know that tingly feeling you get on the back of
-                your neck sometimes? I just got that feeling when talking with her. You know I don't believe in sixth senses, but there is something not right with her. I don't know how I know, but I just do. She's asked the question so many times that
-                she barely listened to the answers anymore. The answers were always the same. Well, not exactly the same, but the same in a general sense. A more accurate description was the answers never surprised her. So, she asked for the 10,000th
-                time, "What's your favorite animal?" But this time was different. When she heard the young boy's answer, she wondered if she had heard him correctly. It was a concerning development that he couldn't get out of his mind. He'd had many friends
-                throughout his early years and had fond memories of playing with them, but he couldn't understand how it had all stopped. There was some point as he grew up that he played with each of his friends for the very last time, and he had no
-                idea that it would be the last.</p>
+            <div class="row project-overview">
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">When:</span> 2020-Present</h2>
+                </div>
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">Tools:</span> Solidworks, 3D-Printing, Arduino C</h2>
+                </div>
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">Role:</span> Personal Project</h2>
+                </div>
+            </div>
+
+            <p> THIS IS A WORK IN PROGRESS </p>
+
+            <p> I am designing, printing, wiring and programming an Arduino Drone. The body and arms are created in SolidWorks and 3D-printed on my own printer. The design is modular so that if one arm breaks, I can easily replace the part without having to reprint an entire new body. </p>
+
+            <p> I have also constructed a radio transmitting module as well. This transmitter consists of two joysticks and two potentiometers wired into an Arduino Nano, which processes and converts the signals to transmit wirelessly by the NRF module. This entire controller is powered off six AA batteries. </p>
+
+            <p> The drone electronics consist of a receiving NRF module that is wired to another Arduino Nano to convert the signals back and then sends those signals to the brain, another Arduino Nano. Yes, this drone consists of three different Arduinos. This main Arduino Nano, the flight controller brain, processes the signals from the radio receiver and the gyroscopic module to calculate the angle and velocity of the drone. These calculations are then processed and send to the electronic speed controllers to speed up or slow down the motors. The drone is powered off a single 2200mAh rechargable LiPo battery. </p> 
+
+            <p> In the future, I would like to add a camera to see what the drone is seeing, along with a Go-Pro on top of the drone to capture aerial photos and videos. </p>
         </div>
 
         <!-- -------------------- PUPPR -------------------- -->
-        <div id="puppr" class="project-content">
+        <div id="puppr" class="project-content text-center">
             <div class="row">
                 <div class="wrapper col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div id="puppr-prev" class="prev-project hvr-grow">
@@ -180,17 +200,13 @@
                     <ol class="carousel-indicators">
                         <li data-target="#puppr-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#puppr-carousel" data-slide-to="1"></li>
-                        <li data-target="#puppr-carousel" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="images/keaton_taiwan.JPG" alt="First slide">
+                            <img class="d-block w-100" src="images/projects_puppr.png" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="images/keaton_track.JPG" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="images/keaton_wakeboard.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="images/projects_puppr2.png" alt="Second slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#puppr-carousel" role="button" data-slide="prev">
@@ -204,17 +220,29 @@
                 </div>
             </div>
 
-            <p>She counted. One. She could hear the steps coming closer. Two. Puffs of breath could be seen coming from his mouth. Three. He stopped beside her. Four. She pulled the trigger of the gun. She reached her goal, exhausted. Even more chilling
-                to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work? You know that tingly feeling you get on the back of
-                your neck sometimes? I just got that feeling when talking with her. You know I don't believe in sixth senses, but there is something not right with her. I don't know how I know, but I just do. She's asked the question so many times that
-                she barely listened to the answers anymore. The answers were always the same. Well, not exactly the same, but the same in a general sense. A more accurate description was the answers never surprised her. So, she asked for the 10,000th
-                time, "What's your favorite animal?" But this time was different. When she heard the young boy's answer, she wondered if she had heard him correctly. It was a concerning development that he couldn't get out of his mind. He'd had many friends
-                throughout his early years and had fond memories of playing with them, but he couldn't understand how it had all stopped. There was some point as he grew up that he played with each of his friends for the very last time, and he had no
-                idea that it would be the last.</p>
+            <div class="row project-overview">
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">When:</span> June 2020</h2>
+                </div>
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">Tools:</span> HTML, CSS, Javascript</h2>
+                </div>
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">Role:</span> Software Developer</h2>
+                </div>
+            </div>
+
+            <p> During TOHacks 2020, myself and two other team members built Puppr, a website to connect lonely, isolated users with local dogs that are available for adoption. These dogs will help with users' mental health as they complete quarintine and reimmerse themselves back into a social world. The entire website was built in 48 hours from scratch.</p>
+
+            <p> Puppr's front end was written in HTML, CSS and Javascript while the backend was written in Python. The landing and signup page are both purely HTML and CSS, while the selection page's functionality is Javascript. When selecting the dogs, you are seeing real dogs available from a real shelter. Using Flask to build a web-scraping API, we were able to import that information into our page for the user to easily see. Whether you select the checkmark or not, you will cycle through a variety of dogs (however many are available at the time). If you choose to click the checkmark, the dog's profile will be saved in the left sidebar, where you can click on that saved dog to go the shelter's webpage. Since this entire app was built within a 48 hour time frame, our web-scraping is accurate, but a little slow; if we were to redo this project, that would be one of our key redesigns for Puppr. </p>
+
+            <button class="page-btn hvr-grow" onclick="window.open('https://adoptadoggo.online', '_blank')">See the Website!</button>
+            <button class="page-btn hvr-grow" onclick="window.open('https://github.com/orizabal/puppr', '_blank')">View the Code!</button>
+
         </div>
 
         <!-- -------------------- PRINTER -------------------- -->
-        <div id="printer" class="project-content">
+        <div id="printer" class="project-content text-center">
             <div class="row">
                 <div class="wrapper col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <div id="printer-prev" class="prev-project hvr-grow">
@@ -236,16 +264,28 @@
                         <li data-target="#printer-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#printer-carousel" data-slide-to="1"></li>
                         <li data-target="#printer-carousel" data-slide-to="2"></li>
+                        <li data-target="#printer-carousel" data-slide-to="3"></li>
+                        <li data-target="#printer-carousel" data-slide-to="4"></li>
+                        <li data-target="#printer-carousel" data-slide-to="5"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="images/keaton_taiwan.JPG" alt="First slide">
+                            <img class="d-block w-100" src="images/projects_print1.png" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="images/keaton_track.JPG" alt="Second slide">
+                            <img class="d-block w-100" src="images/projects_print2.png" alt="Second slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="images/keaton_wakeboard.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="images/projects_print3.png" alt="Third slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/projects_print4.png" alt="Fourth slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/projects_print5.png" alt="Fifth slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/projects_print6.png" alt="Sixth slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#printer-carousel" role="button" data-slide="prev">
@@ -259,13 +299,30 @@
                 </div>
             </div>
 
-            <p>She counted. One. She could hear the steps coming closer. Two. Puffs of breath could be seen coming from his mouth. Three. He stopped beside her. Four. She pulled the trigger of the gun. She reached her goal, exhausted. Even more chilling
-                to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work? You know that tingly feeling you get on the back of
-                your neck sometimes? I just got that feeling when talking with her. You know I don't believe in sixth senses, but there is something not right with her. I don't know how I know, but I just do. She's asked the question so many times that
-                she barely listened to the answers anymore. The answers were always the same. Well, not exactly the same, but the same in a general sense. A more accurate description was the answers never surprised her. So, she asked for the 10,000th
-                time, "What's your favorite animal?" But this time was different. When she heard the young boy's answer, she wondered if she had heard him correctly. It was a concerning development that he couldn't get out of his mind. He'd had many friends
-                throughout his early years and had fond memories of playing with them, but he couldn't understand how it had all stopped. There was some point as he grew up that he played with each of his friends for the very last time, and he had no
-                idea that it would be the last.</p>
+            <div class="row project-overview">
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">When:</span> 2018-Present</h2>
+                </div>
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">Tools:</span> SolidWorks, Fusion 360, Cura</h2>
+                </div>
+                <div class="wrapper col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <h2><span class="highlighted">Role:</span> Personal Project</h2>
+                </div>
+            </div>
+
+            <p> In 2018, I bought a cheap, inaccurate 3D-printer to see what the whole craze around hobbiest 3D-printing was about. Turns out that 3D-printing is extremely functional and amazingly time-consuming! I have learned the ways of 3D-printing including designing, modelling, slicing, painting and even starting a business. </p>
+
+            <p> When I first bought my 3D-printer, I was looking for something cheap as to not spend too much money. What I purchased was an Anet A8, a clone of Joseph Prusa's printer: the Prusa i3, for around $200 CAD. Since first receiving and building the printer, I have upgraded many of the components and have transformed it into the printer I use today. Using my 3D-printer to 3D-print upgrades allowed me to increase the quality of each part by 200% and creating an infinite loop of printing, upgrading and printing even higher quality parts. </p>
+
+            <p> Fast forward a few months, to March 2019. I was starting to print more and more little fidget toys and figurines. People who saw my creations thought that the little prints were fascinating. Using this knowledge, I decided to found a mini company, kleez3dprints. Within this company, I took many custom orders and presented customers with a finish print that met all their requirements. Examples are team keychains, figurines of video game characters, nametags, various fidget toys and functional everyday aids. </p>
+
+            <p> Recently, I have been doing much larger projects. These projects include articulating digital models, slicing them into resonably sized sub-components, then printing, gluing and painting. One such project was the model of Iron Man, which took a total of 40 hours to complete from start to finish. </p>
+
+            <p> 3D-printing is an ever-expanding field and I am very grateful that I was able to learn about and expand my knowledge of such a interesting and useful area. </p>
+
+            <button class="page-btn hvr-grow" onclick="window.open('https://www.instagram.com/kleez3dprints/?hl=en', '_blank')">See More Prints!</button>
+
         </div>
 
         <!-- -------------------- WATCHFACE -------------------- -->
@@ -290,17 +347,13 @@
                     <ol class="carousel-indicators">
                         <li data-target="#watch-carousel" data-slide-to="0" class="active"></li>
                         <li data-target="#watch-carousel" data-slide-to="1"></li>
-                        <li data-target="#watch-carousel" data-slide-to="2"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="images/keaton_taiwan.JPG" alt="First slide">
+                            <img class="d-block w-100" src="images/projects_watchface.png" alt="First slide">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block w-100" src="images/keaton_track.JPG" alt="Second slide">
-                        </div>
-                        <div class="carousel-item">
-                            <img class="d-block w-100" src="images/keaton_wakeboard.jpg" alt="Third slide">
+                            <img class="d-block w-100" src="images/projects_watchfacesoftware.png" alt="Second slide">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#watch-carousel" role="button" data-slide="prev">
@@ -326,13 +379,8 @@
                 </div>
             </div>
 
-            <p>She counted. One. She could hear the steps coming closer. Two. Puffs of breath could be seen coming from his mouth. Three. He stopped beside her. Four. She pulled the trigger of the gun. She reached her goal, exhausted. Even more chilling
-                to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work? You know that tingly feeling you get on the back of
-                your neck sometimes? I just got that feeling when talking with her. You know I don't believe in sixth senses, but there is something not right with her. I don't know how I know, but I just do. She's asked the question so many times that
-                she barely listened to the answers anymore. The answers were always the same. Well, not exactly the same, but the same in a general sense. A more accurate description was the answers never surprised her. So, she asked for the 10,000th
-                time, "What's your favorite animal?" But this time was different. When she heard the young boy's answer, she wondered if she had heard him correctly. It was a concerning development that he couldn't get out of his mind. He'd had many friends
-                throughout his early years and had fond memories of playing with them, but he couldn't understand how it had all stopped. There was some point as he grew up that he played with each of his friends for the very last time, and he had no
-                idea that it would be the last.</p>
+            <p> Using Samsung's Beta GalaxyWatchDesigner Software, I created a dynamic watchface for my Samsung Gear Fit 2 Pro Active Watch. As the software is not a full release, there are various problems using the interface, but I was able to create a watchface that changed the background throughout the day. I also personalized the screens to display the relevant data I needed, such as date, steps, heartrate and of course, the time. In the future, I wish to build a watchface for the next smartwatch I buy. Hopefully, next watchface I am able to add miniture animations that allow the interface to be pleasing, yet informative. </p>
+
         </div>
 
         <!-- -------------------- DONKEY KONG -------------------- -->
@@ -389,15 +437,11 @@
                 </div>
             </div>
 
-            <p>She counted. One. She could hear the steps coming closer. Two. Puffs of breath could be seen coming from his mouth. Three. He stopped beside her. Four. She pulled the trigger of the gun. She reached her goal, exhausted. Even more chilling
-                to her was that the euphoria that she thought she'd feel upon reaching it wasn't there. Something wasn't right. Was this the only feeling she'd have for over five years of hard work? You know that tingly feeling you get on the back of
-                your neck sometimes? I just got that feeling when talking with her. You know I don't believe in sixth senses, but there is something not right with her. I don't know how I know, but I just do. She's asked the question so many times that
-                she barely listened to the answers anymore. The answers were always the same. Well, not exactly the same, but the same in a general sense. A more accurate description was the answers never surprised her. So, she asked for the 10,000th
-                time, "What's your favorite animal?" But this time was different. When she heard the young boy's answer, she wondered if she had heard him correctly. It was a concerning development that he couldn't get out of his mind. He'd had many friends
-                throughout his early years and had fond memories of playing with them, but he couldn't understand how it had all stopped. There was some point as he grew up that he played with each of his friends for the very last time, and he had no
-                idea that it would be the last.</p>
+            <p> During Programming 12 in school, I decided to recreate the classic 1980s Donkey Kong Arcade game. In the limited time frame, I was able to completely recreate the first level in it's entirety. The game included accurate gameplay and accurate sprite animations. Viewing the final product compared to the original, I had almost made an exact replica of the orignal arcade game. </p>
 
-            <button class="page-btn hvr-grow" onclick="window.open('https://github.com/keatonlees/donkey-kong', '_blank')">More About Me</button>
+            <p> To code the game, I used a combination of Java and HTML along with JGEngine to render the environment. It took a long time to implement the sprites and bounding boxes from the sprite sheet and was also difficult to create seamless animations, but it turned out quite smooth in the end. I had started with basic keyboard controls, but eventually integrated a gyroscopic movement controller. This controller was an alternate way to play the game and added a level of difficulty, both in the programming acclerometer values and playing the game. </p>
+
+            <button class="page-btn hvr-grow" onclick="window.open('https://github.com/keatonlees/donkey-kong', '_blank')">View the Code!</button>
 
         </div>
 
@@ -459,7 +503,7 @@
                     <a class="hvr-grow " href="https://www.linkedin.com/in/keatonlees " target="_blank "><i class="fa fa-linkedin "></i></a>
                     <a class="hvr-grow " href="https://github.com/keatonlees " target="_blank "><i class="fa fa-github "></i></a>
                     <a class="hvr-grow " href="https://instagram.com/kleez3dprints " target="_blank "><i class="fa fa-instagram " id="insta " aria-hidden="true "></i></a>
-                    <h3>Coding and Crying | Keaton Lees | July 2020</h3>
+                    <h3>Coded by Keaton Lees | October 2020</h3>
                 </div>
             </div>
         </div>
