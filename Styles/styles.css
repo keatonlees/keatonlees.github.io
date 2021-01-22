@@ -1,0 +1,201 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Sen&display=swap");
+
+/* -------------------- ROOT VARIABLES -------------------- */
+
+:root {
+  --theme-color: white;
+  --text-color: black;
+  /* --theme-color: black;
+  --text-color: white; */
+  --accent-color: #00dfdf;
+
+  --preloader-width: 125px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.theme-color {
+  background-color: var(--theme-color);
+  color: var(--text-color);
+}
+
+/* -------------------- PRELOADER -------------------- */
+.preloader-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader-logobar {
+  width: var(--preloader-width);
+  /* background-color: grey; */
+}
+
+.preloader-img {
+  width: var(--preloader-width);
+}
+
+.preloader-bar {
+  position: relative;
+  width: 35px;
+  height: 8px;
+  border-radius: 10px;
+  background-color: var(--accent-color);
+  animation: bar-bounce-2 1.5s ease-in-out infinite;
+}
+
+.main-content {
+  display: none;
+}
+
+/* -------------------- NAVBAR -------------------- */
+.navbar-bg {
+  background-color: var(--theme-color);
+}
+
+.navbar-brand {
+  width: 40px;
+}
+
+/* -------------------- ANIMATIONS -------------------- */
+
+@keyframes bar-bounce-1 {
+  0% {
+    width: 20px;
+    float: left;
+  }
+  24% {
+    width: var(--preloader-width);
+    float: left;
+  }
+  25% {
+    width: var(--preloader-width);
+    float: right;
+  }
+  50% {
+    width: 20px;
+    float: right;
+  }
+  74% {
+    width: var(--preloader-width);
+    float: right;
+  }
+  75% {
+    width: var(--preloader-width);
+    float: left;
+  }
+  100% {
+    width: 20px;
+    float: left;
+  }
+}
+
+@keyframes bar-bounce-2 {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: calc(var(--preloader-width) - 35px);
+  }
+  100% {
+    left: 0px;
+  }
+}
+
+.page-fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page-fade-out {
+  animation: fadeOut ease 1s;
+  -webkit-animation: fadeOut ease 1s;
+  -moz-animation: fadeOut ease 1s;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* -------------------- BOOTSTRAP PADDING FIX -------------------- */
+
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*
+    Extra small (xs) devices (portrait phones, less than 576px)
+    No media query since this is the default in Bootstrap
+
+    Small (sm) devices (landscape phones, 576px and up)
+    @media (min-width: 576px) { ... }
+
+    Medium (md) devices (tablets, 768px and up) 
+    @media (min-width: 768px) { ... }
+
+    Large (lg) devices (desktops, 992px and up)
+    @media (min-width: 992px) { ... }
+
+    Extra large (xl) devices (large desktops, 1200px and up) 
+    @media (min-width: 1200px) { ... }
+    */

@@ -1,212 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Keaton Lees</title>
+    <link rel="icon" href="Images/logo_square_dark.png" type="image/x-icon" />
 
-<head>
-    <title>Keaton Lees | Home</title>
-    <link rel="icon" href="/Images/preloader-text.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, intial-scale=1" />
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, intial-scale=1">
+    <!-- ----------- STYLESHEETS ----------- -->
+    <link href="/Styles/styles.css" type="text/css" rel="stylesheet" />
+    <link href="/Styles/hover.css" type="text/css" rel="stylesheet" />
 
-    <link href="styles.css" type="text/css" rel="stylesheet">
-    <link href="hover.css" type="text/css" rel="stylesheet">
-
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+    <!-- ----------- IMPORTS ----------- -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      rel="stylesheet"
+    />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-</head>
+  </head>
 
-
-<body class="page-fade-in page-color">
-    <!-- -------------------- PRELOADER -------------------- -->
-    <div id="preloader" class="preloader-container">
-        <img class="preloader" src="Images/preloader-text.png">
-        <img class="preloader ring1" src="Images/preloader-ring1.png">
-        <img class="preloader ring2" src="Images/preloader-ring2.png">
-        <img class="preloader ring3" src="Images/preloader-ring3.png">
+  <body class="theme-color">
+    <!-- ---------- PRELOADER ---------- -->
+    <div class="preloader-container">
+      <div class="preloader-logobar">
+        <img class="preloader-img" src="/Images/logo_square_dark.png" />
+        <!-- <div class="preloader-bar"></div> -->
+      </div>
+      <h2>Sorry! Currently under maintenance!</h2>
+      <h2>Please come back soon!</h2>
     </div>
 
-    <!-- -------------------- FLAIRS -------------------- -->
-    <div class="flair">
-        <img class="flair-home-1" src="Images/flair-double1.png">
-        <img class="flair-home-2" src="Images/flair-triple3.png">
-        <img class="flair-home-3" src="Images/flair-single.png">
-        <img class="flair-home-4" src="Images/flair-quad1.png">
-        <img class="flair-home-5" src="Images/flair-quad4.png">
-        <img class="flair-home-6" src="Images/flair-double2.png">
-        <!-- <img class="flair-home-7" src="Images/flair-triple1.png"> -->
-    </div>
-
-    <!-- -------------------- NAVIGATION BAR -------------------- -->
-    <nav id="navbar" style="display: none;" class="navbar navbar-light navbar-expand-md navbar-bg fixed-top">
+    <!-- ---------- NAVBAR ---------- -->
+    <div class="main-content">
+      <nav class="navbar navbar-bg navbar-expand-md">
         <div class="container">
-            <a class="navbar-brand hvr-grow" href="index.html"><img src="Images/preloader-text.png" class="navbar-logo""></a>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-responsive">
-                <span class="navbar-toggler-icon"></span>
-        </button>
-            <div class="collapse navbar-collapse" id="navbar-responsive">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link hvr-underline-reveal" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hvr-underline-reveal" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hvr-underline-reveal" href="projects.html">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link hvr-underline-reveal" href="Images/KeatonLeesResume.pdf" target="_blank">Resume</a>
-                    </li>
-                </ul>
-            </div>
+          <a class="navbar-brand"
+            ><img src="/Images/logo_square_dark.png" class="navbar-brand"
+          /></a>
         </div>
-    </nav>
+      </nav>
 
-    <!-- -------------------- BANNER -------------------- -->
-    <div class="main-banner">
-        <!-- <div class="video-filter"></div> -->
-        <div class="banner-text">
-            <h1><span class="name-typing-text"></span></h1>
-            <h2><span class="description-typing-text"></span></h2>
-        </div>
-        <!-- <video playsinline autoplay muted class="video-background">
-            <source src="images/ocean-bg.mp4">
-        </video> -->
+      <h1>HOME</h1>
     </div>
+  </body>
 
-    <!-- -------------------- ABOUT ME -------------------- -->
-    <div id="about-me" class="container text-center margin-bottom">
-        <hr class="hr-text" data-content="About Me">
-        <div class="row">
-            <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="about-me-animation-container">
-                    <img class="bubble-icon about-img-1" src="Images/icon-thinker.png">
-                    <img class="bubble-icon about-img-2" src="Images/icon-developer.png">
-                    <img class="bubble-icon about-img-3" src="Images/icon_student.png">
-                    <img class="bubble-icon about-img-4" src="Images/icon-engineer.png">
-                    <img class="bubble-icon about-img-5" src="Images/icon-printer.png">
-                    <img class="bubble-icon about-img-6" src="Images/icon-athlete.png">
-                </div>
-            </div>
-        </div>
-
-        <img class="about-me-avatar" src="Images/keaton_avatar.png">
-        <div class="about-me-container">
-            <p>Hi! My name is <span style="color: var(--color-theme-light)">Keaton Lees</span> and I'm currently studying <span style="color: var(--color-theme-light)">Systems Design Engineering</span> at the University of Waterloo. Currently, I am working
-                at <span style="color: var(--color-theme-light)">Ballard Power Systems</span> as a <span style="color: var(--color-theme-light)">Systems Engineering Co-op</span>. Outside of school and work, you can find me doing a software side project,
-                designing something to 3D-print, or working out.</p>
-            <img class="about-me-avatar-hand-left" src="Images/keaton_hand_left.png">
-            <img class="about-me-avatar-hand-right" src="Images/keaton_hand_right.png">
-        </div>
-
-        <button class="page-btn hvr-grow" onclick="location.href='about.html'">More About Me</button>
-    </div>
-
-    <!-- -------------------- MY PROJECTS -------------------- -->
-    <div id="my-projects" class="container text-center margin-bottom">
-        <hr class="hr-text" data-content="Recent Projects">
-        <div class="row">
-            <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="overlay-card" onclick="location.href='projects.html'; project1_to_show();">
-                    <img src="/Images/projects_drone1.jpg">
-                    <div class="overlay-card-info">
-                        <div class="container">
-                            <div class="row">
-                                <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="overlay-card-info-title">
-                                        <h3>Solidworks | 3D-Printing | Arduino</h3>
-                                        <h1>Arduino Quadcopter</h1>
-                                        <h3>Currently in Progress</h3>
-                                    </div>
-                                </div>
-                                <hr class="overlay-card-info-bar">
-                                <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="overlay-card-info-description">
-                                        <p> I am designing, printing, wiring and programming an Arduino Drone using three Arduino Nanos, a gyroscopic sensor, and wireless radio transmitting modules. </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="overlay-card" onclick="location.href='projects.html'; project2_to_show();">
-                    <img src="/Images/projects_puppr.png">
-                    <div class="overlay-card-info">
-                        <div class="container">
-                            <div class="row">
-                                <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="overlay-card-info-title">
-                                        <h3>HTML | CSS | Javascript</h3>
-                                        <h1>Puppr</h1>
-                                        <h3>TOHacks 2020</h3>
-                                    </div>
-                                </div>
-                                <hr class="overlay-card-info-bar">
-                                <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="overlay-card-info-description">
-                                        <p> For TOHacks 2020, my team and I built Puppr, a website to connect quarantined users with dogs up for adoption. These dogs will help with isolation and the return back into a social society.  </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="row">
-            <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="overlay-card" onclick="location.href='projects.html'; project3_to_show();">
-                    <div class="overlay-card-info">
-                        <div class="container">
-                            <div class="row">
-                                <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="overlay-card-info-title">
-                                        <h3>idk</h3>
-                                        <h1>yet</h1>
-                                        <h3>tbh</h3>
-                                    </div>
-                                </div>
-                                <hr class="overlay-card-info-bar">
-                                <div class="wrapper col-xs-12 col-sm-12 col-md-12 col-lg-6">
-                                    <div class="overlay-card-info-description">
-                                        <p>This is a description</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <button class="page-btn hvr-grow" onclick="location.href='projects.html'">View All Projects</button>
-    </div>
-
-    <!-- -------------------- FOOTER -------------------- -->
-    <footer>
-        <div class="container text-center">
-            <hr class="hr-text " data-content="We may have just met, but let's connect!">
-            <div class="row">
-                <div class="col-12 connect">
-                    <a class="hvr-grow" href="mailto:keatslees&#64yahoo.com?Subject=Let 's Talk!"><i class="fa fa-envelope"></i></a>
-                    <a class="hvr-grow" href="https://www.linkedin.com/in/keatonlees" target="_blank"><i class="fa fa-linkedin"></i></a>
-                    <a class="hvr-grow" href="https://github.com/keatonlees" target="_blank"><i class="fa fa-github"></i></a>
-                    <a class="hvr-grow" href="https://instagram.com/kleez3dprints" target="_blank"><i class="fa fa-instagram" id="insta" aria-hidden="true"></i></a>
-                    <h3>Coded by Keaton Lees | October 2020</h3>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-<!-- MY SCRIPTS -->
-<script src="scripts.js"></script>
-
+  <!-- ----------- MY SCRIPTS ----------- -->
+  <script src="/Scripts/scripts.js"></script>
+  <script src="/Scripts/preloader.js"></script>
 </html>
