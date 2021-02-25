@@ -22,7 +22,6 @@
   <!-- ----------- MY SCRIPTS ----------- -->
   <script src="/Scripts/preloader.js"></script>
   <script src="/Scripts/toggleWebtheme.js"></script>
-  <script src="/Scripts/projectSelector.js"></script>
 </head>
 
 <body class="theme-color">
@@ -42,6 +41,7 @@
     <nav class="navbar navbar-bg navbar-expand-md navbar-dark fixed-top" id="nav">
       <div class="container-fluid">
         <a class="navbar-brand" onclick="toggle_webtheme();">
+          <!-- <img src="/Images/logo_square_dark.png" class="navbar-brand" /> -->
           <img src="/Images/icon_sun.svg" class="navbar-webtheme" id="navbar-webtheme" />
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-responsive">
@@ -50,10 +50,10 @@
         <div class="collapse navbar-collapse" id="navbar-responsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link navbar-active">Home</a>
+              <a class="nav-link hvr-underline-from-left" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link hvr-underline-from-left" href="about.html">About</a>
+              <a class="nav-link navbar-active">About</a>
             </li>
             <li class="nav-item">
               <a class="nav-link hvr-underline-from-left" href="projects.html">Projects</a>
@@ -70,80 +70,47 @@
     <div class="container-fluid">
       <!-- ---------- BANNER TEXT ---------- -->
       <div class="banner-container">
-        <h1 class="banner-text">Hi! I'm Keaton!</h1>
-        <h1 class="banner-subtext">A Systems Design Engineering Student</h1>
-        <div class="button-container-banner">
-          <div class="button hvr-grow" onclick="window.location='about.html'">More About Me!</div>
-        </div>
+        <h1 class="banner-text">All About Me</h1>
+        <h1 class="banner-subtext">A look into who I am</h1>
       </div>
 
-      <div class=" project-link-container">
-        <h1>Some of my recent projects</h1>
-        <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="project-link-card">
-              <img src="/Images/project_smarthome1.png" />
-              <div class="project-link-card-box">
-                <div class="project-link-card-content">
-                  <h2>Jarvis Smart Home</h2>
-                  <p>A Smart Home developed using Flask on a Raspberry Pi with a captive touchscreen.</p>
-                  <h4 class="hvr-underline-from-left" onclick="project_link('smart-home');">
-                    View Project
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="project-link-card">
-              <img src="/Images/project_puppr0.png" />
-              <div class="project-link-card-box">
-                <div class="project-link-card-content">
-                  <h2>Puppr</h2>
-                  <p>A digital platform to connect dog-lovers with dogs up for adoption.</p>
-                  <h4 class="hvr-underline-from-left" onclick="project_link('puppr');">
-                    View Project
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="project-link-card">
-              <img src="/Images/project_drone4.png" />
-              <div class="project-link-card-box">
-                <div class="project-link-card-content">
-                  <h2>TITLE</h2>
-                  <p>Description</p>
-                  <h4 class="hvr-underline-from-left" onclick="project_link('arduino-drone');">
-                    View Project
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
-            <div class="project-link-card">
-              <img src="/Images/project_drone4.png" />
-              <div class="project-link-card-box">
-                <div class="project-link-card-content">
-                  <h2>TITLE</h2>
-                  <p>Description</p>
-                  <h4 class="hvr-underline-from-left" onclick="project_link('puppr');">
-                    View Project
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
-        <div class="button-container">
-          <div class="button hvr-grow" onclick="window.location='projects.html'">See all my
-            projects!
-          </div>
-        </div>
+      <div class="about-container">
+        <img src="Images/keaton_portrait.JPG" />
+        <p>
+          Hi! My name is Keaton Lees and I'm currently studying Systems Design
+          Engineering at the University of Waterloo. I am an enthusiastic
+          learner who loves to explore new technology and continously expand
+          my knowledge of the working world. I equally enjoy and have
+          experience with both software and hardware as I believe both are
+          crucial in achieving the final goal.
+        </p>
+
+        <p>
+          Previously, I have worked at Ballard Power Systems, located in Burnaby, BC as Systems and Controls Engineer
+          and Systems Engineer. I have also founded my own 3D-printing
+          company, kleez3dprints, and have also worked at RoboKids Canada as a
+          Senior Software Instructor.
+        </p>
+
+        <p>
+          Outside of school, you can find me doing everything from designing
+          something to 3D-print to going to the gym to messing around with
+          PC's. I have thoroughly enjoyed 3D-printing ever since I bought my
+          own printer in 2018. You can see some of my recent prints on the
+          Projects Page, or on Instagram @kleez3dprints.
+        </p>
+
+        <p>
+          On the other hand, I love to stay active. I have competed in Track
+          and Field for the past 8 years, as well as being a Level 2 Official,
+          and have only recently stopped due to university. However, I still
+          like to go outside and run, workout at the local gym, or get
+          together with some friends to play some indoor or beach volleyball.
+          Prior to track, I competed in Taekwondo and recieved my 3rd Degree
+          Black Belt after 10 years of dedication; Taekwondo taught me
+          self-discipline and perseverance, characteristics that I still apply
+          to my everyday tasks.
+        </p>
       </div>
     </div>
 
