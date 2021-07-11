@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Keaton Lees</title>
+  <link rel="icon" href="Images/logo_square_dark.png" type="image/x-icon" />
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, intial-scale=1" />
+
+  <!-- ----------- STYLESHEETS ----------- -->
+  <link href="/Styles/styles.css" type="text/css" rel="stylesheet" />
+  <link href="/Styles/hover.css" type="text/css" rel="stylesheet" />
+
+  <!-- ----------- IMPORTS ----------- -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+  <!-- ----------- MY SCRIPTS ----------- -->
+  <script src="/Scripts/preloader.js"></script>
+  <!-- <script src="/Scripts/toggleWebtheme.js"></script> -->
+  <script src="/Scripts/projectSelector.js"></script>
+</head>
+
+<body class="theme-color">
+  <!-- ---------- PRELOADER ---------- -->
+  <div class="preloader-container">
+    <div class="preloader-logobar">
+      <img src="/Images/logo_square_light.png" class="preloader-img" id="preloader-img" />
+      <div class="preloader-bar"></div>
+    </div>
+    <!-- <h2>Sorry! Currently under maintenance!</h2>
+      <h2>Please come back soon!</h2> -->
+  </div>
+
+  <!-- ---------- PAGE ---------- -->
+  <div class="main-content">
+    <!-- ---------- NAVBAR ---------- -->
+    <nav class="navbar navbar-bg navbar-expand-md navbar-dark fixed-top" id="nav">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" onclick="toggle_webtheme();"> -->
+        <a class="navbar-brand">
+          <!-- <img src="/Images/icon_sun.svg" class="navbar-webtheme" id="navbar-webtheme" /> -->
+          <img src="/Images/logo_square_light.png" class="navbar-webtheme">
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-responsive">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-responsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link hvr-underline-from-left" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hvr-underline-from-left" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-active">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link hvr-underline-from-left" href="Files/KeatonLeesResume.pdf" target="_blank">Resume</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ---------- CONTENT ---------- -->
+    <div class="container-fluid">
+      <!-- ---------- BANNER TEXT ---------- -->
+      <div class="banner-container">
+        <h1 class="banner-text">My Projects</h1>
+        <h1 class="banner-subtext">A collection of my creations</h1>
+      </div>
+
+      <div class="projects-container">
+        <div class="row">
+          <!-- PROJECT SELECTOR -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
+            <!-- <div id="todoit-card" class="project-card" onclick="select_project('todoit');">
+              <h1>ToDoIt</h1>
+              <h3>Flask | ReactJS | CSS | MySQLAlchemy</h3>
+              <h2>HackTheNorth 2020++</h2>
+              <h3>January 2020</h3>
+            </div> -->
+            <div id="smart-home-card" class="project-card" onclick="select_project('smart-home');">
+              <h1>Jarvis Smart Home</h1>
+              <h3>Raspberry Pi | Flask | HTML | CSS | JS</h3>
+              <h2>Personal Project</h2>
+              <h3>December 2020</h3>
+            </div>
+            <div id="arduino-drone-card" class="project-card" onclick="select_project('arduino-drone');">
+              <h1>Arduino Drone</h1>
+              <h3>3D-Printing | Arduino | C</h3>
+              <h2>Personal Project</h2>
+              <h3>September 2020</h3>
+            </div>
+            <!-- <div id="rethink-card" class="project-card" onclick="select_project('rethink');">
+              <h1>Rethink</h1>
+              <h3>Adobe XD</h3>
+              <h2>Amazon + Adobe Creative Jam</h2>
+              <h3>October 2020</h3>
+            </div> -->
+            <div id="puppr-card" class="project-card" onclick="select_project('puppr');">
+              <h1>Puppr</h1>
+              <h3>Flask | HTML | CSS | JS | Python | Firebase</h3>
+              <h2>TOHacks 2020</h2>
+              <h3>May 2020</h3>
+            </div>
+            <div id="dk-card" class="project-card" onclick="select_project('dk');">
+              <h1>Donkey Kong Re-creation</h1>
+              <h3>Java | HTML | Hardware</h3>
+              <h2>Personal Project</h2>
+              <h3>April 2019</h3>
+            </div>
+            <div id="first-card" class="project-card" onclick="select_project('first');">
+              <h1>FIRST Robotics</h1>
+              <h3>C++ | Java | Hardware</h3>
+              <h2>Senior Lead</h2>
+              <h3>2019</h3>
+            </div>
+          </div>
+
+          <!-- PROJECT CONTENTS -->
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-8">
+            <!-- <div id="todoit" class="project-content">
+              <h1>ToDoIt</h1>
+            </div> -->
+            <div id="smart-home" class="project-content">
+              <h1>Jarvis Smart Home</h1>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <img src="Images/project_smarthome1.png" style="width: 100%" />
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <img src="Images/project_smarthome2.png" style="width: 100%" />
+                </div>
+              </div>
+              <p>
+                I designed and developed a Smart Clock using Flask,
+                RaspberryPi and a captive touchscreen. This Smart Clock
+                shows the time, date, weather and other useful information.
+                Using the touchscreen, it can interact with smart home
+                functions, such as turning on and off lights and other
+                features.
+              </p>
+
+              <p>
+                To complete my creation, I used SolidWorks to design an enclosure that would hold the Raspberry Pi,
+                speakers, amplifier board, and wiring. I then 3D-printed the enclosure in four large parts and assembled
+                the whole enclosure using M3 screws. I currently use this Jarvis Smart Home as my main bedroom clock and
+                alarm.
+              </p>
+
+              <p>
+                Originally, I integrated Google Home API with the
+                addition of SnowBoy for custom wake words, which I set to "Jarvis". However, since doing this the
+                Snowboy library has been deprecated and I have not had time to find an alternative, so the Google Home
+                functionality is temporarily disabled.
+              </p>
+
+              <p>
+                I attempted to design both the software and enclosure with expandibility in mind. In the future, I would
+                like to possibly add Spotify API integration and Bluetooth capabilities.
+              </p>
+            </div>
+            <div id="arduino-drone" class="project-content">
+              <h1>Arduino Drone</h1>
+              <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <img src="Images/project_drone1.jpg" style="width: 100%" />
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <img src="Images/project_drone4.png" style="width: 100%" />
+                </div>
+              </div>
+
+              <p>
+                I designed, printed, wired and programming an Arduino
+                Drone. The body and arms are created in SolidWorks and
+                3D-printed on my own printer. The design is modular so that if
+                one arm breaks, I can easily replace the part without having
+                to reprint an entire new body.
+              </p>
+
+              <p>
+                I have also constructed a radio transmitting module as well.
+                This transmitter consists of two joysticks and two
+                potentiometers wired into an Arduino Nano, which processes and
+                converts the signals to transmit wirelessly by the NRF module.
+                This entire controller is powered off six AA batteries.
+              </p>
+
+              <p>
+                The drone electronics consist of a receiving NRF module that
+                is wired to another Arduino Nano to convert the signals back
+                and then sends those signals to the brain, another Arduino
+                Nano. Yes, this drone consists of three different Arduinos.
+                This main Arduino Nano, the flight controller, processes
+                the signals from the radio receiver and the gyroscopic module
+                to calculate the angle and velocity of the drone. These
+                calculations are then processed and send to the electronic
+                speed controllers to speed up or slow down the motors. The
+                drone is powered off a single 2200mAh rechargable LiPo
+                battery.
+              </p>
+
+              <p>
+                In the future, I would like to add a first-person view (FPV) camera to see what the
+                drone is seeing, along with a Go-Pro on top of the drone to
+                capture aerial photos and videos.
+              </p>
+            </div>
+            <!-- <div id="rethink" class="project-content">
+              <h1>Rethink</h1>
+              <div class="row">
+
+              </div>
+            </div> -->
+            <div id="puppr" class="project-content">
+              <h1>Puppr</h1>
+              <img src="Images/project_puppr1.png" style="width: 100%" />
+              <p>
+                During TOHacks 2020, myself and two other team members built
+                Puppr, a digital platform to connect lonely, isolated users
+                with local dogs that are available for adoption. These dogs
+                will help with users' mental health as they continue
+                quarintine and reimmerse themselves back into a social world.
+                The entire website was built in 48 hours from scratch.
+              </p>
+              <img src="Images/project_puppr2.png" style="width: 100%" />
+
+              <p>
+                Puppr's front end was written in HTML, CSS and Javascript
+                while the backend was written in Python and Firebase. The landing and
+                signup page are both purely HTML and CSS, while the selection
+                page's functionality is Javascript. When selecting the dogs,
+                you are seeing real dogs available from a real shelter. Using
+                Flask to build a web-scraping API, we were able to import that
+                information into our page for the user to easily see. Whether
+                you select the checkmark or not, you will cycle through a
+                variety of dogs (however many are available at the time). If
+                you choose to click the checkmark, the dog's profile will be
+                saved in the left sidebar, where you can click on that saved
+                dog to go the shelter's webpage. Since this entire app was
+                built within a 48 hour time frame, our web-scraping is
+                accurate, but a little slow; if we were to redo this project,
+                that would be one of our key redesigns for Puppr.
+              </p>
+            </div>
+            <div id="dk" class="project-content">
+              <h1>Donkey Kong Recreation</h1>
+              <img src="Images/project_dk1.jpg" class="dk-img" />
+              <p>
+                I decided to recreate the classic 1980s Donkey Kong Arcade game. I was able to completely adapt and
+                re-create the first level in it's entirety. The game included accurate gameplay and exact sprite
+                animations, with the sprites taken from the original spritesheet. Viewing the final product
+                compared to the original, I had almost made an exact replica of the orignal arcade game.
+              </p>
+              <p>
+                To code the game, I used a combination of Java and HTML along with JGEngine to render the environment.
+                A challenging hurdle to overcome was matching the bounding boxes to the spritesheet and create seamless
+                animations, but it turned out quite smooth in the end. I had started with basic keyboard controls, but
+                eventually integrated gyroscopic movement controller. This controller was
+                an alternate way to play the game and added a level of difficulty, both in the programming acclerometer
+                values and completing the level.
+              </p>
+            </div>
+            <div id="first" class="project-content">
+              <h1>FIRST Robotics</h1>
+              <img src="Images/project_first.jpg" class="first-img" />
+              <p>
+                I was Co-Captain of the FIRST Robotics Team that competed at
+                the FIRST Western National Competiton. I lead the team through
+                design, fabrication, and testing throughout the robot's
+                construction. The FIRST team was only in it's second year and
+                there were various hiccups along the journey to the Western
+                National Competition. Many of the members did not have any
+                knowledge of fabrication, electronics or programming, so
+                myself and the other captain took it upon ourselves to educate
+                the team as much as we could.
+              </p>
+
+              <p>
+                I taught the students how to think about the many factors and
+                variables that we needed to consider when designing such a
+                robot, but keep the solutions realistic and manageable for the
+                size of our team. We also had to consider the easiest and most
+                efficient way to manufacture said robot within the 6 week
+                timeframe provided. At the end of 6 intense weeks of designing
+                and building, the team arrived at a relatively well designed
+                robot given the materials and time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <h1>We may have just met, but let's connect!</h1>
+        <a class="hvr-underline-from-left" href="mailto:keatslees&#64yahoo.com?Subject=Let 's Talk! "><i
+            class="fa fa-envelope "></i></a>
+        <a class="hvr-underline-from-left" href="https://www.linkedin.com/in/keatonlees " target="_blank "><i
+            class="fa fa-linkedin "></i></a>
+        <a class="hvr-underline-from-left" href="https://github.com/keatonlees " target="_blank "><i
+            class="fa fa-github "></i></a>
+        <a class="hvr-underline-from-left" href="https://instagram.com/kleez3dprints " target="_blank "><i
+            class="fa fa-instagram " id="insta " aria-hidden="true "></i></a>
+        <h3>Coded by Keaton Lees | Feb 2020</h3>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>
