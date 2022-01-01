@@ -1,0 +1,6 @@
+.toggle-container {
+}
+
+.toggle-container:hover {
+  cursor: pointer;
+}

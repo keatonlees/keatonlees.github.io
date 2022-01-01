@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+/* ----- fonts ----- */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+/* ----- global variables ----- */
+:root {
+  /* ----- set colours below ----- */
+  --bgColor: #000000;
+  --bgColorLight: #000000;
+  --fontColor: #000000;
+  --fontColorLight: #000000;
+  --accentColor: #000000;
+  --accentColorLight: #000000;
+  --accentColorDark: #000000;
+
+  --navbarHeight: 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* ----- light and dark mode themes ----- */
+body.light-mode {
+  --bgColor: #ececec;
+  --fontColor: #252525;
+  --accentColor: #a00045;
+  --fontColorLight: lightgrey;
+}
+body.dark-mode {
+  --bgColor: #151515;
+  --bgColorLight: #353535;
+  --fontColor: #ececec;
+  --accentColor: #a00045;
+  --fontColorLight: #656565;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--bgColor);
+  color: var(--fontColor);
+  transition: background-color 0.3s ease;
+  /* font-family: "Alegreya Sans", sans-serif; */
+  font-family: "Titillium Web", sans-serif;
+  /* font-family: "Source Sans Pro", sans-serif; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* ----- to fix weird gaps ----- */
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+}
+
+.web-container {
+  /* scroll-snap-type: y mandatory;
+  overflow-y: scroll; */
+  height: 100vh;
+}
+
+.page-container {
+  padding: 0px var(--pageMargins);
+}
+
+.page-section {
+  height: 100vh;
+  /* scroll-snap-align: start; */
+}
+
+.section-centered {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.particles {
+  position: fixed;
+  z-index: -100;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* ----- custom scrolbar ----- */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--fontColorLight);
+  border-radius: 10px;
+}
+
+/* ----- media queries ----- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  :root {
+    --pageMargins: 10px;
   }
-  to {
-    transform: rotate(360deg);
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  :root {
+    --pageMargins: 50px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  :root {
+    --pageMargins: 100px;
+    --contactMargins: 25px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  :root {
+    --pageMargins: 160px;
+    --contactMargins: 40px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  :root {
+    --pageMargins: 300px;
+    --contactMargins: 75px;
   }
 }

@@ -1,0 +1,14 @@
+.projects-item {
+  /* width: 100%;
+  height: 100px; */
+}
+
+.projects-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 100;
+}
+
+.project-title {
+}

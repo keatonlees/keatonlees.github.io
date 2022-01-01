@@ -1,0 +1,17 @@
+.landing-container {
+  height: calc(100vh - var(--navbarHeight));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pre-title {
+  color: var(--accentColor);
+  font-size: 32px;
+}
+.title {
+  font-size: 120px;
+}
+.sub-title {
+  color: var(--fontColorLight);
+}
