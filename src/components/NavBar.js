@@ -119,7 +119,7 @@ function NavBar() {
                 </Link>
               )}
 
-              {/* {location === "/about" ? (
+              {location === "/about" ? (
                 <p className="mobile-link-item-active">About</p>
               ) : (
                 <Link
@@ -132,7 +132,7 @@ function NavBar() {
                 >
                   About
                 </Link>
-              )} */}
+              )}
 
               {location === "/projects" ? (
                 <p className="mobile-link-item-active">Projects</p>
@@ -170,7 +170,7 @@ function NavBar() {
               </Link>
             )}
 
-            {/* {location === "/about" ? (
+            {location === "/about" ? (
               <p className="navbar-link-item-active">About</p>
             ) : (
               <Link
@@ -182,7 +182,7 @@ function NavBar() {
               >
                 About
               </Link>
-            )} */}
+            )}
 
             {location === "/projects" ? (
               <p className="navbar-link-item-active">Projects</p>

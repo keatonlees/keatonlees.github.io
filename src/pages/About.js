@@ -9,6 +9,8 @@ import Landing from "../components/Landing";
 import MegaText from "../components/MegaText";
 import ScrollDown from "../components/ScrollDown";
 import ScrollToTop from "../components/ScrollToTop";
+import ImageTimeline from "../components/ImageTimeline";
+import { motion } from "framer-motion";
 
 // ----- styles -----
 import "../styles/About.css";
@@ -81,7 +83,7 @@ function About(props) {
         onSlideChange={(event) => handleSlideChange(event.activeIndex)}
       >
         <SwiperSlide className="center-slide">
-          <div className="landing-grid-container">
+          <motion.div className="landing-grid-container">
             <div className="landing-grid-item-one">
               <Landing
                 preTitle="About Me"
@@ -89,8 +91,10 @@ function About(props) {
                 subTitle="A technology enthusiast, passionate developer, gym aficionado, amateur chef, lively gamer, fascinated traveller and sushi lover"
               />
             </div>
-            <div className="landing-grid-item-two"></div>
-          </div>
+            <div className="landing-grid-item-two">
+              <ImageTimeline />
+            </div>
+          </motion.div>
         </SwiperSlide>
 
         <SwiperSlide className="center-slide">
