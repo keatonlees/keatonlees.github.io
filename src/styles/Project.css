@@ -1,27 +1,246 @@
-.project-banner {
-  width: calc(100vw - 12px);
-  height: 100vh;
-  margin-left: calc(-1 * var(--pageMargins));
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-}
+/* 
+For each:
+- the what
+  - describe the product and usecases
+- the why
+  - inspiration and goals
+- the how
+  - design and develop process
+  - technolgies used
+- reflection
+  - bugs, fixes, future features
+*/
 
-.project-banner-bg {
-  height: 150px;
+.banner-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 0 5%;
-  font-size: 300px;
-  color: white;
-  background-color: black;
+  justify-content: center;
 }
-
 .project-banner-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.project-banner-container-top,
+.project-banner-container-bottom {
+  width: 100%;
+  height: 200px;
+}
+.project-banner-container-top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: flex-end;
+  margin-bottom: 15px;
+}
+.project-banner-container-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 15px;
+  font-size: 20px;
+}
+.project-banner-title {
+  font-size: 5vw;
+  font-weight: 700;
+}
+.project-banner-number {
+  font-size: 12vw;
+  font-weight: 700;
+  margin-bottom: -30px;
+  color: var(--fontColourAccentTwo);
+}
+
+.project-grid-container {
+  width: 100%;
+  display: grid;
+  align-items: center;
+}
+.two-col {
+  grid-template-areas: "projectGridText projectGridImage";
+}
+.two-col-reverse {
+  grid-template-areas: "projectGridImage projectGridText";
+}
+.two-row {
+  grid-template-areas:
+    "projectGridText"
+    "projectGridImage";
+}
+.project-grid-text {
+  grid-area: projectGridText;
+  display: flex;
+  margin: auto;
+}
+.text-left {
+  padding-right: 15px;
+}
+.text-right {
+  padding-left: 15px;
+}
+.row-width {
+  width: 70%;
+}
+.project-vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  padding-right: 10px;
+  font-size: 50px;
+  color: var(--fontColourAccentOne);
+}
+.project-paragraph {
+  text-align: justify;
+  font-size: 18px;
+}
+
+.project-grid-image {
+  grid-area: projectGridImage;
+  display: flex;
+  justify-content: center;
+}
+.project-image {
+  width: 35vw;
+}
+
+.project-overlay {
+  width: 15vw;
+}
+
+.project-tool-logos-container {
+  padding-top: 60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.project-tool-logos {
+  height: 5vw;
+  padding: 0px 15px;
+}
+
+.project-nav-container {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.project-prev-container,
+.project-next-container,
+.project-preview-container {
+  display: flex;
+  align-items: center;
+}
+.project-prev-container {
+  justify-content: flex-start;
+  text-align: left;
+}
+.project-preview-container {
+  justify-content: center;
+}
+.project-next-container {
+  justify-content: flex-end;
+  text-align: right;
+}
+.project-nav-link {
+  text-decoration: none;
+}
+
+.project-prev-text,
+.project-next-text {
+  display: flex;
+  align-items: center;
+}
+.project-prev-text:hover,
+.project-next-text:hover {
+  cursor: pointer;
+}
+
+.project-preview-image {
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.5s all;
+}
+
+.project-nav-pretitle {
+  font-size: 18px;
+  color: var(--fontColourAccentTwo);
+}
+.project-nav-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 5px;
+  color: var(--fontColourBase);
+}
+.project-nav-arrow {
+  font-size: 36px;
+  color: var(--fontColourBase);
+}
+.arrow-left {
+  margin-right: 10px;
+}
+.arrow-right {
+  margin-left: 10px;
+}
+
+/* ----- media queries ----- */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 600px) {
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+  .project-banner-container-bottom {
+    font-size: 16px;
+  }
+  .project-banner-title {
+    font-size: 7vw;
+  }
+  .project-banner-number {
+    font-size: 16vw;
+    margin-bottom: -20px;
+  }
+  .project-paragraph {
+    font-size: 14px;
+  }
+  .project-tool-logos {
+    height: 8vw;
+    margin-bottom: 15px;
+  }
+  .project-vertical-text {
+    font-size: 30px;
+  }
+  .project-nav-pretitle {
+    font-size: 14px;
+  }
+  .project-nav-title {
+    font-size: 24px;
+  }
+  .project-nav-arrow {
+    font-size: 20px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+  .two-col,
+  .two-col-reverse {
+    grid-template-areas:
+      "projectGridText"
+      "projectGridImage";
+  }
+  .text-left,
+  .text-right {
+    padding: 0;
+  }
+  .project-image {
+    width: 80%;
+    padding-top: 15px;
+  }
+  .row-width {
+    width: 100%;
+  }
+  .project-overlay {
+    display: none;
+  }
 }

@@ -1,0 +1,18 @@
+.projectlinks-container {
+  position: fixed;
+  bottom: 0;
+  right: var(--pageMargins);
+  z-index: 10;
+  margin-bottom: 15px;
+}
+
+.projectlinks-link {
+  font-size: 40px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: var(--fontColourBase);
+  transition: 0.3s all;
+}
+.projectlinks-link:hover {
+  color: var(--accentColourBase);
+}

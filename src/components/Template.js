@@ -5,6 +5,8 @@ import React from "react";
 
 // ----- components -----
 
+// ----- util -----
+
 // ----- styles -----
 
 function FUNCTION_NAME() {

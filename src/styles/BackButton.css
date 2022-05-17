@@ -1,0 +1,22 @@
+.back-btn-container {
+  position: fixed;
+  top: var(--navbarHeight);
+  left: var(--pageMargins);
+  margin-top: 15px;
+  padding: 5px 8px;
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  background-color: var(--fontColourAccentTwo);
+  z-index: 10;
+}
+
+.back-btn-link {
+  text-decoration: none;
+  color: var(--fontColourBase);
+}
+
+.back-btn-icon {
+  font-size: 22px;
+  margin-right: 5px;
+}
