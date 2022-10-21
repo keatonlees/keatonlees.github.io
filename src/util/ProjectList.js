@@ -229,6 +229,8 @@ export const ProjectList = [
     name: "FIRST Robotics",
     url: "/first",
     timeframe: "2019",
+    role: "Software/Hardware Developer",
+    type: "School Team",
     description:
       "As co-captain of my high school FIRST robotics team, I led the students through the design, build and testing process",
     tags: ["Autonomous Development", "Hardware Development", "Robotics"],

@@ -2,20 +2,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Mousewheel } from "swiper";
+import SwiperCore, { Pagination, Mousewheel, Navigation } from "swiper";
 import { motion } from "framer-motion";
-import ReactTooltip from "react-tooltip";
+// import ReactTooltip from "react-tooltip";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLongArrowAltRight,
-  faChevronUp,
+  // faChevronUp,
 } from "@fortawesome/free-solid-svg-icons";
+import MouseTooltip from "react-sticky-mouse-tooltip";
 
 // ----- components -----
 import Landing from "../components/Landing";
 import MegaText from "../components/MegaText";
 import ScrollDown from "../components/ScrollDown";
-import ImageCollage from "../components/ImageCollage";
+// import ImageCollage from "../components/ImageCollage";
+import ContactSlide from "../components/ContactSlide";
 
 // ----- util -----
 import { ProjectList } from "../util/ProjectList";
@@ -26,7 +28,8 @@ import "../styles/Projects.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/mousewheel";
-SwiperCore.use([Pagination, Mousewheel]);
+import "swiper/css/navigation";
+SwiperCore.use([Pagination, Mousewheel, Navigation]);
 
 function Projects(props) {
   const [swiperControl, setSwiperControl] = useState({});
@@ -35,10 +38,11 @@ function Projects(props) {
   // );
   const [currentProject, setCurrentProject] = useState(0);
   const [percentage, setPercentage] = useState(0);
-  const numOfSlides = 2;
+  const numOfSlides = 3;
   const handleSlideChange = (index) => {
     setPercentage((index / numOfSlides) * 100);
   };
+  const [tooltipVisible, setTooltipVisible] = useState(false);
 
   useEffect(() => {
     props.setProjectImageInitial({
@@ -46,7 +50,7 @@ function Projects(props) {
       height: "400px",
     });
     return () => {};
-  }, [props.setProjectImageInitial]);
+  }, [props, props.setProjectImageInitial]);
 
   const projectImages = [];
   ProjectList.forEach((element) => {
@@ -57,18 +61,23 @@ function Projects(props) {
     setCurrentProject(i);
   };
 
-  const handleHoverStart = () => {
-    const element = document.getElementById("see-project");
-    element.style.opacity = 1;
-  };
-  const handleHoverEnd = () => {
-    const element = document.getElementById("see-project");
-    element.style.opacity = 0;
-  };
-
   return (
     <>
       <MegaText text="Projects" percentage={percentage} />
+      <MouseTooltip
+        visible={tooltipVisible}
+        offsetX={15}
+        offsetY={10}
+        className="project-tooltip-container"
+      >
+        <div className="project-tooltip">
+          View project
+          <FontAwesomeIcon
+            icon={faLongArrowAltRight}
+            className="projects-tooltip-arrow"
+          />
+        </div>
+      </MouseTooltip>
       <ScrollDown swiperControl={swiperControl} />
       <Swiper
         onInit={(e) => {
@@ -88,30 +97,19 @@ function Projects(props) {
             <div className="landing-grid-item-one">
               <Landing
                 preTitle="My Projects"
-                title="What I've Done"
+                page="projects"
+                words={["done", "created", "developed", "made", "coded"]}
                 subTitle="Let me take you on a journey through designing, developing and testing various projects"
               />
             </div>
             <div className="landing-grid-item-two">
-              <ImageCollage images={projectImages} />
+              {/* <ImageCollage images={projectImages} /> */}
             </div>
           </div>
         </SwiperSlide>
 
         <SwiperSlide className="projects-container">
-          <div className="projects-section-top">
-            <motion.h1
-              className="projects-title"
-              key={currentProject}
-              variants={motionVariants}
-              initial={"hideAbove"}
-              animate={"showElement"}
-              exit={"exitMoveUp"}
-            >
-              {ProjectList[currentProject].name}
-            </motion.h1>
-          </div>
-
+          <div className="projects-section-top"></div>
           <div className="projects-section-middle-left">
             <motion.div
               className="projects-content-left"
@@ -138,9 +136,16 @@ function Projects(props) {
               </div>
             </motion.div>
           </div>
-
           <div className="projects-section-middle-center">
-            <Link to={"/projects" + ProjectList[currentProject].url}>
+            <Link
+              to={"/projects" + ProjectList[currentProject].url}
+              onMouseEnter={() => {
+                setTooltipVisible(true);
+              }}
+              onMouseLeave={() => {
+                setTooltipVisible(false);
+              }}
+            >
               <motion.img
                 src={ProjectList[currentProject].cover}
                 alt="projects_image"
@@ -149,8 +154,6 @@ function Projects(props) {
                 variants={motionVariants}
                 initial={"hide"}
                 animate={"showElement"}
-                onHoverStart={handleHoverStart}
-                onHoverEnd={handleHoverEnd}
                 style={{
                   width: props.projectImageInitial.width,
                   height: props.projectImageInitial.height,
@@ -158,7 +161,6 @@ function Projects(props) {
               />
             </Link>
           </div>
-
           <motion.div
             className="projects-section-middle-right"
             key={currentProject}
@@ -177,13 +179,6 @@ function Projects(props) {
                     }`
                   : ProjectList.length - ProjectList[currentProject].id + 1}
               </h1>
-              <div className="projects-see-project" id="see-project">
-                View project
-                <FontAwesomeIcon
-                  icon={faLongArrowAltRight}
-                  className="projects-see-project-arrow"
-                />
-              </div>
             </motion.div>
             <motion.img
               src={ProjectList[currentProject].overlay}
@@ -195,7 +190,6 @@ function Projects(props) {
               exit={"exitMoveDown"}
             />
           </motion.div>
-
           <motion.div
             className="projects-section-bottom"
             variants={motionVariants}
@@ -203,35 +197,37 @@ function Projects(props) {
             whileInView={"showElement"}
             exit={"exitMoveDown"}
           >
-            <div className="projects-selector-container">
+            <Swiper
+              spaceBetween={5}
+              slidesPerView={4}
+              centeredSlides={true}
+              style={{ height: "50%", margin: "0px 30%" }}
+              className="project-selector-swiper"
+              onSlideChange={(event) => handleProjectChange(event.activeIndex)}
+            >
               {ProjectList.map((data, i) => {
                 return (
-                  <div
+                  <SwiperSlide
                     key={i}
-                    className="projects-selector-item"
-                    onClick={() => handleProjectChange(i)}
-                    data-tip={data.name}
-                    data-for="project-selector"
+                    style={{ margin: "0px" }}
+                    className="project-selector-swiperslide"
                   >
-                    <img
-                      src={data.selector}
-                      alt="projects_selector"
-                      className="projects-selector-img"
-                    />
-                    {i === currentProject ? (
-                      <div className="projects-selector-icon"></div>
-                    ) : null}
-                  </div>
+                    <div className="project-selector-img-container">
+                      <img
+                        src={data.selector}
+                        alt="projects_selector"
+                        className="projects-selector-img"
+                      />
+                    </div>
+                  </SwiperSlide>
                 );
               })}
-              <ReactTooltip
-                className="tooltip"
-                id="project-selector"
-                effect="solid"
-                delayHide={400}
-              />
-            </div>
+            </Swiper>
           </motion.div>
+        </SwiperSlide>
+
+        <SwiperSlide className="center-slide">
+          <ContactSlide />
         </SwiperSlide>
 
         <SwiperSlide className="projects-container-mobile">
@@ -246,7 +242,11 @@ function Projects(props) {
               return (
                 <div className="projects-mobile-item" key={i}>
                   <Link to={`/projects${data.url}`}>
-                    <img src={data.cover} className="projects-mobile-image" />
+                    <img
+                      src={data.cover}
+                      className="projects-mobile-image"
+                      alt="mobile_img"
+                    />
                   </Link>
                 </div>
               );

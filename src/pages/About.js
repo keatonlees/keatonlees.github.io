@@ -3,6 +3,14 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, { Pagination, Mousewheel } from "swiper";
 // import { motion } from "framer-motion";
+import {
+  Accordion,
+  AccordionItem,
+  AccordionItemButton,
+  AccordionItemHeading,
+  AccordionItemPanel,
+} from "react-accessible-accordion";
+import { ExperienceList } from "../util/ExperienceList";
 
 // ----- components -----
 import Landing from "../components/Landing";
@@ -31,19 +39,21 @@ import heroku from "../images/tool-heroku.png";
 import html from "../images/tool-html.png";
 import java from "../images/tool-java.png";
 import js from "../images/tool-js.png";
+import mongodb from "../images/tool-mongodb.png";
 import mysql from "../images/tool-mysql.png";
 import nodejs from "../images/tool-nodejs.png";
 import printing from "../images/tool-printing.png";
 import python from "../images/tool-python.png";
 import raspi from "../images/tool-raspi.png";
 import react from "../images/tool-react.png";
+import redux from "../images/tool-redux.png";
 import solidworks from "../images/tool-solidworks.png";
 import unity from "../images/tool-unity.png";
 
-import placeholder from "../images/placeholder.png";
+// import placeholder from "../images/placeholder.png";
 import taiwan from "../images/taiwan.jpg";
 import xbox from "../images/xbox.jpg";
-import printer from "../images/printer.jpg";
+// import printer from "../images/printer.jpg";
 import computer from "../images/computer.jpg";
 import ironman from "../images/ironman.jpg";
 import track from "../images/track.jpg";
@@ -87,8 +97,9 @@ function About(props) {
             <div className="landing-grid-item-one">
               <Landing
                 preTitle="About Me"
-                title="Who Am I?"
-                subTitle="A technology enthusiast, passionate developer, gym aficionado, amateur chef, lively gamer, fascinated traveller and sushi lover"
+                page="about"
+                words={["life", "work", "travels", "hobbies", "passions"]}
+                subTitle="A look at where I've worked, what I've learned, what my passions are, and where I've traveled."
               />
             </div>
             <div className="landing-grid-item-two">
@@ -99,96 +110,177 @@ function About(props) {
 
         <SwiperSlide className="center-slide">
           <div className="about-experience-container">
-            <h1 className="about-heading">My Experience</h1>
-            <div className="about-experience-row">
-              <p className="about-experience-year">2022</p>
-              <div className="about-experience-items">
-                <div className="about-experience-item">
-                  <p className="about-experience-title">
-                    Software Engineer{" "}
-                    <a
-                      href="https://www.jamlabs.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="about-experience-link accent-colour"
-                    >
-                      @ Jamlabs Data Science
-                    </a>
-                  </p>
-                  <p className="about-experience-description">Description 1</p>
-                  <p className="about-experience-description">Description 2</p>
-                </div>
-              </div>
-            </div>
+            <h1 className="about-heading">My Experiences</h1>
 
-            <div className="about-experience-row">
-              <p className="about-experience-year">2021</p>
-              <div className="about-experience-items">
-                <div className="about-experience-item">
-                  <p className="about-experience-title">
-                    Full-Stack Engineer{" "}
-                    <a className="about-experience-link accent-colour">
-                      @ Self-Employed Company
-                    </a>
-                  </p>
-                  <p className="about-experience-description">
-                    Developed Octo-Do, a flexible to-do list web application
-                    that allows a user to create, edit and delete tasks using
-                    React, Node.js and MySQL
-                  </p>
-                  <p className="about-experience-description">
-                    Implemented user authentication using Firebase and deployed
-                    completed application to Heroku
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="about-experience-row">
-              <p className="about-experience-year">2020</p>
-              <div className="about-experience-items">
-                <div className="about-experience-item">
-                  <p className="about-experience-title">
-                    Systems and Controls Engineer{" "}
-                    <a
-                      href="https://www.ballard.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="about-experience-link accent-colour"
-                    >
-                      @ Ballard Power Systems
-                    </a>
-                  </p>
-                  <p className="about-experience-description">
-                    Developed automated Python scripts to update and maintain
-                    sensor database of over 300 fuel cell modules that will be
-                    used by a production team of 20 members
-                  </p>
-                  <p className="about-experience-description">
-                    Responsible for assembling and testing over 35 unique
-                    components for use in prototype fuel cells
-                  </p>
-                </div>
-                <div className="about-experience-item">
-                  <p className="about-experience-title">
-                    Systems Engineer{" "}
-                    <a
-                      href="https://www.ballard.com/"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="about-experience-link accent-colour"
-                    >
-                      @ Ballard Power Systems
-                    </a>
-                  </p>
-                  <p className="about-experience-description">
-                    Developed programs to interface with hydrogen fuel cells
-                    using Arduino and Raspberry Pi microcontrollers to decrease
-                    testing times by 25%
-                  </p>
-                </div>
-              </div>
-            </div>
+            <Accordion preExpanded={["2022"]}>
+              <AccordionItem uuid="2022">
+                <AccordionItemHeading>
+                  <AccordionItemButton>2022</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div className="about-experience-item">
+                    <h1 className="about-experience-title">
+                      {ExperienceList[0].title} @{" "}
+                      <a
+                        href={ExperienceList[0].link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="about-experience-company about-experience-company-hover"
+                      >
+                        {ExperienceList[0].company}
+                      </a>
+                    </h1>
+                    <div className="about-experience-logos">
+                      {ExperienceList[0].toolLogos.map((logo) => {
+                        return (
+                          <img
+                            src={logo}
+                            className="about-experience-logo"
+                            alt="logo"
+                          />
+                        );
+                      })}
+                    </div>
+                    {ExperienceList[0].description.map((item) => {
+                      return (
+                        <p className="about-experience-description">{item}</p>
+                      );
+                    })}
+                  </div>
+                  <div
+                    className="about-experience-item"
+                    style={{ marginTop: "20px" }}
+                  >
+                    <h1 className="about-experience-title">
+                      {ExperienceList[1].title} @{" "}
+                      <a
+                        href={ExperienceList[1].link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="about-experience-company about-experience-company-hover"
+                      >
+                        {ExperienceList[1].company}
+                      </a>
+                    </h1>
+                    <div className="about-experience-logos">
+                      {ExperienceList[1].toolLogos.map((logo) => {
+                        return (
+                          <img
+                            src={logo}
+                            className="about-experience-logo"
+                            alt="logo"
+                          />
+                        );
+                      })}
+                    </div>
+                    {ExperienceList[1].description.map((item) => {
+                      return (
+                        <p className="about-experience-description">{item}</p>
+                      );
+                    })}
+                  </div>
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem uuid="2021">
+                <AccordionItemHeading>
+                  <AccordionItemButton>2021</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div className="about-experience-item">
+                    <h1 className="about-experience-title">
+                      {ExperienceList[2].title} @{" "}
+                      <span className="about-experience-company">
+                        {ExperienceList[2].company}
+                      </span>
+                    </h1>
+                    <div className="about-experience-logos">
+                      {ExperienceList[2].toolLogos.map((logo) => {
+                        return (
+                          <img
+                            src={logo}
+                            className="about-experience-logo"
+                            alt="logo"
+                          />
+                        );
+                      })}
+                    </div>
+                    {ExperienceList[2].description.map((item) => {
+                      return (
+                        <p className="about-experience-description">{item}</p>
+                      );
+                    })}
+                  </div>
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem uuid="2020">
+                <AccordionItemHeading>
+                  <AccordionItemButton>2020</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div className="about-experience-item">
+                    <h1 className="about-experience-title">
+                      {ExperienceList[3].title} @{" "}
+                      <a
+                        href={ExperienceList[3].link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="about-experience-company about-experience-company-hover"
+                      >
+                        {ExperienceList[3].company}
+                      </a>
+                    </h1>
+                    <div className="about-experience-logos">
+                      {ExperienceList[3].toolLogos.map((logo) => {
+                        return (
+                          <img
+                            src={logo}
+                            className="about-experience-logo"
+                            alt="logo"
+                          />
+                        );
+                      })}
+                    </div>
+                    {ExperienceList[3].description.map((item) => {
+                      return (
+                        <p className="about-experience-description">{item}</p>
+                      );
+                    })}
+                  </div>
+                  <div
+                    className="about-experience-item"
+                    style={{ marginTop: "20px" }}
+                  >
+                    <h1 className="about-experience-title">
+                      {ExperienceList[4].title} @{" "}
+                      <a
+                        href={ExperienceList[4].link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="about-experience-company about-experience-company-hover"
+                      >
+                        {ExperienceList[4].company}
+                      </a>
+                    </h1>
+                    <div className="about-experience-logos">
+                      {ExperienceList[4].toolLogos.map((logo) => {
+                        return (
+                          <img
+                            src={logo}
+                            className="about-experience-logo"
+                            alt="logo"
+                          />
+                        );
+                      })}
+                    </div>
+                    {ExperienceList[4].description.map((item) => {
+                      return (
+                        <p className="about-experience-description">{item}</p>
+                      );
+                    })}
+                  </div>
+                </AccordionItemPanel>
+              </AccordionItem>
+            </Accordion>
           </div>
         </SwiperSlide>
 
@@ -199,31 +291,37 @@ function About(props) {
               <div className="about-tools-col tools1">
                 <p>Development</p>
                 <div className="about-tools-tools">
-                  <img src={js} className="about-tools-img" />
-                  <img src={react} className="about-tools-img" />
-                  <img src={html} className="about-tools-img" />
-                  <img src={css} className="about-tools-img" />
-                  <img src={python} className="about-tools-img" />
-                  <img src={nodejs} className="about-tools-img" />
-                  <img src={flask} className="about-tools-img" />
-                  <img src={java} className="about-tools-img" />{" "}
-                  <img src={cplusplus} className="about-tools-img" />
-                  <img src={mysql} className="about-tools-img" />
-                  <img src={firebase} className="about-tools-img" />
-                  <img src={heroku} className="about-tools-img" />
+                  <img src={js} className="about-tools-img" alt="tool" />
+                  <img src={react} className="about-tools-img" alt="tool" />
+                  <img src={html} className="about-tools-img" alt="tool" />
+                  <img src={css} className="about-tools-img" alt="tool" />
+                  <img src={python} className="about-tools-img" alt="tool" />
+                  <img src={nodejs} className="about-tools-img" alt="tool" />
+                  <img src={flask} className="about-tools-img" alt="tool" />
+                  <img src={redux} className="about-tools-img" alt="tool" />
+                  <img src={java} className="about-tools-img" alt="tool" />
+                  <img src={cplusplus} className="about-tools-img" alt="tool" />
+                  <img src={mysql} className="about-tools-img" alt="tool" />
+                  <img src={mongodb} className="about-tools-img" alt="tool" />
+                  <img src={firebase} className="about-tools-img" alt="tool" />
+                  <img src={heroku} className="about-tools-img" alt="tool" />
                 </div>
               </div>
               <div className="about-tools-col tools2">
                 <p>Tools</p>
                 <div className="about-tools-tools">
-                  <img src={unity} className="about-tools-img" />
-                  <img src={csharp} className="about-tools-img" />
-                  <img src={git} className="about-tools-img" />
-                  <img src={figma} className="about-tools-img" />
-                  <img src={printing} className="about-tools-img" />
-                  <img src={raspi} className="about-tools-img" />
-                  <img src={arduino} className="about-tools-img" />
-                  <img src={solidworks} className="about-tools-img" />
+                  <img src={unity} className="about-tools-img" alt="tool" />
+                  <img src={csharp} className="about-tools-img" alt="tool" />
+                  <img src={git} className="about-tools-img" alt="tool" />
+                  <img src={figma} className="about-tools-img" alt="tool" />
+                  <img src={printing} className="about-tools-img" alt="tool" />
+                  <img src={raspi} className="about-tools-img" alt="tool" />
+                  <img src={arduino} className="about-tools-img" alt="tool" />
+                  <img
+                    src={solidworks}
+                    className="about-tools-img"
+                    alt="tool"
+                  />
                 </div>
               </div>
             </div>
@@ -235,7 +333,11 @@ function About(props) {
             <h1 className="about-heading">Hobbies and Interests</h1>
             <div className="about-interests-items">
               <div className="about-interests-item item1">
-                <img src={track} className="about-interests-img" />
+                <img
+                  src={track}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Track and Field</h1>
                   <p className="about-interests-description">
@@ -248,7 +350,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item2">
-                <img src={cooking} className="about-interests-img" />
+                <img
+                  src={cooking}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Cooking</h1>
                   <p className="about-interests-description">
@@ -259,7 +365,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item3">
-                <img src={computer} className="about-interests-img" />
+                <img
+                  src={computer}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Technology</h1>
                   <p className="about-interests-description">
@@ -271,7 +381,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item4">
-                <img src={taiwan} className="about-interests-img" />
+                <img
+                  src={taiwan}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Traveling</h1>
                   <p className="about-interests-description">
@@ -282,7 +396,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item5">
-                <img src={taekwondo} className="about-interests-img" />
+                <img
+                  src={taekwondo}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Taekwondo</h1>
                   <p className="about-interests-description">
@@ -294,7 +412,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item6">
-                <img src={ironman} className="about-interests-img" />
+                <img
+                  src={ironman}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">3D-Printing</h1>
                   <p className="about-interests-description">
@@ -306,7 +428,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item7">
-                <img src={volleyball} className="about-interests-img" />
+                <img
+                  src={volleyball}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Volleyball</h1>
                   <p className="about-interests-description">
@@ -319,7 +445,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item8">
-                <img src={arduinoBoard} className="about-interests-img" />
+                <img
+                  src={arduinoBoard}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Mini-Projects</h1>
                   <p className="about-interests-description">
@@ -330,7 +460,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item9">
-                <img src={xbox} className="about-interests-img" />
+                <img
+                  src={xbox}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Gaming</h1>
                   <p className="about-interests-description">
@@ -341,7 +475,11 @@ function About(props) {
               </div>
 
               <div className="about-interests-item item10">
-                <img src={piano} className="about-interests-img" />
+                <img
+                  src={piano}
+                  className="about-interests-img"
+                  alt="interest"
+                />
                 <div className="about-interests-overlay about-light-colour">
                   <h1 className="about-interests-title">Music</h1>
                   <p className="about-interests-description">

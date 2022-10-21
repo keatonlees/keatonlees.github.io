@@ -1,5 +1,7 @@
 .toggle-container {
-  height: 25px;
+  height: 100%;
+  transition: 1s all;
+
 }
 
 .toggle-container:hover {
@@ -7,26 +9,5 @@
 }
 
 .toggle-icon {
-  margin-left: -3px;
-  margin-top: -3px;
-  font-size: 16px;
-}
-
-.toggle-switch.react-toggle .react-toggle-track {
-  background-color: #8d8d8d;
-  color: #ececec;
-}
-.toggle-switch.react-toggle:hover:not(.react-toggle--disabled)
-  .react-toggle-track {
-  background-color: #7c7c7c;
-}
-.toggle-switch.react-toggle .react-toggle-thumb {
-  background-color: #ececec;
-}
-.toggle-switch.react-toggle--focus .react-toggle-thumb {
-  box-shadow: none;
-}
-.toggle-switch.react-toggle:active:not(.react-toggle--disabled)
-  .react-toggle-thumb {
-  box-shadow: none;
+  font-size: 1rem;
 }

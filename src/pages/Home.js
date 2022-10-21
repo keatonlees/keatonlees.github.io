@@ -68,8 +68,16 @@ function Home(props) {
             <div className="landing-grid-item-one">
               <Landing
                 preTitle="Keaton Lees"
-                title="Software Developer"
-                subTitle="Currently a Systems Design Engineering Student @ The University of Waterloo. Previously worked at Ballad Power Systems and Jamlabs Data Science."
+                page="home"
+                words={[
+                  "Software Developer",
+                  "Tech Enthusiast",
+                  "Gym Aficionado",
+                  "Lively Gamer",
+                  "Fascinated Traveller",
+                  "Sushi Lover",
+                ]}
+                subTitle="A Systems Design Engineering Student @ The University of Waterloo. Currently working at PiinPoint as a Full-Stack Developer and previously worked at Jamlabs Data Science as a Software Engineer."
                 pageLinks={true}
               />
             </div>
@@ -92,9 +100,8 @@ function Home(props) {
             <div className="about-tools-row">
               <div className="about-tools-col tools1">
                 <p>My Recent Experiences</p>
-                <div className="about-experience-container">
+                <div className="about-experience-container-home">
                   <div className="about-experience-row">
-                    <p className="about-experience-year">2022</p>
                     <div className="about-experience-items">
                       <div className="about-experience-item">
                         <p className="about-experience-title">
@@ -109,12 +116,16 @@ function Home(props) {
                           </a>
                         </p>
                         <p className="about-experience-description">
-                          Optimized numerous features to increase efficiency by
-                          75% using React, Redux, Node.js and AWS DynamoDB
+                          Launched jShop, a web-based platform for business and
+                          financial professionals to buy and sell big data
                         </p>
                         <p className="about-experience-description">
-                          Implemented Stripe to decrease payment transaction
-                          times and automatic invoicing by 99%
+                          Optimized numerous React components and Redux stores,
+                          increasing data efficiency by 75%
+                        </p>
+                        <p className="about-experience-description">
+                          Implemented Stripe API to decrease transaction times
+                          and automatic invoicing by 99%
                         </p>
                         <p className="about-experience-description">
                           Tracked user experience and improved application
@@ -125,7 +136,6 @@ function Home(props) {
                   </div>
 
                   <div className="about-experience-row">
-                    <p className="about-experience-year">2021</p>
                     <div className="about-experience-items">
                       <div className="about-experience-item">
                         <p className="about-experience-title">
@@ -135,12 +145,17 @@ function Home(props) {
                           </a>
                         </p>
                         <p className="about-experience-description">
-                          Launched a flexible to-do list application, increasing
-                          productivity by 28% using React, Node.js and MySQL
+                          Architectured a flexible to-do list application using
+                          React, Node.js and MySQL, increasing productivity by
+                          28%
                         </p>
                         <p className="about-experience-description">
-                          Implemented user authentication using Firebase and
-                          deployed completed application to Heroku
+                          Designed and developed a modern list layout including
+                          item drag and drop to expand user customization
+                        </p>
+                        <p className="about-experience-description">
+                          Rewrote database requests to be individually dynamic
+                          and selective, optimizing item loading times by 50%
                         </p>
                       </div>
                     </div>
@@ -150,18 +165,18 @@ function Home(props) {
               <div className="about-tools-col tools2">
                 <p>Development Tools</p>
                 <div className="about-tools-tools">
-                  <img src={js} className="about-tools-img" />
-                  <img src={react} className="about-tools-img" />
-                  <img src={html} className="about-tools-img" />
-                  <img src={css} className="about-tools-img" />
-                  <img src={python} className="about-tools-img" />
-                  <img src={nodejs} className="about-tools-img" />
-                  <img src={flask} className="about-tools-img" />
-                  <img src={java} className="about-tools-img" />{" "}
-                  <img src={cplusplus} className="about-tools-img" />
-                  <img src={mysql} className="about-tools-img" />
-                  <img src={firebase} className="about-tools-img" />
-                  <img src={heroku} className="about-tools-img" />
+                  <img src={js} className="about-tools-img" alt="tool" />
+                  <img src={react} className="about-tools-img" alt="tool" />
+                  <img src={html} className="about-tools-img" alt="tool" />
+                  <img src={css} className="about-tools-img" alt="tool" />
+                  <img src={python} className="about-tools-img" alt="tool" />
+                  <img src={nodejs} className="about-tools-img" alt="tool" />
+                  <img src={flask} className="about-tools-img" alt="tool" />
+                  <img src={java} className="about-tools-img" alt="tool" />
+                  <img src={cplusplus} className="about-tools-img" alt="tool" />
+                  <img src={mysql} className="about-tools-img" alt="tool" />
+                  <img src={firebase} className="about-tools-img" alt="tool" />
+                  <img src={heroku} className="about-tools-img" alt="tool" />
                 </div>
               </div>
             </div>
@@ -208,7 +223,7 @@ function Home(props) {
                 <br />
                 <Link
                   to="/projects/Octodo"
-                  className="page-link-item hvr-underline-from-center"
+                  className="page-link-item hvr-underline-from-left"
                 >
                   Check out Octo-Do
                 </Link>

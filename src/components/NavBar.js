@@ -3,8 +3,8 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import useDarkMode from "use-dark-mode";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 // ----- components -----
 import ModeToggle from "./ModeToggle";
@@ -198,7 +198,12 @@ function NavBar() {
               </Link>
             )}
 
-            <a href={resume} target="_blank" className="navbar-link-item">
+            <a
+              href={resume}
+              target="_blank"
+              rel="noreferrer"
+              className="navbar-link-item"
+            >
               Resume
             </a>
           </div>

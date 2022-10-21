@@ -28,7 +28,7 @@ function ImageTimeline() {
     }, state.timeInterval);
   }, []);
 
-  return <p>{imageArray[state.activeImageIndex]}</p>;
+  return <p>{/* {imageArray[state.activeImageIndex]} */}</p>;
 }
 
 export default ImageTimeline;

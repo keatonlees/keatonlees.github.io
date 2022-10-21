@@ -150,7 +150,7 @@ function ProjectFirst(props) {
           </motion.div>
         </SwiperSlide>
 
-        <SwiperSlide className="center-slide">
+        {/* <SwiperSlide className="center-slide">
           <motion.div
             className="project-grid-container two-col"
             variants={motionVariants}
@@ -194,9 +194,9 @@ function ProjectFirst(props) {
               />
             </div>
           </motion.div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
-        <SwiperSlide className="center-slide">
+        {/* <SwiperSlide className="center-slide">
           <motion.div
             className="project-grid-container two-col-reverse"
             variants={motionVariants}
@@ -236,9 +236,9 @@ function ProjectFirst(props) {
               />
             </div>
           </motion.div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
-        <SwiperSlide className="center-slide">
+        {/* <SwiperSlide className="center-slide">
           <motion.div
             className="project-grid-container two-row"
             variants={motionVariants}
@@ -311,9 +311,9 @@ function ProjectFirst(props) {
               />
             </div>
           </motion.div>
-        </SwiperSlide>
+        </SwiperSlide> */}
 
-        <SwiperSlide className="center-slide">
+        {/* <SwiperSlide className="center-slide">
           <motion.div
             className="project-grid-container two-col"
             variants={motionVariants}
@@ -372,7 +372,7 @@ function ProjectFirst(props) {
               />
             </div>
           </motion.div>
-        </SwiperSlide>
+        </SwiperSlide> */}
         <SwiperSlide className="center-slide">
           <div className="project-nav-container">
             <div className="project-prev-container">
@@ -405,6 +405,7 @@ function ProjectFirst(props) {
             <div className="project-preview-container">
               <img
                 src={ProjectList[previewIndex].cover}
+                alt="project"
                 className="project-preview-image"
                 id="previewImage"
                 style={{
@@ -413,33 +414,7 @@ function ProjectFirst(props) {
                 }}
               />
             </div>
-            <div className="project-next-container">
-              {index - 1 < ProjectList.length ? (
-                <Link
-                  to={"/projects" + ProjectList[index + 1].url}
-                  className="project-nav-link"
-                >
-                  <motion.div
-                    className="project-next-text"
-                    variants={motionVariants}
-                    whileHover={"grow"}
-                    onHoverStart={() => handlePreviewStart("next")}
-                    onHoverEnd={handlePreviewEnd}
-                  >
-                    <div>
-                      <p className="project-nav-pretitle">Next Project</p>
-                      <p className="project-nav-title">
-                        {ProjectList[index + 1].name}
-                      </p>
-                    </div>
-                    <FontAwesomeIcon
-                      icon={faChevronRight}
-                      className="project-nav-arrow arrow-right"
-                    />
-                  </motion.div>
-                </Link>
-              ) : null}
-            </div>
+            <div className="project-next-container"></div>
           </div>
         </SwiperSlide>
       </Swiper>
