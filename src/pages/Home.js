@@ -77,7 +77,7 @@ function Home(props) {
                   "Fascinated Traveller",
                   "Sushi Lover",
                 ]}
-                subTitle="A Systems Design Engineering Student @ The University of Waterloo. Currently working at PiinPoint as a Full-Stack Developer and previously worked at Jamlabs Data Science as a Software Engineer."
+                subTitle="A Systems Design Engineering Graduate from The University of Waterloo. Currently looking for full time employment! Previously at CanvassAI, PiinPoint, and Jamlabs Data Science."
                 pageLinks={true}
               />
             </div>
@@ -105,31 +105,35 @@ function Home(props) {
                     <div className="about-experience-items">
                       <div className="about-experience-item">
                         <p className="about-experience-title">
-                          Software Engineer{" "}
+                          Software Developer Intern @{" "}
                           <a
-                            href="https://www.jamlabs.com/"
+                            href="https://www.canvass.io/"
                             target="_blank"
                             rel="noreferrer"
-                            className="about-experience-link accent-colour"
+                            className="about-experience-company about-experience-company-hover"
                           >
-                            @ Jamlabs Data Science
+                            CanvassAI
                           </a>
                         </p>
                         <p className="about-experience-description">
-                          Launched jShop, a web-based platform for business and
-                          financial professionals to buy and sell big data
+                          Worked on adding numerous data analysis features and
+                          optimizing analysis methods for Canvass' Industrial AI
+                          platform
                         </p>
                         <p className="about-experience-description">
-                          Optimized numerous React components and Redux stores,
-                          increasing data efficiency by 75%
+                          Spearheaded 2 frontend features to enhance data
+                          readability for users by 40% using Typescript and
+                          ChakraUI
                         </p>
                         <p className="about-experience-description">
-                          Implemented Stripe API to decrease transaction times
-                          and automatic invoicing by 99%
+                          Restructured end-to-end HTTPS requests that updated
+                          Redux stores and states decreasing data fetch time by
+                          30%
                         </p>
                         <p className="about-experience-description">
-                          Tracked user experience and improved application
-                          process flows by 36% by including Google Analytics
+                          Ensured error-free code and optimal implementation
+                          using Jest and React Testing Library with 100% testing
+                          coverage
                         </p>
                       </div>
                     </div>
@@ -139,23 +143,35 @@ function Home(props) {
                     <div className="about-experience-items">
                       <div className="about-experience-item">
                         <p className="about-experience-title">
-                          Full-Stack Engineer{" "}
-                          <a className="about-experience-link accent-colour">
-                            @ Self-Employed Company
+                          Full-Stack Developer Intern @{" "}
+                          <a
+                            href="https://www.piinpoint.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className="about-experience-company about-experience-company-hover"
+                          >
+                            PiinPoint
                           </a>
                         </p>
                         <p className="about-experience-description">
-                          Architectured a flexible to-do list application using
-                          React, Node.js and MySQL, increasing productivity by
-                          28%
+                          Launched Sitematch, an extensive feature that
+                          streamlines property analysis and 3rd party realtor
+                          communication
                         </p>
                         <p className="about-experience-description">
-                          Designed and developed a modern list layout including
-                          item drag and drop to expand user customization
+                          Contributed 10+ React components into the reusable
+                          companywide library for PiinPoint's location
+                          intelligence platform
                         </p>
                         <p className="about-experience-description">
-                          Rewrote database requests to be individually dynamic
-                          and selective, optimizing item loading times by 50%
+                          Implemented eye-catching interfaces that increased
+                          retention time by 25% for clients including Sobeys and
+                          Tim Hortons
+                        </p>
+                        <p className="about-experience-description">
+                          Refactored 90% of legacy code by migrating stores and
+                          actions from Reflux to Redux, significantly reducing
+                          tech debt
                         </p>
                       </div>
                     </div>

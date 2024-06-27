@@ -16,7 +16,7 @@ import "../styles/NavBar.css";
 import logoDark from "../images/logo_dark.png";
 import logoLight from "../images/logo_light.png";
 
-import resume from "../files/KeatonLeesResume2022.pdf";
+import resume from "../files/KeatonLeesResume.pdf";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;

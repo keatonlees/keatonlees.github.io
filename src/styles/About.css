@@ -3,9 +3,6 @@
   margin-bottom: 30px;
 }
 
-.about-expereince-container-home {
-  width: 100%;
-}
 .about-experience-container {
   /* NEEDED FOR HOME PAGE EDIT */
   width: 70%;
@@ -21,18 +18,19 @@
 }
 .about-experience-title {
   color: var(--fontColourBase);
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 1.5rem;
+  font-weight: 700;
   margin-bottom: 10px;
 }
 .about-experience-company {
-  color: var(--fontColourBase);
+  color: var(--accentColourBase);
   text-decoration: none;
   font-size: 1.6rem;
   font-weight: 700;
+  transition: 0.3s all;
 }
 .about-experience-company-hover:hover {
-  color: var(--accentColourBase);
+  color: var(--accentColourLight);
 }
 .about-experience-logo {
   width: 1.8rem;
@@ -40,7 +38,7 @@
   margin-bottom: 5px;
 }
 .about-experience-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 10px;
 }
 

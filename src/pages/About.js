@@ -112,10 +112,10 @@ function About(props) {
           <div className="about-experience-container">
             <h1 className="about-heading">My Experiences</h1>
 
-            <Accordion preExpanded={["2022"]}>
-              <AccordionItem uuid="2022">
+            <Accordion preExpanded={["2023"]}>
+              <AccordionItem uuid="2023">
                 <AccordionItemHeading>
-                  <AccordionItemButton>2022</AccordionItemButton>
+                  <AccordionItemButton>2023</AccordionItemButton>
                 </AccordionItemHeading>
                 <AccordionItemPanel>
                   <div className="about-experience-item">
@@ -130,7 +130,7 @@ function About(props) {
                         {ExperienceList[0].company}
                       </a>
                     </h1>
-                    <div className="about-experience-logos">
+                    {/* <div className="about-experience-logos">
                       {ExperienceList[0].toolLogos.map((logo) => {
                         return (
                           <img
@@ -140,17 +140,21 @@ function About(props) {
                           />
                         );
                       })}
-                    </div>
+                    </div> */}
                     {ExperienceList[0].description.map((item) => {
                       return (
                         <p className="about-experience-description">{item}</p>
                       );
                     })}
                   </div>
-                  <div
-                    className="about-experience-item"
-                    style={{ marginTop: "20px" }}
-                  >
+                </AccordionItemPanel>
+              </AccordionItem>
+              <AccordionItem uuid="2022">
+                <AccordionItemHeading>
+                  <AccordionItemButton>2022</AccordionItemButton>
+                </AccordionItemHeading>
+                <AccordionItemPanel>
+                  <div className="about-experience-item">
                     <h1 className="about-experience-title">
                       {ExperienceList[1].title} @{" "}
                       <a
@@ -162,7 +166,7 @@ function About(props) {
                         {ExperienceList[1].company}
                       </a>
                     </h1>
-                    <div className="about-experience-logos">
+                    {/* <div className="about-experience-logos">
                       {ExperienceList[1].toolLogos.map((logo) => {
                         return (
                           <img
@@ -172,8 +176,40 @@ function About(props) {
                           />
                         );
                       })}
-                    </div>
+                    </div> */}
                     {ExperienceList[1].description.map((item) => {
+                      return (
+                        <p className="about-experience-description">{item}</p>
+                      );
+                    })}
+                  </div>
+                  <div
+                    className="about-experience-item"
+                    style={{ marginTop: "20px" }}
+                  >
+                    <h1 className="about-experience-title">
+                      {ExperienceList[2].title} @{" "}
+                      <a
+                        href={ExperienceList[2].link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="about-experience-company about-experience-company-hover"
+                      >
+                        {ExperienceList[2].company}
+                      </a>
+                    </h1>
+                    {/* <div className="about-experience-logos">
+                      {ExperienceList[2].toolLogos.map((logo) => {
+                        return (
+                          <img
+                            src={logo}
+                            className="about-experience-logo"
+                            alt="logo"
+                          />
+                        );
+                      })}
+                    </div> */}
+                    {ExperienceList[2].description.map((item) => {
                       return (
                         <p className="about-experience-description">{item}</p>
                       );
@@ -188,13 +224,13 @@ function About(props) {
                 <AccordionItemPanel>
                   <div className="about-experience-item">
                     <h1 className="about-experience-title">
-                      {ExperienceList[2].title} @{" "}
+                      {ExperienceList[3].title} @{" "}
                       <span className="about-experience-company">
-                        {ExperienceList[2].company}
+                        {ExperienceList[3].company}
                       </span>
                     </h1>
-                    <div className="about-experience-logos">
-                      {ExperienceList[2].toolLogos.map((logo) => {
+                    {/* <div className="about-experience-logos">
+                      {ExperienceList[3].toolLogos.map((logo) => {
                         return (
                           <img
                             src={logo}
@@ -203,8 +239,8 @@ function About(props) {
                           />
                         );
                       })}
-                    </div>
-                    {ExperienceList[2].description.map((item) => {
+                    </div> */}
+                    {ExperienceList[3].description.map((item) => {
                       return (
                         <p className="about-experience-description">{item}</p>
                       );
@@ -219,38 +255,6 @@ function About(props) {
                 <AccordionItemPanel>
                   <div className="about-experience-item">
                     <h1 className="about-experience-title">
-                      {ExperienceList[3].title} @{" "}
-                      <a
-                        href={ExperienceList[3].link}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="about-experience-company about-experience-company-hover"
-                      >
-                        {ExperienceList[3].company}
-                      </a>
-                    </h1>
-                    <div className="about-experience-logos">
-                      {ExperienceList[3].toolLogos.map((logo) => {
-                        return (
-                          <img
-                            src={logo}
-                            className="about-experience-logo"
-                            alt="logo"
-                          />
-                        );
-                      })}
-                    </div>
-                    {ExperienceList[3].description.map((item) => {
-                      return (
-                        <p className="about-experience-description">{item}</p>
-                      );
-                    })}
-                  </div>
-                  <div
-                    className="about-experience-item"
-                    style={{ marginTop: "20px" }}
-                  >
-                    <h1 className="about-experience-title">
                       {ExperienceList[4].title} @{" "}
                       <a
                         href={ExperienceList[4].link}
@@ -261,7 +265,7 @@ function About(props) {
                         {ExperienceList[4].company}
                       </a>
                     </h1>
-                    <div className="about-experience-logos">
+                    {/* <div className="about-experience-logos">
                       {ExperienceList[4].toolLogos.map((logo) => {
                         return (
                           <img
@@ -271,8 +275,40 @@ function About(props) {
                           />
                         );
                       })}
-                    </div>
+                    </div> */}
                     {ExperienceList[4].description.map((item) => {
+                      return (
+                        <p className="about-experience-description">{item}</p>
+                      );
+                    })}
+                  </div>
+                  <div
+                    className="about-experience-item"
+                    style={{ marginTop: "20px" }}
+                  >
+                    <h1 className="about-experience-title">
+                      {ExperienceList[5].title} @{" "}
+                      <a
+                        href={ExperienceList[5].link}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="about-experience-company about-experience-company-hover"
+                      >
+                        {ExperienceList[5].company}
+                      </a>
+                    </h1>
+                    {/* <div className="about-experience-logos">
+                      {ExperienceList[5].toolLogos.map((logo) => {
+                        return (
+                          <img
+                            src={logo}
+                            className="about-experience-logo"
+                            alt="logo"
+                          />
+                        );
+                      })}
+                    </div> */}
+                    {ExperienceList[5].description.map((item) => {
                       return (
                         <p className="about-experience-description">{item}</p>
                       );
