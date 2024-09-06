@@ -5,6 +5,8 @@ import SwiperCore, { Pagination, Mousewheel } from "swiper";
 
 // ==================== UTIL ====================
 import { scrollSpeed } from "../constants/Constants";
+import useWindowDimensions from "../../util/WindowDimensions";
+import { tablet } from "../constants/Breakpoints";
 
 // ==================== COMPONENTS ====================
 import ColourWipe from "../../components/colourWipe/ColourWipe";
@@ -23,6 +25,7 @@ import "../../App.sass";
 SwiperCore.use([Pagination, Mousewheel]);
 
 function PageLayout({ bullets, slides, setSI = null }) {
+  const { width } = useWindowDimensions();
   const [swiper, setSwiper] = useState({});
   const [slideIndex, setSlideIndex] = useState(0);
   const customBullet = (index, className) => {
@@ -54,7 +57,7 @@ function PageLayout({ bullets, slides, setSI = null }) {
           },
         }}
         mousewheel={true}
-        allowTouchMove={false}
+        allowTouchMove={width <= tablet ? true : false}
         onInit={(e) => setSwiper(e)}
         onSlideChange={(e) => {
           setSlideIndex(e.activeIndex);
