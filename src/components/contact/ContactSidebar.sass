@@ -1,0 +1,31 @@
+@import "../../App.sass"
+
+.contact-container
+  .contact-items
+    position: fixed
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    display: flex
+    flex-direction: column
+    z-index: 90
+    padding-right: 3px
+    background: var(--glassColour)
+    backdrop-filter: blur(3px)
+    border-radius: 0px 8px 8px 0px
+
+    .contact-icon
+      font-size: 40px
+      margin: 15px 10px
+      color: var(--fontColour)
+      transition: 0.5s
+
+      &:hover
+        cursor: pointer
+        color: var(--accentThirdary)
+
+      @include media("<=phone")
+        display: none
+
+      @include media("<=laptop")
+        font-size: 30px

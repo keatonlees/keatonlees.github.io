@@ -1,0 +1,40 @@
+// ==================== GLOBAL VARIABLES ====================
+$pageMargins: 6vw
+$navbarHeight: 60px
+// $contactWidth: 50px
+
+*, ::before, ::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    transition: background-color 0.5s, color 0.5s
+
+.link
+    text-decoration: none
+    color: var(--fontColour)
+
+.glass
+    background: var(--glassColour)
+    backdrop-filter: blur(3px)
+
+.hover-underline
+    position: relative
+    display: inline-block
+
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        transform: scaleX(0)
+        height: 3px
+        bottom: -5px
+        left: 0
+        background-color: var(--accentPrimary)
+        transform-origin: bottom right
+        transition: transform 0.25s ease-out
+
+    &:hover::after
+        transform: scaleX(1)
+        transform-origin: bottom left

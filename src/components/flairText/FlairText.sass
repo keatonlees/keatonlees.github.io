@@ -1,0 +1,95 @@
+@import "../App.sass"
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap')
+
+.flairText
+    position: absolute
+    font-family: 'Fuzzy Bubbles', cursive
+    font-size: 12px
+    opacity: 0.3
+    text-align: center
+
+.arrow
+    font-size: 24px
+    opacity: 0.5
+
+// ----- home -----
+.home-cv
+    top: calc($navbarHeight - 25px)
+    right: calc($pageMargins - 20px)
+    transform: rotate(-10deg)
+
+    @include media("<=tablet")
+        display: none
+
+.home-scroll
+    left: 50%
+    bottom: 45px
+    margin-left: 45px
+    transform: translateX(-50%) rotate(10deg)
+    opacity: 0
+    visibility: hidden
+    animation-name: fadeInText
+    animation-duration: 2s
+    animation-iteration-count: 1
+    animation-delay: 2s
+    animation-fill-mode: forwards
+
+    @include media("<=tablet")
+        display: none
+
+.home-name
+    left: calc($pageMargins / 2 - 5px)
+    bottom: 40%
+    transform: rotate(-90deg)
+
+    @include media("<=tablet")
+        display: none
+
+// ----- about -----
+.about-landing
+    top: calc($navbarHeight + 25vh)
+    right: calc($pageMargins)
+    transform: rotate(15deg)
+
+    &-arrow
+        transform: rotate(-60deg)
+        margin-right: 20px
+
+    @include media("<=phone")
+        display: none
+
+    @include media(">phone", "<=tablet")
+        top: calc($navbarHeight + 20vh)
+
+// ----- not found -----
+.notfound-error
+    left: 25vw
+    top: 34vh
+    transform: rotate(-5deg)
+
+    @include media("<=phone")
+        display: none
+
+.notfound-uhoh
+    right: 23vw
+    top: 28vh
+    transform: rotate(-15deg)
+
+    @include media("<=phone")
+        display: none
+
+.notfound-notgood
+    right: 23vw
+    top: 39vh
+    transform: rotate(20deg)
+
+    @include media("<=phone")
+        display: none
+
+@keyframes fadeInText
+    0%
+        opacity: 0
+
+    100%
+        opacity: 0.3
+        visibility: visible

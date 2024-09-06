@@ -1,0 +1,42 @@
+@import "../../App"
+@import "../../foundations/constants/Theme"
+@import "../../foundations/constants/Global"
+
+.scrolltop-container
+  position: fixed
+  bottom: 10px
+  right: $pageMargins
+  display: flex
+  margin-bottom: 0.75rem
+  z-index: 80
+  visibility: hidden
+  animation-name: fadeIn
+  animation-duration: 2s
+  animation-iteration-count: 1
+  animation-delay: 2s
+  animation-fill-mode: forwards
+
+  &:hover
+    cursor: pointer
+    color: var(--accentThirdary)
+
+  @include media("<=tablet")
+    display: none
+
+  .scrolltop-button
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 100px
+    transition: 0.5s
+
+    .scrolltop-arrow
+      font-size: 1.25rem
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+
+  100%
+    opacity: 1
+    visibility: visible

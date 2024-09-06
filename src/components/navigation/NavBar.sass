@@ -1,0 +1,166 @@
+@import "../../App.sass"
+
+.navbar-container
+  position: fixed
+  width: 100%
+  height: $navbarHeight
+  top: 0
+  padding: 0px $pageMargins
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-size: 20px
+  z-index: 100
+
+  .navbar-logo
+    width: 40px
+    transition: 0.5s
+
+  .navbar-right
+    display: flex
+    align-items: center
+
+    .navbar-toggle
+      margin-right: 60px
+
+      @include media("<=tablet")
+        margin-right: 30px
+
+    .navbar-links
+      width: 400px
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+    .navbar-link-item
+      color: var(--fontColour)
+      text-decoration: none
+      transition: 0.5s
+
+      &-active
+        text-decoration: underline
+        text-decoration-color: var(--accentPrimary)
+        text-decoration-thickness: 3px
+        text-underline-offset: 7px
+
+    .navbar-hover
+      position: relative
+      display: inline-block
+
+      &::after
+        content: ''
+        position: absolute
+        width: 100%
+        transform: scaleX(0)
+        height: 3px
+        bottom: -5px
+        left: 0
+        background-color: var(--accentPrimary)
+        transform-origin: bottom right
+        transition: transform 0.25s ease-out
+
+      &:hover::after
+        transform: scaleX(1)
+        transform-origin: bottom left
+
+    .mobile-links-container
+
+      .mobile-menu-button
+        position: relative
+        height: 30px
+        padding: 0
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        background: transparent
+        border: none
+        z-index: 100
+
+        &:hover
+          cursor: pointer
+
+        .mobile-bar-one,
+        .mobile-bar-two,
+        .mobile-bar-three
+          position: relative
+          width: 30px
+          height: 4px
+          background: var(--fontColour)
+          border-radius: 10px
+          transition: 0.3s linear
+          transform-origin: 1px
+
+        .mobile-bar-one
+          transform: rotate(0deg)
+
+          &.open
+            transform: rotate(45deg)
+
+        .mobile-bar-two
+          opacity: 1
+          transform: scale(1)
+
+          &.open
+            opacity: 0
+            transform: scale(0)
+
+        .mobile-bar-three
+          transform: rotate(0deg)
+
+          &.open
+            transform: rotate(-45deg)
+
+      .mobile-links-overlay
+        position: fixed
+        width: 100vw
+        height: 0vh
+        top: 0
+        left: 0
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        text-align: center
+        overflow: hidden
+        background-color: var(--accentPrimary)
+        transition: 0.5s
+        transition-delay: 0.8s
+        z-index: 95
+
+        &.open
+          height: 100vh
+
+        .mobile-link-item,
+        .mobile-link-item-active
+          margin: 20px 0px
+          font-size: 30px
+
+        .mobile-link-item
+          text-decoration: none
+          color: var(--fontColour)
+
+          &-active
+            text-decoration: underline
+            text-decoration-color: var(--fontColour)
+            text-decoration-thickness: 3px
+            text-underline-offset: 9px
+
+        .mobile-hover
+          position: relative
+          display: inline-block
+
+          &::after
+            content: ''
+            position: absolute
+            width: 100%
+            transform: scaleX(0)
+            height: 3px
+            bottom: -5px
+            left: 0
+            background-color: var(--fontColour)
+            transform-origin: bottom right
+            transition: transform 0.25s ease-out
+
+          &:hover::after
+            transform: scaleX(1)
+            transform-origin: bottom left

@@ -1,0 +1,67 @@
+@import "../../../App.sass"
+
+.intro-container
+    width: 100%
+    // background-color: skyblue
+    display: flex
+    flex-direction: row
+    gap: 16px
+
+    @include media("<=tablet")
+        width: 100%
+        flex-direction: column
+
+    .intro-image
+        width: 30%
+        display: flex
+        justify-content: center
+        align-items: center
+
+        @include media("<=tablet")
+            width: 100%
+
+        img
+            width: 80%
+            border-radius: 8px
+            filter: drop-shadow(8px 8px var(--accentPrimary))
+
+            @include media("<=tablet")
+                width: 50%
+
+    .intro-content
+        // background-color: red
+        width: 70%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        gap: 24px
+
+        @include media("<=tablet")
+            width: 100%
+            justify-content: flex-start
+
+        &-intro
+            background-color: var(--accentPrimary)
+            padding: 12px
+            border-radius: 8px
+            filter: drop-shadow(8px 8px var(--accentThirdary))
+
+            .text
+                color: var(--white500)
+
+        &-education
+            background-color: var(--accentSecondary)
+            padding: 12px
+            border-radius: 8px
+            filter: drop-shadow(8px 8px var(--accentThirdary))
+
+            @include media("<tablet")
+                display: none
+
+            .school
+                color: var(--white500)
+                margin-bottom: 8px
+
+            .text
+                color: var(--white500)
+                margin-bottom: 4px

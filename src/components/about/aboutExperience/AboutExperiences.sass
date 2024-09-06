@@ -1,0 +1,112 @@
+@import "../../../App.sass"
+
+.experiences-container
+    // background-color: skyblue
+    display: flex
+    justify-content: center
+    align-items: center
+
+    @include media("<=tablet")
+        height: 100%
+        flex-direction: column
+        justify-content: flex-start
+
+.experiences-timeline
+    // background-color: salmon
+    display: flex
+    align-items: center
+    height: 50vh
+    margin-right: 28px
+
+    @include media("<=tablet")
+        height: 34px
+        margin-right: 0px
+        margin-top: 8px
+        margin-bottom: 16px
+
+    &-line
+        width: 3px
+        height: 100%
+        background-color: var(--accentPrimary)
+        margin-right: 16px
+
+        @include media("<=tablet")
+            display: none
+
+    .experiences-years
+        // background-color: red
+        display: flex
+        height: 100%
+        flex-direction: column
+        justify-content: space-evenly
+
+        @include media("<=tablet")
+            flex-direction: row
+
+        .experiences-title
+            @include media("<=tablet")
+                display: none
+
+        .experiences-year, .experiences-year-active
+            padding: 8px
+            border-radius: 8px
+
+        .experiences-year
+            transition: 0.3s all
+
+            @include media("<=tablet")
+                margin: 0px 4px
+                margin-bottom: 16px
+
+            &:hover
+                cursor: pointer
+                background-color: var(--bgColour400)
+
+        .experiences-year-active
+            transition: 0.3s all
+            background-color: var(--accentPrimary)
+            filter: drop-shadow(8px 8px var(--accentThirdary))
+
+            @include media("<=tablet")
+                filter: drop-shadow(4px 4px var(--accentThirdary))
+
+            .text
+                color: var(--white500)
+
+        .experiences-year-text
+            color: var(--fontColour100)
+
+            @include media("<=tablet")
+                display: none
+
+.experiences-content
+    // background-color: red
+    width: 45vw
+
+    @include media("<=tablet")
+        width: 80vw
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+    .content-item
+
+        .divider
+            width: 100%
+            height: 3px
+            background-color: var(--accentPrimary)
+            margin: 12px 0px
+
+        &-title
+            display: flex
+
+        .company-link
+            text-decoration: none
+
+        &-description
+            margin: 8px 0px
+
+            .point
+                margin: 4px 0px
+                margin-left: 8px

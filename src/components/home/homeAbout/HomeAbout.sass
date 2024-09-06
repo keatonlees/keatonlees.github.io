@@ -1,0 +1,105 @@
+@import "../../../App.sass"
+
+.ha-container
+  display: flex
+  gap: 24px
+  align-items: center
+
+  @include media("<=tablet")
+    flex-direction: column
+
+  .ha-left, .ha-right
+    width: 35vw
+
+    @include media(">tablet", "<=laptop")
+      width: 40vw
+
+    @include media("<=tablet")
+      width: 80vw
+
+  .ha-left
+    display: flex
+    flex-direction: column
+    gap: 24px
+    align-items: flex-end
+
+    @include media("<=tablet")
+      align-items: center
+
+  .ha-left-text
+    background-color: var(--accentPrimary)
+    filter: drop-shadow(8px 8px var(--accentThirdary))
+    padding: 12px
+    border-radius: 8px
+    color: var(--white500)
+
+  .ha-right
+    display: flex
+    flex-direction: column
+    gap: 24px
+
+    .ha-top
+      background-color: var(--accentSecondary)
+      filter: drop-shadow(8px 8px var(--accentThirdary))
+      padding: 12px
+      border-radius: 8px
+
+      &-title
+        color: var(--white500)
+        margin-bottom: 8px
+
+      &-experiences
+        display: flex
+        gap: 4px
+
+        .experience
+          display: flex
+          flex-direction: column
+          gap: 4px
+          width: 100%
+
+          &-text
+            color: var(--white500)
+
+          &-link
+            text-decoration: none
+            color: var(--white500)
+            transition: 0.3s all
+
+            &:hover
+              color: var(--accentThirdary) !important
+
+    .ha-bottom
+      background-color: var(--accentSecondary)
+      filter: drop-shadow(8px 8px var(--accentThirdary))
+      padding: 12px
+      border-radius: 8px
+
+      @include media("<=tablet")
+        display: none
+
+      &-title
+        color: var(--white500)
+        margin-bottom: 8px
+
+      &-skills
+        display: flex
+        gap: 4px
+
+        .skill
+          width: 100%
+
+          .skill-title
+            color: var(--white500)
+            margin-bottom: 4px
+
+          .skill-group
+            display: flex
+            flex-direction: column
+            gap: 2px
+
+            &-title
+              margin-bottom: 4px
+
+            .skill-text
+              color: var(--white500)

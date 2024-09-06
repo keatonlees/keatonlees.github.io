@@ -1,0 +1,123 @@
+@import "../../../App.sass"
+
+.build-container
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    overflow: hidden
+
+    &-top
+        height: 100%
+        display: flex
+        margin-top: $navbarHeight
+
+        .build-left
+            // background: violet
+            width: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+
+            @include media("<=tablet")
+                display: none
+
+            .content-container
+                position: absolute
+                transition: 0.5s
+                width: 450px
+                height: 450px
+
+                @include media(">tablet", "<=laptop")
+                    width: 300px
+                    height: 300px
+
+                .content-image
+                    width: 100%
+                    height: 100%
+                    object-fit: contain
+
+            .is-next-next
+                z-index: 50
+                opacity: 0
+                transform: translateX(-700px) translateY(-700px) scale(0.1)
+
+            .is-next
+                z-index: 51
+                transform: translateX(-150px) translateY(-250px) scale(0.6)
+                filter: blur(10px)
+
+            .is-active
+                z-index: 52
+
+            .is-prev
+                z-index: 53
+                opacity: 0
+                transform: translateX(-700px) translateY(700px) scale(1.5)
+
+            .is-hidden
+                opacity: 0
+                transform: translateX(-700px)
+
+        .build-right
+            // background: salmon
+            width: 50%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: flex-start
+
+            @include media("<=tablet")
+                align-items: center
+                width: 100%
+
+    &-bot
+        // background: skyblue
+        height: 100px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        .nav, .nav-active,.nav-inactive
+            width: 40px
+            height: 40px
+            display: flex
+            justify-content: center
+            align-items: center
+            margin: 4px
+            overflow: hidden
+            user-select: none
+
+            @include media("<=tablet")
+                width: 30px
+                height: 30px
+
+            img
+                width: 100%
+                transition: 0.3s
+
+        .nav-active
+            transition: 0.3s
+            scale: 1.15
+
+        .nav-inactive
+            &:hover
+                cursor: pointer
+                background-color: var(--bgColour300)
+
+        .nav-arrow
+            font-size: 32px
+            transition: 0.3s
+
+            &:hover
+                cursor: pointer
+                color: var(--accentThirdary)
+
+        .nav-inactive img
+            border: 0.15rem solid var(--fontColour)
+            color: var(--fontColour)
+            border-radius: 6px
+
+        .nav-active img
+            border: 0.15rem solid var(--accentThirdary)
+            border-radius: 6px
