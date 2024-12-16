@@ -116,14 +116,14 @@ function ProjectsBuilt() {
           <RiArrowLeftSFill />
         </div>
 
-        {ProjectList.map((project, i) => {
+        {ProjectList.map((_, i) => {
           return (
             <div
               className={i === index ? "nav nav-active" : "nav nav-inactive"}
               onClick={() => setIndex(i)}
               key={i}
             >
-              <img src={project.selector} alt="selector-icon" loading="lazy" />
+              <div className="nav-dot"></div>
             </div>
           );
         })}

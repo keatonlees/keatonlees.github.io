@@ -32,7 +32,7 @@ function BuiltContent({ i, isExpanded, setIsExpanded }) {
         <Text fs="5xl" fw="bold" className="title">
           {PL[i].name}
         </Text>
-        <Text className="timeframe">{PL[i].timeframe}</Text>
+        {/* <Text className="timeframe">{PL[i].timeframe}</Text> */}
       </motion.div>
       <motion.div
         className={isExpanded ? "card-expanded" : "card"}

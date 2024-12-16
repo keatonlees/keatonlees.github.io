@@ -79,8 +79,8 @@
         align-items: center
 
         .nav, .nav-active,.nav-inactive
-            width: 40px
-            height: 40px
+            width: 24px
+            height: 24px
             display: flex
             justify-content: center
             align-items: center
@@ -105,19 +105,23 @@
                 cursor: pointer
                 background-color: var(--bgColour300)
 
+        .nav-dot
+            width: 80%
+            height: 80%
+            background-color: var(--fontColour)
+
         .nav-arrow
-            font-size: 32px
+            font-size: 60px
             transition: 0.3s
 
             &:hover
                 cursor: pointer
                 color: var(--accentThirdary)
 
-        .nav-inactive img
-            border: 0.15rem solid var(--fontColour)
-            color: var(--fontColour)
+        .nav-inactive div
+            background-color: var(--fontColour)
             border-radius: 6px
 
-        .nav-active img
-            border: 0.15rem solid var(--accentThirdary)
+        .nav-active div
+            background-color: var(--accentThirdary)
             border-radius: 6px

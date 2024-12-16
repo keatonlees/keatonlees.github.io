@@ -1,3 +1,11 @@
+// ----- GetWrapped -----
+import rbb_overlay from "../images/project_rbb_logo.png";
+import rbb_layout from "../images/project_rbb_layout.png";
+
+// ----- GetWrapped -----
+import gw_overlay from "../images/project_getwrapped_logo.png";
+import gw_home from "../images/project_getwrapped_home.png";
+
 // ----- Octo-Do -----
 import octodo_cover from "../images/project_octodo_cover.png";
 import octodo_selector from "../images/project_octodo_selector.png";
@@ -11,16 +19,16 @@ import jarvis_overlay from "../images/project_jarvis_nobg.png";
 import jarvis_screen from "../images/project_jarvis_screen.png";
 
 // ----- Arduino Drone -----
-import drone_cover from "../images/project_drone_cover.png";
-import drone_selector from "../images/project_drone_selector.png";
-import drone_overlay from "../images/project_drone_nobg.png";
-import drone_solidworks from "../images/project_drone_body.png";
+// import drone_cover from "../images/project_drone_cover.png";
+// import drone_selector from "../images/project_drone_selector.png";
+// import drone_overlay from "../images/project_drone_nobg.png";
+// import drone_solidworks from "../images/project_drone_body.png";
 
 // ----- rethink -----
-import rethink_cover from "../images/project_rethink_cover.png";
-import rethink_selector from "../images/project_rethink_selector.png";
-import rethink_overlay from "../images/project_rethink_lying_nobg.png";
-import rethink_screen from "../images/project_rethink_combo.png";
+// import rethink_cover from "../images/project_rethink_cover.png";
+// import rethink_selector from "../images/project_rethink_selector.png";
+// import rethink_overlay from "../images/project_rethink_lying_nobg.png";
+// import rethink_screen from "../images/project_rethink_combo.png";
 
 // ----- puppr -----
 import puppr_cover from "../images/project_puppr_cover.png";
@@ -35,36 +43,41 @@ import kong_overlay from "../images/project_kong_nobg.png";
 import kong_screen from "../images/project_kong_game.png";
 
 // ----- FIRST Robotics -----
-import first_cover from "../images/project_first_cover.png";
-import first_selector from "../images/project_first_selector.png";
-import first_overlay from "../images/project_first_nobg.png";
-import first_group from "../images/FIRST_robotics_group.jpg";
+// import first_cover from "../images/project_first_cover.png";
+// import first_selector from "../images/project_first_selector.png";
+// import first_overlay from "../images/project_first_nobg.png";
+// import first_group from "../images/FIRST_robotics_group.jpg";
 
 // ----- TOOLS -----
-import adobexd from "../images/tool-adobexd.png";
-import arduino from "../images/tool-arduino.png";
-import cplusplus from "../images/tool-cplusplus.png";
+// import adobexd from "../images/tool-adobexd.png";
+// import arduino from "../images/tool-arduino.png";
+import aws from "../images/tool-aws.png";
+// import cplusplus from "../images/tool-cplusplus.png";
 import css from "../images/tool-css.png";
-import figma from "../images/tool-figma.png";
+// import figma from "../images/tool-figma.png";
 import firebase from "../images/tool-firebase.png";
 import flask from "../images/tool-flask.png";
 import heroku from "../images/tool-heroku.png";
 import html from "../images/tool-html.png";
 import java from "../images/tool-java.png";
 import js from "../images/tool-js.png";
+import mongo from "../images/tool-mongodb.png";
 import mysql from "../images/tool-mysql.png";
+import next from "../images/tool-nextjs.png";
 import nodejs from "../images/tool-nodejs.png";
+import npm from "../images/tool-npm.png";
 import printing from "../images/tool-printing.png";
 import python from "../images/tool-python.png";
 import raspi from "../images/tool-raspi.png";
 import react from "../images/tool-react.png";
-import solidworks from "../images/tool-solidworks.png";
+// import solidworks from "../images/tool-solidworks.png";
+import ts from "../images/tool-ts.png";
 
 import { BsClipboard2CheckFill, BsHouseGearFill } from "react-icons/bs";
-import { TbDrone } from "react-icons/tb";
+// import { TbDrone } from "react-icons/tb";
 import { BiSolidBrain, BiSolidDog } from "react-icons/bi";
 import { MdVideogameAsset } from "react-icons/md";
-import { FaRobot } from "react-icons/fa";
+// import { FaRobot } from "react-icons/fa";
 
 /*
 List of tags:
@@ -80,6 +93,74 @@ List of tags:
 */
 
 export const ProjectList = [
+  {
+    id: 10,
+    name: "react-bento-box",
+    url: "/react-bento-box",
+    timeframe: "Dec 2024",
+    role: "Fullstack Developer",
+    type: "Personal Project",
+    description:
+      "A lightweight NPM library for creating customizable bento box layouts in React",
+    paragraphs: [
+      "Bento Box UI is a type of frontend layout that utilizes the full screen and divides into sections, similar to a bento box.",
+      "react-bento-box allows for users to create bento box components and have the flexibility to position content anywhere they like. It is built using React and TypeScript, bundled with Rollup and pushed to the NPM website.",
+    ],
+    tags: ["Frontend Development", "Backend Development"],
+    toolList: [
+      "ReactJS",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Node.js",
+      "MySQL",
+      "Firebase",
+      "Heroku",
+    ],
+    toolLogos: [react, ts, npm],
+    // cover: octodo_cover,
+    // selector: octodo_selector,
+    overlay: rbb_overlay,
+    image: rbb_layout,
+    caption: "Simple Bento Box Layout",
+    icon: <BsClipboard2CheckFill />,
+    link: "https://www.npmjs.com/package/react-bento-box",
+    github: "https://github.com/keatonlees/react-bento-box",
+  },
+  {
+    id: 9,
+    name: "Get Wrapped",
+    url: "/getwrapped",
+    timeframe: "Nov 2024",
+    role: "Fullstack Developer",
+    type: "Personal Project",
+    description:
+      "A full-stack web application that lets users create and share personalized Spotify Wrapped-like experiences",
+    paragraphs: [
+      "Get Wrapped is a web application that lets users make custom Wraps for couples, trips, and more. Users must login to create and edit, but anyone can view a Wrap given a personalized link.",
+      "The application leverages Next.js and TypeScript for the frontend, MongoDB for data storage, AWS S3 for media management and Firebase for authentication.",
+    ],
+    tags: ["Frontend Development", "Backend Development"],
+    toolList: [
+      "ReactJS",
+      "Javascript",
+      "HTML5",
+      "CSS3",
+      "Node.js",
+      "MySQL",
+      "Firebase",
+      "Heroku",
+    ],
+    toolLogos: [next, ts, mongo, aws, firebase],
+    // cover: octodo_cover,
+    // selector: octodo_selector,
+    overlay: gw_overlay,
+    image: gw_home,
+    caption: "Get Wrapped Home Page",
+    icon: <BsClipboard2CheckFill />,
+    link: "https://getwrapped.vercel.app/",
+    github: "https://github.com/keatonlees/getwrapped",
+  },
   // {
   //   id: 8,
   //   name: "Chromation",
@@ -167,56 +248,56 @@ export const ProjectList = [
     link: "",
     github: "",
   },
-  {
-    id: 4,
-    name: "Drone",
-    url: "/drone",
-    timeframe: "February 2021",
-    role: "Hardware Developer",
-    type: "Personal Project",
-    description:
-      "A quadcopter constructed using an Arduino, gyroscope and radio modules with a 3D-printed body",
-    paragraphs: [
-      "I have always loved drones and FPV flights. Thus, I wanted to see if it was possible to build my own quadcopter. I 3D-printed the body in 6 parts with cutouts for motors, speed controllers, and 2 Arduino Nanos; one Nano would act as the flight controller, and the other would be the receiver.",
-      "There were multiple problems with my implementation. Firstly, the weight to power ratio of the body and motors was not enough for the drone to sustain flight. Secondly, since I had build my own controller, the transmission speed and distance was very limited.",
-    ],
-    tags: ["Hardware Development", "Robotics", "3D-Printing"],
-    toolList: ["Arduino C", "3D-Printing", "Solidworks"],
-    toolLogos: [arduino, printing, solidworks],
-    cover: drone_cover,
-    selector: drone_selector,
-    overlay: drone_overlay,
-    icon: <TbDrone />,
-    image: drone_solidworks,
-    caption: "Solidworks Drone Model",
-    link: "",
-    github: "",
-  },
-  {
-    id: 3,
-    name: "Rethink",
-    url: "/rethink",
-    timeframe: "September 2020",
-    role: "Designer",
-    type: "Hackathon Project",
-    description:
-      "An AdobeXD mobile application to introduce high school students to the world of design",
-    paragraphs: [
-      "As part of the Adobe Creative Jams Designathon, myself and two others built Rethink. Rethink is a digital mobile application that introduces high school adolescents to design concepts through gamification.",
-      "There are multiple features of Rethink, including Education, Events, Chats, and Community. Notably, the education section gamifies learning into different games and topics, while the events section suggests nearby hosted events.",
-    ],
-    tags: ["Prototyping", "UI/UX Design"],
-    toolList: ["AdobeXd", "Figma"],
-    toolLogos: [adobexd, figma],
-    cover: rethink_cover,
-    selector: rethink_selector,
-    overlay: rethink_overlay,
-    icon: <BiSolidBrain />,
-    image: rethink_screen,
-    caption: "Learn Screen (Left), Events Screen (Right)",
-    link: "https://xd.adobe.com/view/f0025240-e2f4-45ee-80b6-5dcc01971ae3-a551/screen/03850abc-4097-4d6e-8562-99a8267bb38e/?fullscreen=",
-    github: "",
-  },
+  // {
+  //   id: 4,
+  //   name: "Drone",
+  //   url: "/drone",
+  //   timeframe: "February 2021",
+  //   role: "Hardware Developer",
+  //   type: "Personal Project",
+  //   description:
+  //     "A quadcopter constructed using an Arduino, gyroscope and radio modules with a 3D-printed body",
+  //   paragraphs: [
+  //     "I have always loved drones and FPV flights. Thus, I wanted to see if it was possible to build my own quadcopter. I 3D-printed the body in 6 parts with cutouts for motors, speed controllers, and 2 Arduino Nanos; one Nano would act as the flight controller, and the other would be the receiver.",
+  //     "There were multiple problems with my implementation. Firstly, the weight to power ratio of the body and motors was not enough for the drone to sustain flight. Secondly, since I had build my own controller, the transmission speed and distance was very limited.",
+  //   ],
+  //   tags: ["Hardware Development", "Robotics", "3D-Printing"],
+  //   toolList: ["Arduino C", "3D-Printing", "Solidworks"],
+  //   toolLogos: [arduino, printing, solidworks],
+  //   cover: drone_cover,
+  //   selector: drone_selector,
+  //   overlay: drone_overlay,
+  //   icon: <TbDrone />,
+  //   image: drone_solidworks,
+  //   caption: "Solidworks Drone Model",
+  //   link: "",
+  //   github: "",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Rethink",
+  //   url: "/rethink",
+  //   timeframe: "September 2020",
+  //   role: "Designer",
+  //   type: "Hackathon Project",
+  //   description:
+  //     "An AdobeXD mobile application to introduce high school students to the world of design",
+  //   paragraphs: [
+  //     "As part of the Adobe Creative Jams Designathon, myself and two others built Rethink. Rethink is a digital mobile application that introduces high school adolescents to design concepts through gamification.",
+  //     "There are multiple features of Rethink, including Education, Events, Chats, and Community. Notably, the education section gamifies learning into different games and topics, while the events section suggests nearby hosted events.",
+  //   ],
+  //   tags: ["Prototyping", "UI/UX Design"],
+  //   toolList: ["AdobeXd", "Figma"],
+  //   toolLogos: [adobexd, figma],
+  //   cover: rethink_cover,
+  //   selector: rethink_selector,
+  //   overlay: rethink_overlay,
+  //   icon: <BiSolidBrain />,
+  //   image: rethink_screen,
+  //   caption: "Learn Screen (Left), Events Screen (Right)",
+  //   link: "https://xd.adobe.com/view/f0025240-e2f4-45ee-80b6-5dcc01971ae3-a551/screen/03850abc-4097-4d6e-8562-99a8267bb38e/?fullscreen=",
+  //   github: "",
+  // },
   {
     id: 2,
     name: "Puppr",

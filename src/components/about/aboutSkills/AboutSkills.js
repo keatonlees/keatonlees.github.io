@@ -15,13 +15,13 @@ function AboutSkills() {
   const frontend = [
     "javascript",
     "typescript",
-    "react.js",
+    "react",
+    "next.js",
     "redux",
-    "html",
-    "css",
+    "html5",
+    "css3",
     "sass/scss",
-    "chakraui",
-    "framer motion",
+    "tailwindcss",
   ];
   const backend = [
     "python",

@@ -11,28 +11,28 @@ function HomeAbout() {
 
   const experiences = [
     {
-      company: "CanvassAI",
-      title: "Software Developer Intern",
+      company: "Canvass Analytics Inc.",
+      title: "Software Developer",
       year: "2023",
       link: "https://www.canvass.io/",
     },
     {
       company: "PiinPoint",
-      title: "Full-Stack Developer Intern",
+      title: "Full-Stack Developer",
       year: "2022",
       link: "https://www.piinpoint.com/",
     },
     {
       company: "Jamlabs Data Science",
-      title: "Software Developer Intern",
+      title: "Software Developer",
       year: "2022",
       link: "https://www.jamlabs.com/",
     },
   ];
 
-  const frontend_skills = ["JavaScript", "TypeScript", "React.js"];
-  const backend_skills = ["Python", "Node.js", "Java"];
-  const other_skills = ["Git", "Jest", "AWS"];
+  const frontend_skills = ["TypeScript", "React", "Next.js"];
+  const backend_skills = ["Python", "Node.js", "MongoDB"];
+  const other_skills = ["Git", "AWS", "Docker"];
 
   return (
     <SlideLayout a="center" j="center">
@@ -43,11 +43,16 @@ function HomeAbout() {
             fw="light"
             className="ha-left-text"
           >
-            Hi! I'm Keaton! I'm a Systems Design Engineering Graduate from the
-            University of Waterloo. Previously, I've helped developed apps at
-            CanvassAI, PiinPoint, and Jamlabs Data Science. Outside of work, you
-            can creating fun projects using new technologies. On top of that, I
-            enjoy gymming, playing volleyball, and researching upcoming tech.
+            Hey, I'm Keaton! A full-stack developer with a strong foundation in
+            both frontend and backend technologies. I recently completed my BASc
+            in Systems Design Engineering at the University of Waterloo, where I
+            honed my skills in building impactful solutions to unique problems.
+            I have hands on experience with React, Next.js, TypeScript and
+            Python. I've contributed to building dynamic applications,
+            streamlining workflows, and creating engaging interfaces. I'm
+            passionate about collaborating with others, solving complex
+            challenges, and continuously learning to improve my technical and
+            leadership skills.
           </Text>
           <Button navLink="/about" fs={width <= phone ? "sm" : "md"} fw="bold">
             More about me!
@@ -56,7 +61,7 @@ function HomeAbout() {
 
         <div className="ha-right">
           <div className="ha-top">
-            <Text className="ha-top-title">Recent Experiences</Text>
+            <Text className="ha-top-title">Experiences</Text>
             <div className="ha-top-experiences">
               {experiences.map((experience, i) => {
                 return (
