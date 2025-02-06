@@ -1,7 +1,7 @@
 // ==================== IMPORTS ====================
-@import "./foundations/constants/Breakpoints"
-@import './foundations/constants/Global'
-@import './foundations/constants/Theme'
+@import "./constants/Breakpoints"
+@import './constants/Global'
+@import './constants/Theme'
 
 // 50-55 = project built images
 // 80 = scroll down
@@ -135,12 +135,6 @@
     @return false
   @return $number * nth($units, $index)
 
-.test-class
-  color: red
-
-.other-class
-  background-color: blue
-
 // ==================== MEDIA QUERIES ====================
 @include media("<=phone")
 @include media(">phone", "<=tablet")
@@ -148,67 +142,3 @@
 @include media(">laptop", "<=desktop")
 @include media(">desktop")
 @include media("retina2x")
-
-// ==================== SWIPER ADJUSTMENTS ====================
-.swiper
-  height: 100vh
-  &-slide
-    width: 100%
-  &-pagination
-    background: var(--glassColour)
-    backdrop-filter: blur(3px)
-    padding: 8px
-    margin-right: -10px
-    border-radius: 10px 0px 0px 10px
-    @include media("<=phone")
-      padding: 0px
-  &-pagination-bullet
-    width: 8px
-    height: 60px
-    background-color: var(--bgColour400)
-    border-radius: 80px
-    transition: 0.5s
-    @include media("<=phone")
-      width: 0 !important
-    &:hover
-      background-color: var(--accentThirdary)
-  &-pagination-bullet-active
-    background-color: var(--accentPrimary)
-    transition: 0.5s
-.swiper-button-prev,
-.swiper-button-next
-  color: var(--accentPrimary)
-.customBullet
-  opacity: 1
-  @include media("<=phone")
-    display: none !important
-  &:hover p
-    opacity: 1
-  p
-    position: fixed
-    right: 8px
-    height: 60px
-    padding-right: 20px
-    display: flex
-    justify-content: flex-end
-    align-items: center
-    text-align: right
-    opacity: 0
-    transition: 0.5s
-    font-size: 14px
-
-// ----- Ambient Background Particles ----- 
-// .particles
-//   position: fixed
-//   z-index: -500
-
-// ----- React Tooltip -----
-// .tooltip
-//   background-color: var(--fontColour) !important
-//   color: var(--bgColour) !important
-//   border-radius: 5px !important
-//   transition: 0.2s !important
-//   &.place-top::after
-//     border-top-color: var(--fontColour) !important
-//   &.place-bottom::after
-//     border-bottom-color: var(--fontColour) !important

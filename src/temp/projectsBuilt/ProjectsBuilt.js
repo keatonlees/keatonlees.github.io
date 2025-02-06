@@ -4,7 +4,7 @@ import { RiArrowLeftSFill, RiArrowRightSFill } from "react-icons/ri";
 import { motion } from "framer-motion";
 
 // ==================== UTIL ====================
-import { ProjectList } from "../../../data/ProjectList";
+import { ProjectList } from "../../data/ProjectList";
 
 // ==================== COMPONENTS ====================
 import BuiltContent from "./BuiltContent";
@@ -16,7 +16,7 @@ import {
   staggerChildFromLeft,
   staggerChildFromRight,
   staggerParent,
-} from "../../../foundations/motionVariants/MotionVariants";
+} from "../../foundations/motionVariants/MotionVariants";
 
 function ProjectsBuilt() {
   const [index, setIndex] = useState(0);

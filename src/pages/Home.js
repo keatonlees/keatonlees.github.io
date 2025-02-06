@@ -1,29 +1,13 @@
-// ==================== COMPONENTS ====================
-import { PageLayout } from "../foundations";
-import HomeLanding from "../components/home/homeLanding/HomeLanding";
-import HomeAbout from "../components/home/homeAbout/HomeAbout";
-
-// ==================== STYLES ====================
-import "../App.sass";
-import ContactSlide from "../components/contact/ContactSlide";
+import PageTransition from "../components/PageTransition/PageTransition";
 
 function Home() {
-  const bullets = [
-    "Landing",
-    "About",
-    // "Spotlight",
-    //  "Blogs",
-    "Contact",
-  ];
-  const slides = [
-    <HomeLanding />,
-    <HomeAbout />,
-    // <h1>Spotlight</h1>,
-    // <h1>Blog</h1>,
-    <ContactSlide />,
-  ];
+  return (
+    <>
+      <PageTransition />
 
-  return <PageLayout bullets={bullets} slides={slides} />;
+      <div>Home test</div>
+    </>
+  );
 }
 
 export default Home;

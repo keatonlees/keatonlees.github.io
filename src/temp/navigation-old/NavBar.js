@@ -2,12 +2,12 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import useDarkMode from "use-dark-mode";
+// import useDarkMode from "use-dark-mode";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
 // ==================== UTIL ====================
-import useWindowDimensions from "../../util/WindowDimensions.js";
+import useWindowDimensions from "../../hooks/useWindowDimension.js";
 
 // ==================== COMPONENTS ====================
 import ModeToggle from "../modeToggle/ModeToggle";
@@ -22,7 +22,7 @@ import resume from "../../files/KeatonLeesResume.pdf";
 import { Text } from "../../foundations/index.js";
 
 function NavBar() {
-  const darkMode = useDarkMode(true);
+  const darkMode = true;
   const { width } = useWindowDimensions();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [location, setLocation] = useState("");

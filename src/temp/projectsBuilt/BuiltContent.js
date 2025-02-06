@@ -6,10 +6,10 @@ import {
 } from "react-icons/bs";
 
 // ==================== UTIL ====================
-import { ProjectList as PL } from "../../../data/ProjectList";
+import { ProjectList as PL } from "../../data/ProjectList";
 
 // ==================== COMPONENTS ====================
-import { Text } from "../../../foundations";
+import { Text } from "../../foundations";
 
 // ==================== STYLES ====================
 import "./BuiltContent.sass";

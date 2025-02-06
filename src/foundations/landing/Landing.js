@@ -5,14 +5,14 @@ import ReactTextTransition, { presets } from "react-text-transition";
 import Marquee from "react-fast-marquee";
 
 // ==================== UTIL ====================
-import useWindowDimensions from "../../util/WindowDimensions.js";
-import { wordSpeed } from "../constants/Constants";
+import useWindowDimensions from "../../hooks/useWindowDimension.js";
+import { wordSpeed } from "../../constants/Constants.js";
 import {
   staggerParent,
   staggerChildFromLeft,
   staggerChildFadeIn,
 } from "../motionVariants/MotionVariants.js";
-import { phone, desktop } from "../constants/Breakpoints.js";
+import { phone, desktop } from "../../constants/Breakpoints.js";
 
 // ==================== COMPONENTS ====================
 import Text from "../text/Text";

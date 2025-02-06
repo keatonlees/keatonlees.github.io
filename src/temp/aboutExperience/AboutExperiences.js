@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 // ==================== UTIL ====================
 import { ExperienceList } from "../../../data/ExperienceList";
-import useWindowDimensions from "../../../util/WindowDimensions";
-import { tablet } from "../../../foundations/constants/Breakpoints";
+import useWindowDimensions from "../../../hooks/useWindowDimension";
+import { tablet } from "../../../constants/Breakpoints";
 import {
   staggerChildFadeIn,
   staggerParent,

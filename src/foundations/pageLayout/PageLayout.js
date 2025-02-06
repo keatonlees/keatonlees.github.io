@@ -1,28 +1,28 @@
 // ==================== LIBRARIES ====================
 import { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Pagination, Mousewheel } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import SwiperCore, { Pagination, Mousewheel } from "swiper";
 
 // ==================== UTIL ====================
-import { scrollSpeed } from "../constants/Constants";
-import useWindowDimensions from "../../util/WindowDimensions";
-import { tablet } from "../constants/Breakpoints";
+import { scrollSpeed } from "../../constants/Constants";
+import useWindowDimensions from "../../hooks/useWindowDimension";
+import { tablet } from "../../constants/Breakpoints";
 
 // ==================== COMPONENTS ====================
-import ColourWipe from "../../components/colourWipe/ColourWipe";
+// import ColourWipe from "../../components/colourWipe/ColourWipe";
 import NavBar from "../../components/navigation/NavBar";
 import ContactSidebar from "../../components/contact/ContactSidebar";
 import ScrollDown from "../../components/navigation/ScrollDown";
 import ScrollTop from "../../components/navigation/ScrollTop";
 
 // ==================== STYLES ====================
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/mousewheel";
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/mousewheel";
 import "../../App.sass";
 
 // ==================== INITIALIZE SWIPER ====================
-SwiperCore.use([Pagination, Mousewheel]);
+// SwiperCore.use([Pagination, Mousewheel]);
 
 function PageLayout({ bullets, slides, setSI = null }) {
   const { width } = useWindowDimensions();
@@ -40,13 +40,13 @@ function PageLayout({ bullets, slides, setSI = null }) {
 
   return (
     <>
-      <ColourWipe />
+      {/* <ColourWipe /> */}
       <NavBar />
       <ContactSidebar />
       <ScrollDown swiper={swiper} index={slideIndex} />
       <ScrollTop swiper={swiper} index={slideIndex} />
 
-      <Swiper
+      {/* <Swiper
         direction={"vertical"}
         slidesPerView={1}
         speed={scrollSpeed}
@@ -71,7 +71,7 @@ function PageLayout({ bullets, slides, setSI = null }) {
             </SwiperSlide>
           );
         })}
-      </Swiper>
+      </Swiper> */}
     </>
   );
 }

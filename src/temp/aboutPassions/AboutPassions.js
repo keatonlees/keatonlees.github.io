@@ -1,6 +1,6 @@
 // ==================== LIBRARIES ====================
 import { useState } from "react";
-import Spline from "@splinetool/react-spline";
+// import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 
 // ==================== UTIL ====================
@@ -32,12 +32,12 @@ function AboutPassions({ slideIndex }) {
 
       {(slideIndex === 4 || isSeen) && (
         <motion.div style={{ width: "100vw", height: "100vh" }}>
-          <Spline
+          {/* <Spline
             onLoad={onLoad}
             // scene="https://prod.spline.design/Qxu-lxNSi6aKu0Pl/scene.splinecode"
             scene="https://prod.spline.design/SceMpboQsywFAVg2/scene.splinecode"
             style={{ display: isLoading ? "none" : "block" }}
-          />
+          /> */}
         </motion.div>
       )}
     </SlideLayout>

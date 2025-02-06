@@ -3,9 +3,9 @@ import React from "react";
 import { motion, useIsPresent } from "framer-motion";
 
 // ==================== STYLES ====================
-import "./ColourWipe.sass";
+import "./PageTransition.sass";
 
-function ColourWipe() {
+function PageTransition() {
   const isPresent = useIsPresent();
 
   return (
@@ -14,15 +14,22 @@ function ColourWipe() {
       initial={{ scaleY: 1 }}
       animate={{
         scaleY: 0,
-        transition: { duration: 0.8, ease: "circOut", delay: 0.3 },
+        transition: { duration: 0.8, ease: "circOut", delay: 2 },
       }}
       exit={{
         scaleY: 1,
         transition: { duration: 0.8, ease: "circIn", delay: 0.1 },
       }}
-      style={{ originY: isPresent ? 0 : 1 }}
-    />
+      style={{ originY: isPresent ? 1 : 0 }}
+    >
+      <motion.div
+        initial={{ opacity: 1 }}
+        animate={{ opacity: 0, transition: { delay: 1 } }}
+      >
+        Designed by Keaton
+      </motion.div>
+    </motion.div>
   );
 }
 
-export default ColourWipe;
+export default PageTransition;

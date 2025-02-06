@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Marquee from "react-fast-marquee";
 
 // ==================== COMPONENTS ====================
-import ColourWipe from "../components/colourWipe/ColourWipe";
+// import ColourWipe from "../components/colourWipe/ColourWipe";
 import NavBar from "../components/navigation/NavBar";
 
 // ==================== STYLES ====================
@@ -13,30 +13,12 @@ import "./NotFound.sass";
 import { Button, Flex, Text } from "../foundations";
 
 function NotFound() {
-  const numLines = 12;
-  let bgContent = [];
-  for (let i = 0; i < numLines; i++) {
-    bgContent.push(
-      <Marquee
-        key={i}
-        speed={5}
-        autoFill
-        direction={i % 2 === 0 ? "left" : "right"}
-      >
-        <Text fs="6xl" fw="bold" className="bg-text">
-          ERROR
-        </Text>
-      </Marquee>
-    );
-  }
-
   return (
     <>
-      <ColourWipe />
-      <NavBar />
+      {/* <ColourWipe /> */}
+      {/* <NavBar /> */}
 
       <Flex a="center" j="center" className="notfound-container">
-        <div className="bg-container">{bgContent}</div>
         <Flex a="center" d="column" className="notfound-content glass">
           <Text fs="9xl" fw="bold" fc="accent">
             404

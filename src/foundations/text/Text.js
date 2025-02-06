@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 
 // ==================== UTIL ====================
-import { FS } from "../constants/FontSizes.js";
-import { FW } from "../constants/FontWeights.js";
+import { FS } from "../../constants/FontSizes.js";
+import { FW } from "../../constants/FontWeights.js";
 
 // ==================== STYLES ====================
 import "./Text.sass";

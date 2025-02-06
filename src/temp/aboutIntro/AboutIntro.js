@@ -2,8 +2,8 @@
 import { motion } from "framer-motion";
 
 // ==================== UTIL ====================
-import useWindowDimensions from "../../../util/WindowDimensions";
-import { laptop } from "../../../foundations/constants/Breakpoints";
+import useWindowDimensions from "../../../hooks/useWindowDimension";
+import { laptop } from "../../../constants/Breakpoints";
 import {
   staggerChildFadeIn,
   staggerParent,

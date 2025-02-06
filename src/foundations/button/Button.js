@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
 // ==================== UTIL ====================
-import { FW } from "../constants/FontWeights";
+import { FW } from "../../constants/FontWeights";
 
 // ==================== COMPONENTS ====================
 import Text from "../text/Text";

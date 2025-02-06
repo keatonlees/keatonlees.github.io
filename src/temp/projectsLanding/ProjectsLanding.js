@@ -1,6 +1,6 @@
 // ==================== UTIL ====================
-import useWindowDimensions from "../../../util/WindowDimensions";
-import { phone } from "../../../foundations/constants/Breakpoints";
+import useWindowDimensions from "../../../hooks/useWindowDimension";
+import { phone } from "../../../constants/Breakpoints";
 
 // ==================== COMPONENTS ====================
 import { Button, Landing, SlideLayout, Text } from "../../../foundations";
