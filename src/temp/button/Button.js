@@ -5,7 +5,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom";
 import { FW } from "../../constants/FontWeights";
 
 // ==================== COMPONENTS ====================
-import Text from "../text/Text";
+import Text from "../../temp/text/Text";
 
 // ==================== STYLES ====================
 import "../../App.sass";
