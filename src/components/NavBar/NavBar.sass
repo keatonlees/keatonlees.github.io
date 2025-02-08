@@ -1,0 +1,89 @@
+@import "../../App"
+@import "../../constants/Theme"
+
+.navbar
+  position: fixed
+  width: calc(100% - 32px)
+  display: flex
+  justify-content: space-between
+  padding: 0 8px
+  align-items: center
+  height: max(5.4vh, 3.6rem)
+  max-height: 6vh
+  margin: 16px
+  border-radius: 8px
+  z-index: 100
+
+  .navbar-logo
+    width: max(2.4vw, 2.4rem)
+
+  .navbar-desktop
+    display: none
+    gap: 16px
+
+    @include media(">tablet")
+      display: flex
+
+  .navbar-mobile
+    display: none
+
+    @include media("<=tablet")
+      display: flex
+
+    .hamburger
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      width: 28px
+      height: 20px
+      margin-right: 8px
+
+      .hamburger-bar
+        width: 100%
+        height: 3px
+        background-color: var(--color-text)
+        border-radius: 2px
+        transition: 0.3s all
+        transform-origin: left
+
+    .mobile-menu
+      position: fixed
+      top: 100%
+      left: 0
+      width: 100%
+      z-index: 100
+      border-radius: 8px
+      padding: 16px
+      transform-origin: top
+
+      &-content
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+  .navbar-right-container
+    display: flex
+    align-items: center
+    gap: 8px
+
+.link
+  color: var(--color-text)
+  text-decoration: none
+  font-size: max(1.2vw, 1rem)
+  font-weight: 600
+
+  @include media("<=tablet")
+    padding: 0.8rem
+    width: 100%
+    font-size: 1.2rem
+    text-align: center
+
+.active
+  color: var(--color-accent)
+  text-decoration: underline
+  text-decoration-color: var(--color-accent)
+  text-decoration-thickness: 2px
+  text-underline-offset: 25%

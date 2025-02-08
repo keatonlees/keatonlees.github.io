@@ -1,7 +1,4 @@
-// ==================== GLOBAL VARIABLES ====================
-$pageMargins: 6vw
-$navbarHeight: 60px
-// $contactWidth: 50px
+@import "./Theme"
 
 *, ::before, ::after
     margin: 0
@@ -9,15 +6,22 @@ $navbarHeight: 60px
     box-sizing: border-box
 
 body
-    transition: background-color 0.5s, color 0.5s
-
-.link
-    text-decoration: none
-    color: var(--fontColour)
+    transition: background-color 0.3s, color 0.3s
 
 .glass
-    background: var(--glassColour)
-    backdrop-filter: blur(3px)
+    background: var(--color-glass)
+    backdrop-filter: blur(4px)
+
+.shadow
+    box-shadow: 0px 9px 20px var(--color-shadow)
+
+.progress-bar
+    position: fixed
+    bottom: 0
+    width: 100vw
+    height: 8px
+    background-color: var(--color-accent)
+    transform-origin: left
 
 .hover-underline
     position: relative
@@ -28,10 +32,10 @@ body
         position: absolute
         width: 100%
         transform: scaleX(0)
-        height: 3px
-        bottom: -5px
+        height: 2px
+        bottom: -3px
         left: 0
-        background-color: var(--accentPrimary)
+        background-color: var(--color-accent)
         transform-origin: bottom right
         transition: transform 0.25s ease-out
 

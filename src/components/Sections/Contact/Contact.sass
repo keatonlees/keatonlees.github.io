@@ -1,0 +1,53 @@
+@import "../../../App.sass"
+
+.contact
+  height: 100vh
+  display: flex
+  flex-direction: column
+
+  .contact-top
+    flex: 2
+    padding: 0px 32px
+
+    .content
+      height: 100%
+      border-bottom: 1px solid var(--color-text)
+      display: flex
+      align-items: flex-end
+      padding-bottom: 32px
+
+      @include media("<=tablet")
+        flex-direction: column
+
+      .message
+        flex: 1
+        font-size: 3.6vw
+
+      .social-content
+        flex: 1
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+
+        img
+          width: 20vw
+
+  .contact-bottom
+    flex: 1.2
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    padding-bottom: 32px
+
+    .mega-text
+      font-size: 8.4vw
+      font-weight: 700
+      line-height: 0.7
+
+    .footer
+      padding: 0px 32px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      font-size: 1.6rem

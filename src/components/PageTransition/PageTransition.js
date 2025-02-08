@@ -1,11 +1,10 @@
-// ==================== IMPORTS ====================
-import React from "react";
-import { motion, useIsPresent } from "framer-motion";
+import { motion, useIsPresent } from "motion/react";
 
-// ==================== STYLES ====================
+import Text from "../ui/Text/Text";
+
 import "./PageTransition.sass";
 
-function PageTransition() {
+function PageTransition({ text = "Keaton Lees" }) {
   const isPresent = useIsPresent();
 
   return (
@@ -14,7 +13,7 @@ function PageTransition() {
       initial={{ scaleY: 1 }}
       animate={{
         scaleY: 0,
-        transition: { duration: 0.8, ease: "circOut", delay: 2 },
+        transition: { duration: 0.8, ease: "circOut", delay: 1.2 },
       }}
       exit={{
         scaleY: 1,
@@ -24,9 +23,12 @@ function PageTransition() {
     >
       <motion.div
         initial={{ opacity: 1 }}
-        animate={{ opacity: 0, transition: { delay: 1 } }}
+        animate={{
+          opacity: 0,
+          transition: { duration: 0.4, ease: "circOut", delay: 0.5 },
+        }}
       >
-        Designed by Keaton
+        <Text variant="h1">{text}</Text>
       </motion.div>
     </motion.div>
   );

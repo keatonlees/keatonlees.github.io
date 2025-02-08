@@ -1,0 +1,24 @@
+@import "../../../constants/Theme"
+
+.arrow-link
+  display: flex
+  align-items: center
+  gap: 4px
+  text-decoration: none
+  width: fit-content
+  transition: 0.3s all
+
+  .arrow
+    font-size: 1.4rem
+    transition: 0.3s all
+
+.button
+  color: var(--color-primary)
+  padding: 0.6rem 1rem
+  background: linear-gradient(135deg, transparent 4%, var(--color-secondary) 4%, var(--color-secondary) 96%, transparent 96%)
+
+  &:hover
+    filter: drop-shadow(6px 6px var(--color-accent))
+
+    .arrow
+      transform: translateX(2px)

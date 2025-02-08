@@ -10,6 +10,15 @@
 // 100 = navbar
 // 1000 = colour wipe
 
+// ==================== SCROLLBAR ====================
+::-webkit-scrollbar
+  width: 0px
+::-webkit-scrollbar-track
+  background: transparent
+::-webkit-scrollbar-thumb
+  background-color: var(--color-primary)
+  border-radius: 4px
+
 // ==================== BREAKPOINT LOGIC ====================
 @mixin media($conditions...)
   @for $i from 1 through length($conditions)

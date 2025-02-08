@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "framer-motion": "^5.6.0",
+    "motion": "^12.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.0",
@@ -46,8 +46,8 @@
     "@babel/eslint-parser": "^7.22.7",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@babel/preset-env": "^7.22.7",
+    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
     "babel-preset-react": "^6.24.1",
-    "eslint-plugin-import": "^2.31.0",
     "gh-pages": "^6.3.0"
   }
 }
