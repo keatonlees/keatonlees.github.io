@@ -7,7 +7,7 @@ import headshot_1 from "../../../images/headshot_1.png";
 import headshot_2 from "../../../images/headshot_2.png";
 import planets from "../../../images/planets.png";
 import { useTheme } from "../../../lib/ThemeContext";
-import MarqueeText from "../../MarqueeText/MarqueeText";
+// import MarqueeText from "../../MarqueeText/MarqueeText";
 import ScrollDown from "../../ScrollDown/ScrollDown";
 import Socials from "../../Socials/Socials";
 import Text from "../../ui/Text/Text";
@@ -103,7 +103,7 @@ function Hero() {
       </motion.div>
 
       {/* Marquees */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { delay: 4.4, duration: 0.6 } }}
       >
@@ -121,7 +121,7 @@ function Hero() {
           angle={-45}
           className="hero-marquee"
         />
-      </motion.div>
+      </motion.div> */}
 
       <div className="hero-content">
         <motion.div
