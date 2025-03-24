@@ -1,0 +1,62 @@
+.flair-base
+  position: absolute
+
+.color-squares-h
+  display: flex
+  flex-direction: row
+.color-squares-v
+  display: flex
+  flex-direction: column
+.color-square-h
+  width: max(4.8vw, 3.2rem)
+  height: max(0.8vw, 0.6rem)
+.color-square-v
+  width: max(0.8vw, 0.6rem)
+  height: max(4.8vw, 3.2rem)
+.color-square-1
+  background-color: var(--color-primary-100)
+.color-square-2
+  background-color: var(--color-primary-300)
+.color-square-3
+  background-color: var(--color-primary-700)
+.color-square-4
+  background-color: var(--color-primary-900)
+
+.color-dots-h
+  display: flex
+  flex-direction: row
+  gap: max(0.4vw, 0.4rem)
+.color-dots-v
+  display: flex
+  flex-direction: column
+  gap: max(0.4vw, 0.4rem)
+.color-dot-h, .color-dot-v
+  width: max(1.2vw, 1.4rem)
+  aspect-ratio: 1/1
+  border-radius: 999px
+.color-dot-1
+  background-color: var(--color-primary-100)
+.color-dot-2
+  background-color: var(--color-primary-300)
+.color-dot-3
+  background-color: var(--color-primary-700)
+.color-dot-4
+  background-color: var(--color-primary-900)
+
+.square-grid-h, .square-grid-v
+  display: grid
+.square-grid-h
+  grid-template-columns: repeat(5, 1fr)
+  gap: 4px 8px
+.square-grid-v
+  grid-template-columns: repeat(3, 1fr)
+  gap: 8px 4px
+.square-grid-item
+  width: max(0.4vw, 0.4rem)
+  aspect-ratio: 1/1
+  background-color: var(--color-bg-300)
+
+.line-grid-h
+  width: max(4.8vw, 2rem)
+  height: max(2vw, 2rem)
+  background: repeating-linear-gradient( 45deg, var(--color-bg-300) 0, var(--color-bg-300) 4px, transparent 4px, transparent 12px )

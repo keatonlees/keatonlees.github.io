@@ -1,0 +1,80 @@
+@import "../../../App.sass"
+
+.dashboard
+  background-color: var(--color-bg)
+  padding: var(--padding-vpage) var(--padding-hpage)
+  display: flex
+  gap: 60px
+  min-height: 100vh
+  position: relative
+
+  @include media("<=tablet")
+    flex-direction: column
+
+  .db-color-square
+    bottom: var(--padding-hpage)
+    right: var(--padding-hpage)
+  .db-square-grid
+    bottom: var(--padding-hpage)
+    left: var(--padding-hpage)
+
+  .dashboard-left
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: max(6vw, 48px)
+
+    @include media("<=tablet")
+      padding-bottom: 64px
+      border-bottom: 1px solid var(--color-text-100)
+
+    .about
+      display: flex
+      flex-direction: column
+      gap: 8px
+
+      .about-text
+        font-size: var(--font-size-text)
+
+    .skills
+      display: flex
+      flex-direction: column
+      gap: 8px
+
+  .dashboard-right
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+    .db-experiences
+      display: flex
+      flex-direction: column
+
+      .db-experience
+        margin-bottom: 64px
+
+        @include media("<=tablet")
+          margin-bottom: 32px
+
+        .db-company
+          font-size: var(--font-size-title)
+          transition: 0.3s scale
+          width: fit-content
+
+        .db-link:hover
+          cursor: pointer
+          scale: 1.05
+
+        .db-title
+          font-size: var(--font-size-text)
+
+        .db-position
+          color: var(--color-accent)
+
+        .db-timeframe
+          color: var(--color-text-100)
+
+        .db-glance
+          font-size: var(--font-size-text)
+          margin-left: var(--padding-hpage)

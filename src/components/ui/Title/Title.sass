@@ -1,0 +1,36 @@
+@import "../../../App.sass"
+
+.title-container
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  gap: max(1vw, 1rem)
+
+  .title-text-sm
+    font-size: max(2.8vw, 1.8rem)
+
+  .title-text-md
+    font-size: max(3.6vw, 2.4rem)
+
+  .title-text-lg
+    font-size: max(4.2vw, 3rem)
+
+.title-light
+  color: var(--color-text)
+
+.title-dark
+  color: var(--color-bg)
+
+.dash
+  width: max(3.2vw, 2rem)
+  height: max(0.8vh, 0.4rem)
+  border-radius: 0.2rem
+
+  @include media("<=tablet")
+    display: none
+
+.dash-light
+  background-color: var(--color-text)
+
+.dash-dark
+  background-color: var(--color-bg)

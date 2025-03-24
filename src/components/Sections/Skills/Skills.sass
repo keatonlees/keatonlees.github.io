@@ -1,0 +1,155 @@
+@import "../../../App.sass"
+
+.skills-container
+  min-height: 100vh
+  padding: 8vh max(1.6vw, 16px)
+  display: flex
+
+  .tech-skills
+    display: flex
+    flex-direction: column
+    flex: 1
+    gap: 8px
+
+    .skills-section-container
+      display: flex
+      flex-direction: column
+      gap: 64px
+      padding-right: max(1.6vw, 16px)
+
+      .skills-title
+        font-size: max(2.8vw, 2rem)
+
+  .select-skills
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+
+    @include media("<=tablet")
+      display: none
+
+    .hover-bubble
+      background: linear-gradient(135deg, var(--color-glass-low), var(--color-glass-half))
+      backdrop-filter: blur(10px)
+      -webkit-backdrop-filter: blur(10px)
+      border: 1px solid var(--color-glass-dark)
+      color: var(--color-text)
+      border-radius: 999px
+      width: 10vw
+      font-size: max(1.2vw, 1rem)
+      aspect-ratio: 1/1
+      display: flex
+      justify-content: center
+      align-items: center
+      transition: all 0.3s ease-in-out
+      animation: float 28s ease-in-out infinite
+      position: absolute
+      overflow: hidden
+      z-index: 2
+      text-align: center
+      padding: 0 16px
+
+      &:nth-child(1)
+        top: 35%
+        animation-delay: 0s
+
+      &:nth-child(2)
+        top: 55%
+        left: 28%
+        animation-delay: -3s
+
+      &:nth-child(3)
+        top: 55%
+        right: 28%
+        animation-delay: -6s
+
+      &:hover
+        cursor: pointer
+        transform: scale(1.05)
+        animation-play-state: paused
+        border: 1px solid var(--color-accent)
+
+    .detail-bubble
+      background: linear-gradient(135deg, var(--color-glass-low), var(--color-glass-half))
+      backdrop-filter: blur(10px)
+      -webkit-backdrop-filter: blur(10px)
+      border: 1px solid var(--color-glass-dark)
+      border-radius: 999px
+      position: absolute
+      opacity: 0.3
+      animation: float 20s ease-in-out infinite
+      z-index: 1
+
+      &:nth-child(4)
+        width: 4vw
+        height: 4vw
+        top: 20%
+        left: 25%
+        animation-delay: -2s
+
+      &:nth-child(5)
+        width: 3vw
+        height: 3vw
+        top: 25%
+        right: 15%
+        animation-delay: -4s
+
+      &:nth-child(6)
+        width: 5vw
+        height: 5vw
+        bottom: 30%
+        left: 15%
+        animation-delay: -6s
+
+      &:nth-child(7)
+        width: 3.5vw
+        height: 3.5vw
+        bottom: 20%
+        right: 20%
+        animation-delay: -8s
+
+      &:nth-child(8)
+        width: 4.5vw
+        height: 4.5vw
+        top: 85%
+        left: 30%
+        animation-delay: -10s
+
+      &:nth-child(9)
+        width: 3vw
+        height: 3vw
+        top: 50%
+        right: 25%
+        animation-delay: -12s
+
+@keyframes float
+  0%
+    transform: translate(0, 0) scale(1)
+  10%
+    transform: translate(3px, -5px) scale(1.01)
+  20%
+    transform: translate(-2px, -8px) scale(1.02)
+  30%
+    transform: translate(4px, -10px) scale(1)
+  40%
+    transform: translate(-3px, -12px) scale(0.99)
+  50%
+    transform: translate(2px, -8px) scale(1.01)
+  60%
+    transform: translate(-4px, -6px) scale(1.02)
+  70%
+    transform: translate(3px, -10px) scale(1)
+  80%
+    transform: translate(-2px, -8px) scale(0.98)
+  90%
+    transform: translate(4px, -5px) scale(1.01)
+  100%
+    transform: translate(0, 0) scale(1)
+
+@keyframes rotate
+  from
+    transform: rotate(0deg)
+  to
+    transform: rotate(360deg)

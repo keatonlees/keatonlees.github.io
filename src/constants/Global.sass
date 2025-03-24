@@ -1,0 +1,47 @@
+@import "./Theme"
+
+*, ::before, ::after
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    transition: background-color 0.3s, color 0.3s
+
+.glass
+    background: var(--color-glass)
+    backdrop-filter: blur(4px)
+.glass-dark
+    background: var(--color-glass)
+    backdrop-filter: blur(4px)
+
+.shadow
+    box-shadow: 0px 9px 20px var(--color-shadow)
+
+.progress-bar
+    position: fixed
+    bottom: 0
+    width: 100vw
+    height: 8px
+    background-color: var(--color-accent)
+    transform-origin: left
+
+.hover-underline
+    position: relative
+    display: inline-block
+
+    &::after
+        content: ''
+        position: absolute
+        width: 100%
+        transform: scaleX(0)
+        height: 2px
+        bottom: -3px
+        left: 0
+        background-color: var(--color-accent)
+        transform-origin: bottom right
+        transition: transform 0.25s ease-out
+
+    &:hover::after
+        transform: scaleX(1)
+        transform-origin: bottom left

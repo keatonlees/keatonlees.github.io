@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap")
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap')
+
+body
+    font-family: "Josefin Sans", sans-serif
+    background-color: var(--color-bg)
+    color: var(--color-text)
+
+.dark
+    --color-bg-100: var(--black-100)
+    --color-bg-300: var(--black-300)
+    --color-bg: var(--black-500)
+    --color-bg-700: var(--black-700)
+    --color-bg-900: var(--black-900)
+
+    --color-text-100: var(--white-100)
+    --color-text-300: var(--white-300)
+    --color-text: var(--white-500)
+    --color-text-700: var(--white-700)
+    --color-text-900: var(--white-900)
+
+    --color-primary-100: var(--purple-100)
+    --color-primary-300: var(--purple-300)
+    --color-primary: var(--purple-500)
+    --color-primary-700: var(--purple-700)
+    --color-primary-900: var(--purple-900)
+
+    --color-secondary-100: var(--cyan-100)
+    --color-secondary-300: var(--cyan-300)
+    --color-secondary: var(--cyan-500)
+    --color-secondary-700: var(--cyan-700)
+    --color-secondary-900: var(--cyan-900)
+
+    --color-accent: var(--pink-500)
+
+    --color-glass: var(--glass-900)
+    --color-glass-dark: var(--glass-500)
+    --color-glass-low: var(--glass-500-low)
+    --color-glass-half: var(--glass-500-half)
+
+    --color-shadow: var(--shadow-dark)
+
+:root
+    --color-bg-100: var(--white-100)
+    --color-bg-300: var(--white-300)
+    --color-bg: var(--white-500)
+    --color-bg-700: var(--white-700)
+    --color-bg-900: var(--white-900)
+
+    --color-text-100: var(--black-100)
+    --color-text-300: var(--black-300)
+    --color-text: var(--black-500)
+    --color-text-700: var(--black-700)
+    --color-text-900: var(--black-900)
+
+    --color-primary-100: var(--skyblue-100)
+    --color-primary-300: var(--skyblue-300)
+    --color-primary: var(--skyblue-500)
+    --color-primary-700: var(--skyblue-700)
+    --color-primary-900: var(--skyblue-900)
+
+    --color-secondary-100: var(--slate-100)
+    --color-secondary-300: var(--slate-300)
+    --color-secondary: var(--slate-500)
+    --color-secondary-700: var(--slate-700)
+    --color-secondary-900: var(--slate-900)
+
+    --color-accent: var(--maroon-500)
+
+    --color-glass: var(--glass-500)
+    --color-glass-dark: var(--glass-900)
+    --color-glass-low: var(--glass-900-low)
+    --color-glass-half: var(--glass-900-half)
+
+    --color-shadow: var(--shadow-light)
+
+    --white-100: #989592
+    --white-200: #b2aeaa
+    --white-300: #cbc7c2
+    --white-400: #e5e0db
+    --white-500: #fef9f3
+    --white-600: #fefaf4
+    --white-700: #fefaf5
+    --white-800: #fefbf7
+    --white-900: #fefbf8
+
+    --black-100: #7c7c7c
+    --black-200: #666666
+    --black-300: #515151
+    --black-400: #3b3b3b
+    --black-500: #252525
+    --black-600: #212121
+    --black-700: #1e1e1e
+    --black-800: #1a1a1a
+    --black-900: #161616
+
+    --skyblue-100: #cee5ef
+    --skyblue-200: #c6e0ed
+    --skyblue-300: #bedcea
+    --skyblue-400: #b6d7e8
+    --skyblue-500: #AED3E5
+    --skyblue-600: #9dbece
+    --skyblue-700: #8ba9b7
+    --skyblue-800: #7a95a0
+    --skyblue-900: #687f89
+
+    --slate-100: #899cb2
+    --slate-200: #758ca5
+    --slate-300: #617b98
+    --slate-400: #4e6b8b
+    --slate-500: #3A5A7E
+    --slate-600: #345171
+    --slate-700: #2e4865
+    --slate-800: #293f58
+    --slate-900: #23364c
+
+    --maroon-100: #e581ac
+    --maroon-200: #e06c9e
+    --maroon-300: #dc5791
+    --maroon-400: #d74283
+    --maroon-500: #d32d75
+    --maroon-600: #be2969
+    --maroon-700: #a9245e
+    --maroon-800: #941f52
+    --maroon-900: #7f1b46
+
+    --purple-100: #957cec
+    --purple-200: #8366e9
+    --purple-300: #7150e5
+    --purple-400: #603ae2
+    --purple-500: #4e24df
+    --purple-600: #4620c9
+    --purple-700: #3e1db2
+    --purple-800: #37199c
+    --purple-900: #2f1686
+
+    --cyan-100: #66edff
+    --cyan-200: #4deaff
+    --cyan-300: #33e7ff
+    --cyan-400: #1ae4ff
+    --cyan-500: #00e1ff
+    --cyan-600: #00cbe6
+    --cyan-700: #00b4cc
+    --cyan-800: #009eb3
+    --cyan-900: #008799
+
+    --pink-100: #ff66b0
+    --pink-200: #ff4da3
+    --pink-300: #ff3395
+    --pink-400: #ff1a88
+    --pink-500: #ff007b
+    --pink-600: #e6006f
+    --pink-700: #cc0062
+    --pink-800: #b30056
+    --pink-900: #99004a
+
+    --glass-500: rgba(255, 255, 255, 0.8)
+    --glass-900: rgba(0, 0, 0, 0.8)
+
+    --glass-500-low: rgba(255, 255, 255, 0.15)
+    --glass-500-half: rgba(255, 255, 255, 0.05)
+    --glass-900-low: rgba(0, 0, 0, 0.15)
+    --glass-900-half: rgba(0, 0, 0, 0.05)
+
+    --shadow-light: rgba(13, 38, 76, 0.19)
+    --shadow-dark: rgba(0, 0, 0, 0.19)
+
+    --font-size-title: max(2.8vw, 2rem)
+    --font-size-text: max(1.6vw, 1.2rem)
+
+    --padding-hpage: max(1.6vw, 1rem)
+    --padding-vpage: 8vh

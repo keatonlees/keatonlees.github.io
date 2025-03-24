@@ -1,373 +1,102 @@
-// ----- GetWrapped -----
-import rbb_overlay from "../images/project_rbb_logo.png";
-import rbb_layout from "../images/project_rbb_layout.png";
+import gw1 from "../images/project_getwrapped_home.png";
+import gw2 from "../images/project_getwrapped_page_1.png";
+import gw3 from "../images/project_getwrapped_page_2.png";
+import jarvis1 from "../images/project_jarvis_body.png";
+import jarvis2 from "../images/project_jarvis_screen.png";
+import octodo1 from "../images/project_octodo_home.png";
+import octodo2 from "../images/project_octodo_login.png";
+import rbb from "../images/project_rbb_layout.png";
+import souvenr1 from "../images/project_souvenr_home.png";
 
-// ----- GetWrapped -----
-import gw_overlay from "../images/project_getwrapped_logo.png";
-import gw_home from "../images/project_getwrapped_home.png";
-
-// ----- Octo-Do -----
-import octodo_cover from "../images/project_octodo_cover.png";
-import octodo_selector from "../images/project_octodo_selector.png";
-import octodo_overlay from "../images/project_octodo_waving_nobg.png";
-import octodo_login from "../images/project_octodo_login.png";
-
-// ----- Jarvis -----
-import jarvis_cover from "../images/project_jarvis_cover.png";
-import jarvis_selector from "../images/project_jarvis_selector.png";
-import jarvis_overlay from "../images/project_jarvis_nobg.png";
-import jarvis_screen from "../images/project_jarvis_screen.png";
-
-// ----- Arduino Drone -----
-// import drone_cover from "../images/project_drone_cover.png";
-// import drone_selector from "../images/project_drone_selector.png";
-// import drone_overlay from "../images/project_drone_nobg.png";
-// import drone_solidworks from "../images/project_drone_body.png";
-
-// ----- rethink -----
-// import rethink_cover from "../images/project_rethink_cover.png";
-// import rethink_selector from "../images/project_rethink_selector.png";
-// import rethink_overlay from "../images/project_rethink_lying_nobg.png";
-// import rethink_screen from "../images/project_rethink_combo.png";
-
-// ----- puppr -----
-import puppr_cover from "../images/project_puppr_cover.png";
-import puppr_selector from "../images/project_puppr_selector.png";
-import puppr_overlay from "../images/project_puppr_nobg.png";
-import puppr_screen from "../images/project_puppr_home.png";
-
-// ----- Donkey Kong -----
-import kong_cover from "../images/project_kong_cover.png";
-import kong_selector from "../images/project_kong_selector.png";
-import kong_overlay from "../images/project_kong_nobg.png";
-import kong_screen from "../images/project_kong_game.png";
-
-// ----- FIRST Robotics -----
-// import first_cover from "../images/project_first_cover.png";
-// import first_selector from "../images/project_first_selector.png";
-// import first_overlay from "../images/project_first_nobg.png";
-// import first_group from "../images/FIRST_robotics_group.jpg";
-
-// ----- TOOLS -----
-// import adobexd from "../images/tool-adobexd.png";
-// import arduino from "../images/tool-arduino.png";
-import aws from "../images/tool-aws.png";
-// import cplusplus from "../images/tool-cplusplus.png";
-import css from "../images/tool-css.png";
-// import figma from "../images/tool-figma.png";
-import firebase from "../images/tool-firebase.png";
-import flask from "../images/tool-flask.png";
-import heroku from "../images/tool-heroku.png";
-import html from "../images/tool-html.png";
-import java from "../images/tool-java.png";
-import js from "../images/tool-js.png";
-import mongo from "../images/tool-mongodb.png";
-import mysql from "../images/tool-mysql.png";
-import next from "../images/tool-nextjs.png";
-import nodejs from "../images/tool-nodejs.png";
-import npm from "../images/tool-npm.png";
-import printing from "../images/tool-printing.png";
-import python from "../images/tool-python.png";
-import raspi from "../images/tool-raspi.png";
-import react from "../images/tool-react.png";
-// import solidworks from "../images/tool-solidworks.png";
-import ts from "../images/tool-ts.png";
-
-import { BsClipboard2CheckFill, BsHouseGearFill } from "react-icons/bs";
-// import { TbDrone } from "react-icons/tb";
-import { BiSolidBrain, BiSolidDog } from "react-icons/bi";
-import { MdVideogameAsset } from "react-icons/md";
-// import { FaRobot } from "react-icons/fa";
-
-/*
-List of tags:
-- Frontend Development
-- Backend Development
-- Game Development
-- Autonomous Development
-- UI/UX Design
-- Prototyping
-- Robotics
-- Hardware Development
-- 3D-Printing
-*/
-
+// TODO: rewrite glance and points
 export const ProjectList = [
+  // {
+  //   name: "HikerAI",
+  //   glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  //   points: [
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+  //   ],
+  //   tech: ["React", "Node.js", "MongoDB"],
+  //   images: ["image1", "image2", "image3"],
+  //   link: null,
+  //   github: null,
+  //   bgColor1: "blue",
+  //   bgColor2: "skyblue",
+  // },
   {
-    id: 10,
+    name: "Souvenr",
+    glance:
+      "A cross-platform travel app that helps users plan trips and get recommendations",
+    points: [
+      "Designed for travelers, Souvenr is a cross-platform travel app enabling itinerary planning, personalized recommendations, and digital souvenir collection. ",
+      "Built with React Native, Python, AWS DynamoDB & S3, and Firebase, the app streamlines trip organization and collaboration. Future improvements could enhance recommendation algorithms and offline accessibility.",
+    ],
+    tech: ["React Native", "Python", "Flask", "DynamoDB", "S3", "Firebase"],
+    images: [souvenr1],
+    link: null,
+    github: null,
+    bgColor1: "#D3D3D3",
+    bgColor2: "#1DD1A1",
+  },
+  {
     name: "react-bento-box",
-    url: "/react-bento-box",
-    timeframe: "Dec 2024",
-    role: "Fullstack Developer",
-    type: "Personal Project",
-    description:
+    glance:
       "A lightweight NPM library for creating customizable bento box layouts in React",
-    paragraphs: [
+    points: [
       "Bento Box UI is a type of frontend layout that utilizes the full screen and divides into sections, similar to a bento box.",
       "react-bento-box allows for users to create bento box components and have the flexibility to position content anywhere they like. It is built using React and TypeScript, bundled with Rollup and pushed to the NPM website.",
     ],
-    tags: ["Frontend Development", "Backend Development"],
-    toolList: [
-      "ReactJS",
-      "Javascript",
-      "HTML5",
-      "CSS3",
-      "Node.js",
-      "MySQL",
-      "Firebase",
-      "Heroku",
-    ],
-    toolLogos: [react, ts, npm],
-    // cover: octodo_cover,
-    // selector: octodo_selector,
-    overlay: rbb_overlay,
-    image: rbb_layout,
-    caption: "Simple Bento Box Layout",
-    icon: <BsClipboard2CheckFill />,
+    tech: ["React", "TypeScript", "NPM"],
+    images: [rbb],
     link: "https://www.npmjs.com/package/react-bento-box",
     github: "https://github.com/keatonlees/react-bento-box",
+    bgColor1: "#ADB2D3",
+    bgColor2: "#FF6B6C",
   },
   {
-    id: 9,
-    name: "Get Wrapped",
-    url: "/getwrapped",
-    timeframe: "Nov 2024",
-    role: "Fullstack Developer",
-    type: "Personal Project",
-    description:
+    name: "GetWrapped",
+    glance:
       "A full-stack web application that lets users create and share personalized Spotify Wrapped-like experiences",
-    paragraphs: [
+    points: [
       "Get Wrapped is a web application that lets users make custom Wraps for couples, trips, and more. Users must login to create and edit, but anyone can view a Wrap given a personalized link.",
       "The application leverages Next.js and TypeScript for the frontend, MongoDB for data storage, AWS S3 for media management and Firebase for authentication.",
     ],
-    tags: ["Frontend Development", "Backend Development"],
-    toolList: [
-      "ReactJS",
-      "Javascript",
-      "HTML5",
-      "CSS3",
-      "Node.js",
-      "MySQL",
-      "Firebase",
-      "Heroku",
-    ],
-    toolLogos: [next, ts, mongo, aws, firebase],
-    // cover: octodo_cover,
-    // selector: octodo_selector,
-    overlay: gw_overlay,
-    image: gw_home,
-    caption: "Get Wrapped Home Page",
-    icon: <BsClipboard2CheckFill />,
+    tech: ["Next.js", "TypeScript", "MongoDB", "S3", "Firebase"],
+    images: [gw2, gw1, gw3],
     link: "https://getwrapped.vercel.app/",
     github: "https://github.com/keatonlees/getwrapped",
+    bgColor1: "#D14545",
+    bgColor2: "#FF9933",
   },
-  // {
-  //   id: 8,
-  //   name: "Chromation",
-  //   url: "/chromation",
-  //   timeframe: "July 2021",
-  //   role: "Game Developer",
-  //   type: "Personal Project",
-  //   description:
-  //     "Octo-Do is a flexible web-based to-do list application with ability to add, edit and delete task items built in React, CSS and Node.js",
-  //   toolList: [
-  //     "Unity C#",
-  //   ],
-  //   toolLogos: [unity],
-  //   cover: chromation_cover,
-  //   selector: chromation_selector,
-  //   overlay: chromation_overlay,
-  //   images: [],
-  //   link: "",
-  //   github: "",
-  // },
   {
-    id: 6,
     name: "Octo-Do",
-    url: "/octodo",
-    timeframe: "May 2021",
-    role: "Fullstack Developer",
-    type: "Work Project",
-    description:
-      "Octo-Do is a flexible web-based to-do list application with ability to add, edit and delete task items built in React, CSS and Node.js",
-    paragraphs: [
-      "Octo-Do runs a React.js frontend using the react-beautiful-dnd library to enable drag-and-drop functionality. The backend is developed using Node.js and Axios for its simplicity paired with a MySQL database hosted using Heroku's ClearDB add-on.",
-      "One optimization I performed was reducing the fetch and update time of the individual to-do items by 50%. If I had time to go back to Octo-Do, my first recommendation would be to revamp the user's customization options.",
+    glance:
+      "A flexible web-based to-do list application with ability to add, edit and delete task items",
+    points: [
+      "Octo-Do features a React.js frontend with the react-beautiful-dnd library for smooth drag-and-drop functionality. The backend, built with Node.js and Axios for simplicity, integrates a MySQL database hosted via Heroku's ClearDB add-on.",
+      "One key optimization reduced the fetch and update time of individual to-do items by 50%. If I revisited Octo-Do, my top priority would be enhancing user customization options.",
     ],
-    tags: ["Frontend Development", "Backend Development"],
-    toolList: [
-      "ReactJS",
-      "Javascript",
-      "HTML5",
-      "CSS3",
-      "Node.js",
-      "MySQL",
-      "Firebase",
-      "Heroku",
-    ],
-    toolLogos: [react, js, html, css, nodejs, mysql, firebase, heroku],
-    cover: octodo_cover,
-    selector: octodo_selector,
-    overlay: octodo_overlay,
-    image: octodo_login,
-    caption: "Octo-Do Login Page",
-    icon: <BsClipboard2CheckFill />,
-    link: "",
+    tech: ["React", "JavaScript", "Node.js", "MySQL", "Firebase"],
+    images: [octodo2, octodo1],
+    link: null,
     github: "https://github.com/keatonlees/octo-do",
+    bgColor1: "#6247AA",
+    bgColor2: "#A594F9",
   },
   {
-    id: 5,
     name: "Jarvis",
-    url: "/jarvis",
-    timeframe: "March 2021",
-    role: "Fullstack Developer",
-    type: "Personal Project",
-    description:
-      "A personal smart home and clock designed, printed and programmed using a Raspberry Pi 4 and a Flask server",
-    paragraphs: [
-      'Taking inspiration from Ironman\'s Jarvis AI and Google Home implementations, I decided to attempt my own version. The Raspberry Pi 4 runs an HTML frontend with a Flask server for data and Google Home queries. Initially, I had setup a custom wake-word, "Jarvis", but the library being used was deprecated.',
+    glance:
+      "A smart home designed, printed and programmed using a RaspberryPi and Flask",
+    points: [
+      "Drawing inspiration from Ironman's Jarvis AI and Google Home, I built my own version using a Raspberry Pi 4 with an HTML frontend and Flask server for data and queries. I initially set up a custom wake-word, 'Jarvis,' but the library was deprecated.",
       "The entire setup was housed in a 3D-printed enclosure I designed along with an audio amplifier and 2 speakers ripped from an old smart home. The project was successful and I would love to revisit a V2 at some point!",
     ],
-    tags: ["Frontend Development", "Hardware Development", "3D-Printing"],
-    toolList: [
-      "Python",
-      "Flask",
-      "HTML5",
-      "CSS3",
-      "Javascript",
-      "Raspberry Pi",
-      "3D-Printing",
-    ],
-    toolLogos: [python, flask, html, css, js, raspi, printing],
-    cover: jarvis_cover,
-    selector: jarvis_selector,
-    overlay: jarvis_overlay,
-    icon: <BsHouseGearFill />,
-    image: jarvis_screen,
-    caption: "Jarvis Home Screen",
-    link: "",
-    github: "",
+    tech: ["Python", "Flask", "HTML5", "JavaScript", "RasPi"],
+    images: [jarvis1, jarvis2],
+    link: null,
+    github: null,
+    bgColor1: "#66023c",
+    bgColor2: "#cd1c18",
   },
-  // {
-  //   id: 4,
-  //   name: "Drone",
-  //   url: "/drone",
-  //   timeframe: "February 2021",
-  //   role: "Hardware Developer",
-  //   type: "Personal Project",
-  //   description:
-  //     "A quadcopter constructed using an Arduino, gyroscope and radio modules with a 3D-printed body",
-  //   paragraphs: [
-  //     "I have always loved drones and FPV flights. Thus, I wanted to see if it was possible to build my own quadcopter. I 3D-printed the body in 6 parts with cutouts for motors, speed controllers, and 2 Arduino Nanos; one Nano would act as the flight controller, and the other would be the receiver.",
-  //     "There were multiple problems with my implementation. Firstly, the weight to power ratio of the body and motors was not enough for the drone to sustain flight. Secondly, since I had build my own controller, the transmission speed and distance was very limited.",
-  //   ],
-  //   tags: ["Hardware Development", "Robotics", "3D-Printing"],
-  //   toolList: ["Arduino C", "3D-Printing", "Solidworks"],
-  //   toolLogos: [arduino, printing, solidworks],
-  //   cover: drone_cover,
-  //   selector: drone_selector,
-  //   overlay: drone_overlay,
-  //   icon: <TbDrone />,
-  //   image: drone_solidworks,
-  //   caption: "Solidworks Drone Model",
-  //   link: "",
-  //   github: "",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Rethink",
-  //   url: "/rethink",
-  //   timeframe: "September 2020",
-  //   role: "Designer",
-  //   type: "Hackathon Project",
-  //   description:
-  //     "An AdobeXD mobile application to introduce high school students to the world of design",
-  //   paragraphs: [
-  //     "As part of the Adobe Creative Jams Designathon, myself and two others built Rethink. Rethink is a digital mobile application that introduces high school adolescents to design concepts through gamification.",
-  //     "There are multiple features of Rethink, including Education, Events, Chats, and Community. Notably, the education section gamifies learning into different games and topics, while the events section suggests nearby hosted events.",
-  //   ],
-  //   tags: ["Prototyping", "UI/UX Design"],
-  //   toolList: ["AdobeXd", "Figma"],
-  //   toolLogos: [adobexd, figma],
-  //   cover: rethink_cover,
-  //   selector: rethink_selector,
-  //   overlay: rethink_overlay,
-  //   icon: <BiSolidBrain />,
-  //   image: rethink_screen,
-  //   caption: "Learn Screen (Left), Events Screen (Right)",
-  //   link: "https://xd.adobe.com/view/f0025240-e2f4-45ee-80b6-5dcc01971ae3-a551/screen/03850abc-4097-4d6e-8562-99a8267bb38e/?fullscreen=",
-  //   github: "",
-  // },
-  {
-    id: 2,
-    name: "Puppr",
-    url: "/puppr",
-    timeframe: "May 2020",
-    role: "Software Developer",
-    type: "Hackathon Project",
-    description:
-      "A web-based tinder-like application to connect socially isolated used with dogs up for adoption built using HTML, CSS and Javascript",
-    paragraphs: [
-      "Puppr was built as TOHacks Hackathon Project. During Covid, we saw a need to connect socially isolated people with dogs and puppies who were in nearby adoption shelters.",
-      "The application scrapes information from local adoption sites and displays it in a swipe left, swipe right fashion for users to match with dogs. Information like name, age, breed and a personality description is presented for each dog. If a user finds a good fit, contact info is provided so they can get in touch with the shelter.",
-    ],
-    tags: ["Frontend Development", "Backend Development"],
-    toolList: ["Python", "Flask", "HTML5", "CSS3", "Javascript", "Firebase"],
-    toolLogos: [python, flask, html, css, js, firebase],
-    cover: puppr_cover,
-    selector: puppr_selector,
-    overlay: puppr_overlay,
-    icon: <BiSolidDog />,
-    image: puppr_screen,
-    caption: "Puppr Home Screen",
-    link: "",
-    github: "",
-  },
-  {
-    id: 1,
-    name: "Kong",
-    url: "/kong",
-    timeframe: "April 2019",
-    role: "Software Developer",
-    type: "Personal Project",
-    description:
-      "A recreation of the popular 1980's Donkey Kong arcade game using Java, JGEngine and a gyroscope",
-    paragraphs: [
-      "Using Java and JGEngine, I was able to entirely recreate the first level of the 1981 Donkey Kong Platformer. The recreation included high-definition sprites, original music, accurate sound effects and accessible keyboard controls.",
-      "Addtionally, as a challenge, gyroscopic controls were implemented. These controls allows the user to control the game using motion controls; tilting left or right would move the character in the corresponding direction and tilting up or down would subsequently jump or crouch.",
-    ],
-    tags: ["Game Development", "Hardware Development"],
-    toolList: ["Java", "HTML5"],
-    toolLogos: [java, html],
-    cover: kong_cover,
-    selector: kong_selector,
-    overlay: kong_overlay,
-    icon: <MdVideogameAsset />,
-    image: kong_screen,
-    caption: "Game Ending Recreation",
-    link: "",
-    github: "",
-  },
-  // {
-  //   id: 1,
-  //   name: "FIRST",
-  //   url: "/first",
-  //   timeframe: "2018",
-  //   role: "Software/Hardware Developer",
-  //   type: "Club Project",
-  //   description:
-  //     "As co-captain of my high school FIRST robotics team, I led the students through the design, build and testing process",
-  //   paragraphs: [],
-  //   tags: ["Autonomous Development", "Hardware Development", "Robotics"],
-  //   toolList: ["C++", "Java"],
-  //   toolLogos: [cplusplus, java],
-  //   cover: first_cover,
-  //   selector: first_selector,
-  //   overlay: first_overlay,
-  //   icon: <FaRobot />,
-  //   image: first_group,
-  //   caption: "2018 FIRST Robotics Team",
-  //   link: "",
-  //   github: "",
-  // },
 ];

@@ -1,0 +1,65 @@
+@import "../../../App.sass"
+
+.contact
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  background-image: linear-gradient(to bottom, var(--color-bg), var(--color-primary))
+
+  .contact-content
+    flex: 2
+    display: flex
+
+    @include media("<=tablet")
+      flex-direction: column
+
+    .content-left
+      flex: 1
+      display: flex
+      align-items: center
+      padding: var(--padding-hpage)
+
+      @include media("<=tablet")
+        align-items: flex-end
+
+      .content-text
+        font-size: max(8.4vw, 60px)
+
+    .content-right
+      flex: 1
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding: var(--padding-hpage)
+
+      .contact-socials-logo
+        width: max(20vw, 10rem)
+
+      .contact-socials
+
+        &:hover
+          color: var(--color-accent)
+
+  .contact-footer
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+    .signature
+      font-size: 8.4vw
+      line-height: 0.7
+
+      @include media("<=tablet")
+        font-size: 8vw
+
+    .copyright
+      width: 100%
+      display: flex
+      justify-content: space-between
+      padding: 0 var(--padding-hpage)
+
+      .copyright-text
+        font-size: max(1.6vw, 0.8rem)

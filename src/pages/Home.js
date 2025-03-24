@@ -1,29 +1,33 @@
-// ==================== COMPONENTS ====================
-import { PageLayout } from "../foundations";
-import HomeLanding from "../components/home/homeLanding/HomeLanding";
-import HomeAbout from "../components/home/homeAbout/HomeAbout";
+import { motion, useScroll } from "motion/react";
 
-// ==================== STYLES ====================
-import "../App.sass";
-import ContactSlide from "../components/contact/ContactSlide";
+import NavBar from "../components/NavBar/NavBar";
+import PageTransition from "../components/PageTransition/PageTransition";
+import Contact from "../components/Sections/Contact/Contact";
+import Dashboard from "../components/Sections/Dashboard/Dashboard";
+import Hero from "../components/Sections/Hero/Hero";
+import Spotlight from "../components/Sections/Spotlight/Spotlight";
 
 function Home() {
-  const bullets = [
-    "Landing",
-    "About",
-    // "Spotlight",
-    //  "Blogs",
-    "Contact",
-  ];
-  const slides = [
-    <HomeLanding />,
-    <HomeAbout />,
-    // <h1>Spotlight</h1>,
-    // <h1>Blog</h1>,
-    <ContactSlide />,
-  ];
+  const { scrollYProgress } = useScroll();
 
-  return <PageLayout bullets={bullets} slides={slides} />;
+  return (
+    <>
+      <PageTransition text="Keaton Lees" />
+      <NavBar />
+
+      <Hero />
+      <Dashboard />
+      <Spotlight />
+      <Contact />
+
+      <motion.div
+        className="progress-bar"
+        style={{
+          scaleX: scrollYProgress,
+        }}
+      />
+    </>
+  );
 }
 
 export default Home;
