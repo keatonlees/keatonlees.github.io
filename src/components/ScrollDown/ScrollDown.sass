@@ -1,0 +1,24 @@
+.scroll-down
+  position: absolute
+  right: 0.8vw
+  bottom: 0.8vw
+  display: flex
+  font-size: max(7vw, 4.8rem)
+  color: var(--color-primary-700)
+  transition: 0.3s scale
+  z-index: 21
+  animation: bounce 4s infinite cubic-bezier(.47,1.64,.41,.8)
+
+  &:hover
+    cursor: pointer
+    scale: 1.05
+
+@keyframes bounce
+  0%
+    transform: translateY(0)
+
+  80%
+    transform: translateY(-6px)
+
+  100%
+    transform: translateY(0)

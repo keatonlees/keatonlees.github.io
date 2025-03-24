@@ -6,26 +6,20 @@ import AboutMe from "../components/Sections/AboutMe/AboutMe";
 import Contact from "../components/Sections/Contact/Contact";
 import Education from "../components/Sections/Education/Education";
 import Experiences from "../components/Sections/Experiences/Experiences";
-import Heading from "../components/Sections/Heading/Heading";
+import Skills from "../components/Sections/Skills/Skills";
 
 function About() {
   const { scrollYProgress } = useScroll();
-
-  const words = ["life", "work", "skills", "passions", "hobbies", "travels"];
 
   return (
     <>
       <PageTransition text="About Me" />
       <NavBar />
 
-      <Heading
-        title="The inside scoop on my"
-        list={words}
-        subtitle="A dive into my professional side"
-      />
       <AboutMe />
       <Education />
       <Experiences />
+      <Skills />
       <Contact />
 
       <motion.div

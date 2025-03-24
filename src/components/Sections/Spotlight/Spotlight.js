@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
+import { ProjectList } from "../../../data/ProjectList";
+import ColorDots from "../../Flairs/ColorDots";
 import ArrowLink from "../../ui/ArrowLink/ArrowLink";
 import Text from "../../ui/Text/Text";
 import Title from "../../ui/Title/Title";
@@ -5,44 +9,41 @@ import Title from "../../ui/Title/Title";
 import "./Spotlight.sass";
 
 function Spotlight() {
-  const projects = [
-    {
-      name: "HikerAI",
-      glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
-    {
-      name: "rbb",
-      glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
-    {
-      name: "Jarvis",
-      glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
-  ];
+  const projects = [ProjectList[0], ProjectList[1], ProjectList[2]];
 
   return (
     <div className="spotlight">
-      <Title variant="lg" mode="dark">
-        What I'm Building
-      </Title>
+      {/* ===== FLAIRS ===== */}
+      <ColorDots variant="v" className="sl-color-dot" />
+
+      <Title variant="lg">What I've Built</Title>
 
       <div className="projects">
         {projects.map((project, i) => (
-          <div key={i} className="project">
-            <div className="number">
-              <Text variant="h1">0{i + 1}</Text>
+          <Link key={i} className="project" to={`/projects#${project.name}`}>
+            <div className="sp-header">
+              <div className="sp-number">
+                <Text variant="h1">0{i + 1}</Text>
+              </div>
+
+              <div className="sp-image-container">
+                <img
+                  src={project.images[0]}
+                  alt={project.name}
+                  className="sp-image"
+                  loading="lazy"
+                />
+              </div>
+
+              <div className="sp-name">
+                <Text variant="h1">{project.name}</Text>
+              </div>
             </div>
 
-            <div className="image">test</div>
-
-            <div className="name">
-              <Text variant="h1">{project.name}</Text>
-            </div>
-
-            <div className="glance">
+            <div className="sp-glance">
               <Text variant="p">{project.glance}</Text>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
 

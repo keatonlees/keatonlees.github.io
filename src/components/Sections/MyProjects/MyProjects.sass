@@ -1,0 +1,40 @@
+@import "../../../App.sass"
+
+.my-projects
+  min-height: 100vh
+  background-image: linear-gradient(to bottom, var(--color-primary), var(--color-bg))
+  display: flex
+  // background-color: blue
+
+  @include media("<=tablet")
+    flex-direction: column-reverse
+    justify-content: flex-end
+
+  .my-projects-left-container
+    flex: 1
+    display: flex
+    justify-content: center
+    align-items: center
+
+    @include media("<=tablet")
+      display: none
+
+  .my-projects-right-container
+    flex: 1
+    display: flex
+    flex-direction: column
+
+    @include media("<=tablet")
+      flex: none
+      height: 100vh
+      gap: 32px
+
+    .my-projects-summary
+      flex: 1
+      display: flex
+      align-items: flex-end
+      padding: var(--padding-hpage)
+      font-size: var(--font-size-text)
+
+      @include media("<=tablet")
+        align-items: flex-start

@@ -52,6 +52,7 @@ function NavBar() {
           src={isLight ? logo_dark : logo_light}
           alt="navbar-logo"
           className="navbar-logo"
+          loading="lazy"
         />
       </motion.div>
 
@@ -70,7 +71,9 @@ function NavBar() {
           </Link>
         </motion.div>
 
-        <motion.div variants={staggerChild}>/</motion.div>
+        <motion.div variants={staggerChild} className="link">
+          /
+        </motion.div>
 
         <motion.div variants={staggerChild}>
           <Link
@@ -81,7 +84,9 @@ function NavBar() {
           </Link>
         </motion.div>
 
-        <motion.div variants={staggerChild}>/</motion.div>
+        <motion.div variants={staggerChild} className="link">
+          /
+        </motion.div>
 
         <motion.div variants={staggerChild}>
           <Link
@@ -92,7 +97,9 @@ function NavBar() {
           </Link>
         </motion.div>
 
-        <motion.div variants={staggerChild}>/</motion.div>
+        <motion.div variants={staggerChild} className="link">
+          /
+        </motion.div>
 
         <motion.a
           href={resume}

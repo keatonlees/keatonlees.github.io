@@ -1,53 +1,65 @@
 @import "../../../App.sass"
 
 .contact
-  height: 100vh
+  min-height: 100vh
   display: flex
   flex-direction: column
+  background-image: linear-gradient(to bottom, var(--color-bg), var(--color-primary))
 
-  .contact-top
+  .contact-content
     flex: 2
-    padding: 0px 32px
+    display: flex
 
-    .content
-      height: 100%
-      border-bottom: 1px solid var(--color-text)
+    @include media("<=tablet")
+      flex-direction: column
+
+    .content-left
+      flex: 1
       display: flex
-      align-items: flex-end
-      padding-bottom: 32px
+      align-items: center
+      padding: var(--padding-hpage)
 
       @include media("<=tablet")
-        flex-direction: column
+        align-items: flex-end
 
-      .message
-        flex: 1
-        font-size: 3.6vw
+      .content-text
+        font-size: max(8.4vw, 60px)
 
-      .social-content
-        flex: 1
-        display: flex
-        align-items: center
-        justify-content: center
-        flex-direction: column
+    .content-right
+      flex: 1
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      padding: var(--padding-hpage)
 
-        img
-          width: 20vw
+      .contact-socials-logo
+        width: max(20vw, 10rem)
 
-  .contact-bottom
-    flex: 1.2
+      .contact-socials
+
+        &:hover
+          color: var(--color-accent)
+
+  .contact-footer
+    flex: 1
     display: flex
     flex-direction: column
-    justify-content: flex-end
-    padding-bottom: 32px
+    justify-content: center
+    align-items: center
 
-    .mega-text
+    .signature
       font-size: 8.4vw
-      font-weight: 700
       line-height: 0.7
 
-    .footer
-      padding: 0px 32px
+      @include media("<=tablet")
+        font-size: 8vw
+
+    .copyright
+      width: 100%
       display: flex
       justify-content: space-between
-      align-items: center
-      font-size: 1.6rem
+      padding: 0 var(--padding-hpage)
+
+      .copyright-text
+        font-size: max(1.6vw, 0.8rem)

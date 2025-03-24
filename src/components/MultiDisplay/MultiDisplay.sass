@@ -1,0 +1,65 @@
+@import "../../App.sass"
+
+.display-image
+  border-radius: 0.4rem
+
+.display-container-1
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .display-image-1
+    width: 100%
+    max-height: 50vh
+
+.display-container-2
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .display-image-2-1, .display-image-2-2
+    width: 50%
+
+  .display-image-2-1
+    margin-top: 3%
+    margin-right: -2%
+
+    @include media("<=phone")
+      margin-top: 8%
+
+  .display-image-2-2
+    margin-bottom: 3%
+    margin-left: -2%
+
+    @include media("<=phone")
+      margin-bottom: 8%
+
+.display-container-3
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .display-image-3-1, .display-image-3-2, .display-image-3-3
+    width: 35%
+
+    @include media("<=tablet")
+      width: 50%
+
+  .display-image-3-1
+    margin-right: -4%
+    margin-top: 6%
+
+    @include media("<=phone")
+      margin-right: -25%
+      margin-top: 35%
+
+  .display-image-3-2
+    z-index: 1
+
+  .display-image-3-3
+    margin-left: -4%
+    margin-bottom: 6%
+
+    @include media("<=phone")
+      margin-left: -25%
+      margin-bottom: 35%

@@ -1,19 +1,18 @@
 .heading
   padding-top: 10vh
-  padding: 12vh 32px 32px
+  padding: 12vh var(--padding-hpage) 0 var(--padding-hpage)
   display: flex
   flex-direction: column
-  gap: 0.6rem
+  gap: max(0.8vh, 1rem)
 
   .heading-title-container
     display: flex
-    flex-direction: row
-    align-items: flex-start
-    gap: 0.8rem
-    flex-wrap: wrap
+    flex-direction: column
+    gap: 1vh
 
     .heading-title
-      font-size: max(8vw, 3.2rem)
+      font-size: max(7.6vw, 3.2rem)
 
   .subtitle
-    font-size: max(2.4vw, 1.4rem)
+    font-size: max(1.6vw, 1.6rem)
+    color: var(--color-text-100)

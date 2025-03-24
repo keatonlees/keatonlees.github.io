@@ -1,57 +1,50 @@
+import { motion } from "motion/react";
+
+import { ExperienceList } from "../../../data/ExperienceList";
 import Text from "../../ui/Text/Text";
 import Title from "../../ui/Title/Title";
 
 import "./Experiences.sass";
 
 function Experiences() {
-  const experiences = [
-    {
-      company: "Souvenr",
-      title: "Founder",
-      timeframe: "Dec 2024 - Present",
-      glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      points: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      ],
-    },
-    {
-      company: "GetWrapped",
-      title: "Founder",
-      timeframe: "Sept 2024 - Present",
-      glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      points: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-      ],
-    },
-  ];
-
   return (
-    <div className="experiences">
-      <Title variant="lg" mode="dark">
-        My Experiences
-      </Title>
+    <div className="experiences" id="experiences">
+      <Title variant="lg">Experiences</Title>
 
       <div className="experiences-container">
-        {experiences.map((experience, i) => (
-          <div key={i} className="experience">
-            <Text variant="h1" className="company">
+        {ExperienceList.map((experience, i) => (
+          <motion.div
+            key={i}
+            className="experience"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.6, delay: 0.3 },
+            }}
+            viewport={{ once: true, amount: 0.6 }}
+          >
+            <Text
+              variant="h1"
+              className={`exp-company ${experience.link ? "exp-link" : ""}`}
+              onClick={() => experience.link && window.open(experience.link)}
+            >
               {experience.company}
             </Text>
-            <Text variant="h2" className="title">
-              {experience.title}
+            <Text variant="h2" className="exp-title">
+              <span className="exp-position">{experience.title}</span>{" "}
+              <span className="exp-timeframe">{experience.timeframe}</span>
             </Text>
-            <div className="timeframe">{experience.timeframe}</div>
-            <div className="glance">{experience.glance}</div>
-            <ul className="points">
+            <ul className="exp-points">
               {experience.points.map((point, j) => (
-                <li key={j}>{point}</li>
+                <li key={j}>
+                  <Text variant="p" className="exp-point">
+                    {point}
+                  </Text>
+                </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

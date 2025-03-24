@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./Text.sass";
 
 function Text({ variant = "p", className = "", children, ...props }) {

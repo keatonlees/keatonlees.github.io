@@ -4,13 +4,13 @@
 .navbar
   position: fixed
   width: calc(100% - 32px)
+  height: max(5.4vh, 3.6rem)
   display: flex
   justify-content: space-between
-  padding: 0 8px
   align-items: center
-  height: max(5.4vh, 3.6rem)
   max-height: 6vh
   margin: 16px
+  padding: 8px
   border-radius: 8px
   z-index: 100
 
@@ -19,7 +19,7 @@
 
   .navbar-desktop
     display: none
-    gap: 16px
+    gap: 24px
 
     @include media(">tablet")
       display: flex

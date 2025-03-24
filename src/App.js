@@ -21,10 +21,10 @@ ReactGA.send("pageview");
 function App() {
   return (
     <ThemeProvider>
-      <ScrollToTop />
       <Route
         render={({ location }) => (
           <AnimatePresence propagate mode="wait">
+            <ScrollToTop />
             <Switch location={location} key={location.pathname}>
               <Route exact path="/" render={() => <Home />} />
               <Route exact path="/about" render={() => <About />} />

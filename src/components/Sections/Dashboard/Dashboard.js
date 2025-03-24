@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { motion } from "motion/react";
 
+import { DashboardList } from "../../../data/ExperienceList";
+import BadgeGroup from "../../BadgeGroup/BadgeGroup";
+import ColorSquares from "../../Flairs/ColorSquares";
 import ArrowLink from "../../ui/ArrowLink/ArrowLink";
-import IconBadge from "../../ui/IconBadge/IconBadge";
 import Text from "../../ui/Text/Text";
 import Title from "../../ui/Title/Title";
 
@@ -9,71 +11,59 @@ import "./Dashboard.sass";
 
 function Dashboard() {
   const skills = [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
+    "TypeScript",
     "React",
+    "Next.js",
+    "TailwindCSS",
+    "Python",
     "Node.js",
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "React",
-    "Node.js",
-  ];
-
-  const experiences = [
-    {
-      company: "Souvenr",
-      title: "Founder",
-      timeframe: "Dec 2024 - Present",
-      glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
-    {
-      company: "GetWrapped",
-      title: "Founder",
-      timeframe: "Sept 2024 - Present",
-      glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
-    {
-      company: "Canvass Analytics Inc.",
-      title: "Software Developer Intern",
-      timeframe: "Apr - Aug 2023",
-      glance: "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-    },
+    "Flask",
+    "MySQL",
+    "NoSQL",
+    "MongoDB",
   ];
 
   return (
     <div className="dashboard">
+      {/* ===== FLAIRS ===== */}
+      <ColorSquares variant="h" className="db-color-square" />
+      {/* <SquareGrid variant="h" className="db-square-grid" /> */}
+
       <div className="dashboard-left">
         {/* ===== ABOUT ===== */}
         <div className="about">
           <Title variant="lg">About Me</Title>
-          <Text variant="p" className="about-text">
-            Hey, I'm Keaton! A full-stack developer with a strong foundation in
-            both frontend and backend technologies. I recently completed my BASc
-            in Systems Design Engineering at the University of Waterloo, where I
-            honed my skills in building impactful solutions to unique problems.
-            I have hands on experience with React, Next.js, TypeScript and
-            Python. I've contributed to building dynamic applications,
-            streamlining workflows, and creating engaging interfaces. I'm
-            passionate about collaborating with others, solving complex
-            challenges, and continuously learning to improve my technical and
-            leadership skills.
-          </Text>
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 0.6, delay: 0.3 },
+            }}
+            viewport={{ once: true, amount: 0.6 }}
+          >
+            <Text variant="p" className="about-text">
+              Hey! I'm Keaton, an engineering grad from UWaterloo. I've built
+              AI-powered tools at CanvassAI, launched location intelligence and
+              relator features at PiinPoint, and restructured payment processes
+              at Jamlabs. I specialize in React, TypeScript, Python, and
+              data-driven solutions. Beyond coding, I love exploring upcoming
+              electronics, creating tech content, and breaking code. You'll
+              often catch me on the volleyball court, discovering new foods, or
+              planning my next adventure. I'm always up for a chat, so feel free
+              to reach out!
+            </Text>
+          </motion.div>
         </div>
 
         {/* ===== SKILLS ===== */}
         <div className="skills">
           <Title variant="lg">Notable Skills</Title>
 
-          <div className="skill-list">
-            {skills.map((skill, i) => {
-              return <IconBadge key={i} text={skill} />;
-            })}
-          </div>
+          <BadgeGroup list={skills} />
         </div>
 
-        <ArrowLink to="/about" label="More About Me" variant="button" />
+        <ArrowLink to="/about#skills" label="More Skills" variant="button" />
       </div>
 
       <div className="dashboard-right">
@@ -81,24 +71,47 @@ function Dashboard() {
 
         {/* ===== EXPERIENCES ===== */}
         <div className="db-experiences">
-          {experiences.map((experience, i) => {
+          {DashboardList.map((experience, i) => {
             return (
-              <div className="db-experience" key={i}>
-                <Text variant="h1" className="db-company">
+              <motion.div
+                className="db-experience"
+                key={i}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { duration: 0.6, delay: 0.3 },
+                }}
+                viewport={{ once: true, amount: 0.6 }}
+              >
+                <Text
+                  variant="h1"
+                  className={`db-company ${experience.link ? "db-link" : ""}`}
+                  onClick={() =>
+                    experience.link && window.open(experience.link)
+                  }
+                >
                   {experience.company}
                 </Text>
                 <Text variant="h2" className="db-title">
-                  {experience.title} {experience.timeframe}
+                  <span className="db-position">{experience.title}</span>{" "}
+                  <span className="db-timeframe">{experience.timeframe}</span>
                 </Text>
-                <Text variant="p" className="db-glance">
-                  {experience.glance}
-                </Text>
-              </div>
+                <ul className="db-glance">
+                  <li>
+                    <Text variant="p">{experience.glance}</Text>
+                  </li>
+                </ul>
+              </motion.div>
             );
           })}
         </div>
 
-        <ArrowLink to="/about" label="View All Experiences" variant="button" />
+        <ArrowLink
+          to="/about#experiences"
+          label="View All Experiences"
+          variant="button"
+        />
       </div>
     </div>
   );

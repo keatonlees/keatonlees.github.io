@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import { motion } from "motion/react";
 import ReactTextTransition, { presets } from "react-text-transition";
 
 import Text from "../../ui/Text/Text";
@@ -19,7 +20,15 @@ function Heading({ title, list, subtitle }) {
 
   return (
     <div className="heading">
-      <div className="heading-title-container">
+      <motion.div
+        className="heading-title-container"
+        initial={{ opacity: 0, x: -20 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.6, delay: 2 },
+        }}
+      >
         <Text variant="h1" className="heading-title">
           {title}
         </Text>
@@ -28,10 +37,19 @@ function Heading({ title, list, subtitle }) {
             {list[index]}
           </ReactTextTransition>
         </Text>
-      </div>
-      <Text variant="h2" className="subtitle">
-        {subtitle}
-      </Text>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, x: -20 }}
+        animate={{
+          opacity: 1,
+          x: 0,
+          transition: { duration: 0.6, delay: 2.3 },
+        }}
+      >
+        <Text variant="h2" className="subtitle">
+          {subtitle}
+        </Text>
+      </motion.div>
     </div>
   );
 }

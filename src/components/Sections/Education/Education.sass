@@ -1,16 +1,45 @@
-.education
-  padding: 32px
+@import "../../../App.sass"
+
+.education-container
+  // background-image: linear-gradient(to bottom, var(--color-bg), var(--color-primary))
+  background-color: var(--color-bg)
+  padding: 4vh var(--padding-hpage)
   display: flex
-  flex-direction: column
-  gap: 16px
+  flex-direction: row
+  gap: max(1.6vw, 1.8rem)
 
-  .item
-    margin-bottom: 32px
+  @include media("<=tablet")
+    flex-direction: column
 
-    .title
-      font-size: max(2vw, 1.4rem)
-      display: flex
-      flex-wrap: wrap
+  .summary-continuation
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 6.6vh
 
-    .subtitle
-      font-size: max(1.2vw, 1.2rem)
+    @include media("<=tablet")
+      gap: 3.2vh
+
+    .summary-text
+      font-size: var(--font-size-text)
+
+  .educations
+    flex: 1
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+    .item
+      margin-bottom: 24px
+
+      .title
+        font-size: var(--font-size-title)
+
+        .timeframe
+          color: var(--color-text-100)
+
+      .subtitle
+        font-size: var(--font-size-text)
+
+        .degree
+          color: var(--color-accent)

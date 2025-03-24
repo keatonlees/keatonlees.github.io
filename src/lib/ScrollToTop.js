@@ -1,19 +1,28 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
-import { withRouter } from "react-router-dom";
+import { useLocation, withRouter } from "react-router-dom";
 
 function ScrollToTop({ history }) {
+  const location = useLocation();
+  const lastHash = useRef("");
+
   useEffect(() => {
-    const unlisten = history.listen(() => {
+    if (location.hash) {
+      lastHash.current = location.hash.slice(1);
+    }
+
+    if (lastHash.current && document.getElementById(lastHash.current)) {
+      document.getElementById(lastHash.current)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+      lastHash.current = "";
+    } else {
       setTimeout(() => {
         window.scrollTo(0, 0);
-      }, 1000);
-    });
-
-    return () => {
-      unlisten();
-    };
-  }, [history]);
+      }, 900);
+    }
+  }, [location, history]);
 
   return null;
 }

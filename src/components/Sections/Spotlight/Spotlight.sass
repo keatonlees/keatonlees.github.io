@@ -1,13 +1,19 @@
 @import "../../../constants/Theme"
+@import "../../../App.sass"
 
 .spotlight
-  padding: 64px 32px
-  background-color: var(--color-primary)
-  color: var(--color-bg)
+  background-image: linear-gradient(to bottom, var(--color-primary), var(--color-primary-100))
+  padding: var(--padding-vpage) var(--padding-hpage)
+  color: var(--color-text)
   display: flex
   flex-direction: column
   gap: 8px
   min-height: 100vh
+  position: relative
+
+  .sl-color-dot
+    bottom: var(--padding-hpage)
+    right: var(--padding-hpage)
 
   .projects
     display: flex
@@ -18,37 +24,58 @@
     .project
       display: flex
       align-items: center
-      justify-content: center
+      justify-content: flex-start
       gap: 16px
       padding: 32px 0px
-      border-top: 1px solid var(--color-bg)
+      border-top: 1px solid var(--color-text-100)
+      text-decoration: none
+      color: var(--color-text)
 
       &:last-child
-        border-bottom: 1px solid var(--color-bg)
+        border-bottom: 1px solid var(--color-text-100)
 
-      .number
-        font-size: 4rem
-        flex: 0.5
+      @include media("<=tablet")
+        flex-direction: column
+        align-items: flex-start
+
+      .sp-header
         display: flex
-        align-items: flex-end
-
-      .image
-        flex: 1
-        opacity: 0
-        transform: translateX(-8px)
-        transition: 0.3s all
-
-      .name
-        flex: 1.5
-        font-size: 3.6rem
-
-      .glance
+        justify-content: flex-start
+        align-items: center
         flex: 2
-        font-size: 1.6rem
+        gap: 16px
+
+        .sp-number
+          font-size: var(--font-size-title)
+          flex: 0.4
+          display: flex
+          align-items: flex-end
+
+        .sp-image-container
+          flex: 1
+          opacity: 0
+          transform: translateX(-8px)
+          transition: 0.3s all
+          display: flex
+          align-items: center
+
+          .sp-image
+            width: 100%
+
+          @include media("<=tablet")
+            display: none
+
+        .sp-name
+          flex: 2
+          font-size: var(--font-size-text)
+
+      .sp-glance
+        flex: 1
+        font-size: var(--font-size-text)
 
       &:hover
         cursor: pointer
 
-        .image
+        .sp-image-container
           opacity: 1
           transform: translateX(0px)

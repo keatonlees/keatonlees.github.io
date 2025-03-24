@@ -17,8 +17,8 @@ function Home() {
 
       <Hero />
       <Dashboard />
-      {/* <Spotlight /> */}
-      {/* <Contact /> */}
+      <Spotlight />
+      <Contact />
 
       <motion.div
         className="progress-bar"

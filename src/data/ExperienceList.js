@@ -1,110 +1,83 @@
-// ----- TOOLS -----
-import arduino from "../images/tool-arduino.png";
-import aws from "../images/tool-aws.png";
-import cplusplus from "../images/tool-cplusplus.png";
-import css from "../images/tool-css.png";
-import firebase from "../images/tool-firebase.png";
-// import flask from "../images/tool-flask.png";
-import heroku from "../images/tool-heroku.png";
-import html from "../images/tool-html.png";
-import java from "../images/tool-java.png";
-import js from "../images/tool-js.png";
-import mongodb from "../images/tool-mongodb.png";
-import mysql from "../images/tool-mysql.png";
-import nodejs from "../images/tool-nodejs.png";
-import printing from "../images/tool-printing.png";
-import python from "../images/tool-python.png";
-import raspi from "../images/tool-raspi.png";
-import react from "../images/tool-react.png";
-import redux from "../images/tool-redux.png";
-// import solidworks from "../images/tool-solidworks.png";
+export const ExperienceList = [
+  {
+    company: "EliteAI",
+    title: "Software Engineer",
+    timeframe: "Mar 2025 - Present",
+    link: null,
+    glance:
+      "Building an extensive mobile fitness app for performance tracking and athlete comparison",
+    points: [
+      "Engineered a high-performance mobile fitness app, enabling real-time performance tracking using React Native and Expo",
+      "Integrated a dynamic backend to compare athlete performance across teams and locations using Firebase and Prisma",
+      "Created intuitive and responsive designs using TailwindCSS to streamline visualizations for athletes' competitive metrics",
+    ],
+  },
+  {
+    company: "Lees Solutions",
+    title: "Full-Stack Developer",
+    timeframe: "Sept 2024 - Present",
+    link: null,
+    glance:
+      "Developed numerous full-stack applications in various industries, including AI and travel",
+    points: [
+      "Souvenr: Engineered a cross-platform app tailored towards travelers, allowing for itinerary planning, travel recommendations, and digital souvenir collection, built with React Native, Python, AWS DynamoDB and S3, and Firebase",
+      "GetWrapped: Deployed a full-stack web app for crafting and sharing personalized Spotify Wrapped-like experiences for events such as trips and anniversaries, leveraging Next.js, MongoDB, and AWS S3",
+    ],
+  },
+  {
+    company: "Canvass Analytics Inc",
+    title: "Software Developer",
+    timeframe: "Apr - Aug 2023",
+    link: "https://www.canvass.io/",
+    glance:
+      "Spearheaded the development of 3 new dashboard systems and enhanced data processing",
+    points: [
+      "Spearheaded the development of 3 new dashboard systems, optimizing analysis methods and enhancing data processing",
+      "Improved data readability by 30% by implementing User Labels and Favoriting, utilizing TypeScript, React, and Node.js",
+      "Collaborated with engineers to redesign API routes to Redux stores, enhancing performance and reducing fetch time by 18%",
+      "Refined reusability for multiple interfaces and effectively presented updated features to stakeholders and management",
+    ],
+  },
+  {
+    company: "PiinPoint",
+    title: "Full-Stack Developer",
+    timeframe: "Sep - Dec 2022",
+    link: "https://www.piinpoint.com/",
+    glance:
+      "Launched Sitematch, consolidating property analysis workflows and 3rd party realtor communication",
+    points: [
+      "Launched 2 new features to streamline property analysis and realtor communication, contributing 10+ React components",
+      "Overhauled map interface usability, boosting retention by 25% for major clients including Sobeys and Tim Hortons",
+      "Reduced tech debt by 90% by migrating from Reflux to Redux, and developed WCAG 2.0 compliant elements",
+    ],
+  },
+  {
+    company: "Jamlabs Data Science",
+    title: "Software Engineer",
+    timeframe: "Jan - Apr 2022",
+    link: "https://www.jamlabs.com/",
+    glance:
+      "Optimized jShop, used to buy and sell big data, and reduced transaction times using Stripe",
+    points: [
+      "Iterated an E-commerce app for data transactions, modernizing React components to cut fetch times by 20% for 10+ clients",
+      "Automated invoicing and financial paperwork using Python and Stripe, reducing processing times from 3+ days to 30 minutes",
+    ],
+  },
+  {
+    company: "Self Employed",
+    title: "Full-Stack Developer",
+    timeframe: "May - Aug 2021",
+    link: null,
+    glance:
+      "Architected a flexible to-do application allowing users to categorize their pending tasks",
+    points: [
+      "Architected and optimized a flexible task management platform, enabling efficient task categorization and reducing load times by 50%, while enhancing user interaction with React, Node.js, MySQL, and react-beautiful-dnd",
+    ],
+  },
+];
 
-export const ExperienceList = {
-  2023: [
-    {
-      company: "CanvassAI",
-      title: "Software Developer Intern",
-      link: "https://www.canvass.io/",
-      description: [
-        "Spearheaded development of Logbook, a data summary feature, optimizing analysis methods for Canvass' AI platform",
-        "Implemented User Labeling and Favoriting to improve data readability by 30% using TypeScript and ChakraUI",
-        "Created end-to-end HTTPS requests that updated Redux stores and states, decreasing data fetch time by 18%",
-        "Achieved 100% testing coverage to ensure error-free code and optimal implementation using Jest and React Testing Library",
-        "Streamlined reusability for 10+ custom React components, enhancing developer productivity for future features",
-        "Delivered comprehensive demos of upcoming features to stakeholders and upper management",
-      ],
-      toolLogos: [react, js, html, css],
-    },
-  ],
-  2022: [
-    {
-      company: "PiinPoint",
-      title: "Full-Stack Developer Intern",
-      link: "https://www.piinpoint.com/",
-      description: [
-        "Launched Sitematch, an extensive feature that consolidates property analysis workflows and 3rd party realtor communication",
-        "Contributed 10+ React components into the reusable company-wide library for PiinPoint's location intelligence platform",
-        "Overhauled all map interfaces and modals, increasing retention time by 25% for clients including Sobeys and Tim Hortons",
-        "Reduced 90% of tech debt by refactoring legacy code and migrating stores and actions from Reflux to Redux",
-        "Developed WCAG 2.0 compliant elements by collaborating with designers, resulting in 100% positive feedback from test users",
-      ],
-      toolLogos: [react, js, html, css, python, redux, mongodb],
-    },
-    {
-      company: "Jamlabs Data Science",
-      title: "Software Engineer Intern",
-      link: "https://www.jamlabs.com/",
-      description: [
-        "Drove the development of jShop, an E-commerce app for business professionals to buy and sell data, used by 10+ beta clients",
-        "Modernized 5+ React components, hooks and Redux stores, and decreased fetch times by 20% by introducing caching",
-        "Automated invoicing and financial documentation using Stripe API, and reduced processing times from 3+ days to 30 minutes",
-        "Tracked user experience and process flows by integrating Google Analytics to increase page views by 33%",
-      ],
-      toolLogos: [react, js, html, css, nodejs, redux, aws],
-    },
-  ],
-  2021: [
-    {
-      company: "Self-Employed",
-      title: "Full-Stack Developer Intern",
-      link: "",
-      description: [
-        "Architected a flexible to-do application using React, Node.js, and MySQL allowing users to categorize their pending tasks",
-        "Optimized MySQL database queries to prevent redundant fetching, reducing element load times by 50%",
-        "Implemented react-beautiful-dnd library for drag-and-drop controls, allowing for more fluid user interaction",
-      ],
-      toolLogos: [react, js, html, css, nodejs, mysql, firebase, heroku],
-    },
-  ],
-  2020: [
-    {
-      company: "Ballard Power Systems",
-      title: "Systems and Controls Engineer Intern",
-      link: "https://www.ballard.com/",
-      description: [
-        "Maintained sensor database of 300+ fuel cells using automated Python scripts, improving update efficiency by 20%",
-        "Constructed and tested 35+ electrical prototypes while reducing assembly process time by 50%",
-      ],
-      toolLogos: [python, arduino, raspi, printing],
-    },
-    {
-      company: "Ballard Power Systems",
-      title: "Systems Engineer Intern",
-      link: "https://www.ballard.com/",
-      description: [
-        "Developed and automated fuel cells scripts using Python and microcontrollers to decrease component testing times by 40%",
-        "Sourced fuel cell components and electronic equipment valued over $100,000 for the department",
-      ],
-      toolLogos: [python, arduino, raspi, printing],
-    },
-  ],
-  2019: [
-    {
-      company: "First Robotics",
-      title: "Lead Engineer",
-      link: "",
-      description: [],
-      toolLogos: [python, cplusplus, java],
-    },
-  ],
-};
+export const DashboardList = [
+  ExperienceList[0],
+  ExperienceList[1],
+  ExperienceList[2],
+];

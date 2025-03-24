@@ -1,23 +1,38 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 import { motion, useScroll, useTransform } from "motion/react";
 import ReactTextTransition, { presets } from "react-text-transition";
 
-import headshot from "../../../images/headshot.png";
+import headshot_1 from "../../../images/headshot_1.png";
+import headshot_2 from "../../../images/headshot_2.png";
+import planets from "../../../images/planets.png";
+import { useTheme } from "../../../lib/ThemeContext";
 import MarqueeText from "../../MarqueeText/MarqueeText";
+import ScrollDown from "../../ScrollDown/ScrollDown";
 import Socials from "../../Socials/Socials";
 import Text from "../../ui/Text/Text";
 
 import "./Hero.sass";
 
-import planets from "../../../images/planets.png";
-
 function Hero() {
+  const { theme } = useTheme();
+  const isLight = theme === "light";
+
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], ["0px", "300px"]);
 
   const [index, setIndex] = useState(0);
-  const wordSet = ["Software Developer", "Avid Traveler"];
+  const wordSet = useMemo(
+    () => [
+      "Software Engineer",
+      "Tech Enthusiast",
+      "Avid Traveler",
+      "Volleyball Addict",
+      "Sushi Connoisseur",
+      "Casual Vlogger",
+    ],
+    [],
+  );
 
   const [position1, setPosition1] = useState({ top: 0, left: 0 });
   const [position2, setPosition2] = useState({ bottom: 0, right: 0 });
@@ -25,10 +40,9 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       wordSet[index + 1] ? setIndex(index + 1) : setIndex(0);
-    }, 3000);
+    }, 5000);
     return () => clearInterval(interval);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index]);
+  }, [index, wordSet]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -74,8 +88,18 @@ function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { delay: 4.4, duration: 0.6 } }}
       >
-        <img src={planets} alt="planets" className="flair planets planets-1" />
-        <img src={planets} alt="planets" className="flair planets planets-2" />
+        <img
+          src={planets}
+          alt="planets"
+          className="flair planets planets-1"
+          loading="lazy"
+        />
+        <img
+          src={planets}
+          alt="planets"
+          className="flair planets planets-2"
+          loading="lazy"
+        />
       </motion.div>
 
       {/* Marquees */}
@@ -84,14 +108,14 @@ function Hero() {
         animate={{ opacity: 1, transition: { delay: 4.4, duration: 0.6 } }}
       >
         <MarqueeText
-          text="heythere"
+          text="heythere!"
           width={500}
           coords={{ left: -100, top: 100 }}
           angle={-45}
           className="hero-marquee"
         />
         <MarqueeText
-          text="scrolldown"
+          text="scrolldown!"
           width={500}
           coords={{ right: -100, bottom: 100 }}
           angle={-45}
@@ -103,7 +127,7 @@ function Hero() {
         <motion.div
           className="social-content"
           style={{ y }}
-          initial={{ y: -10, opacity: 0 }}
+          initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1, transition: { delay: 3.2 } }}
         >
           <Socials className="hero-socials" />
@@ -118,17 +142,17 @@ function Hero() {
         <motion.div className="sub-content" style={{ y }}>
           <motion.div
             className="content-left"
-            initial={{ y: 10, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { delay: 2.8 } }}
           >
             <Text variant="h1" className="sub-text">
-              Systems Design Engineering Grad from the University of Waterloo
+              Developer by day, volleyball player by night, foodie all the time
             </Text>
           </motion.div>
 
           <motion.div
             className="content-right"
-            initial={{ y: 10, opacity: 0 }}
+            initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1, transition: { delay: 3 } }}
           >
             <ReactTextTransition springConfig={presets.gentle}>
@@ -141,9 +165,10 @@ function Hero() {
 
         {/* Image */}
         <motion.img
-          src={headshot}
+          src={isLight ? headshot_2 : headshot_1}
           alt="self portrait"
           className="mega-image"
+          loading="lazy"
           initial={{ opacity: 0, y: 20 }}
           animate={{
             opacity: 1,
@@ -151,6 +176,9 @@ function Hero() {
             transition: { delay: 3.4, ease: "easeInOut" },
           }}
         />
+
+        {/* Scroll Down */}
+        <ScrollDown />
       </div>
     </div>
   );

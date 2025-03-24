@@ -8,8 +8,11 @@
   width: fit-content
   transition: 0.3s all
 
-  .arrow
-    font-size: 1.4rem
+  .arrow-link-text
+    font-size: max(0.8vw, 1rem)
+
+  .arrow-link-icon
+    font-size: max(1.4rem, 1rem)
     transition: 0.3s all
 
 .button
@@ -20,5 +23,5 @@
   &:hover
     filter: drop-shadow(6px 6px var(--color-accent))
 
-    .arrow
+    .arrow-link-icon
       transform: translateX(2px)

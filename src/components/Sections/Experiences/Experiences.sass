@@ -1,18 +1,41 @@
 .experiences
-  background-color: var(--color-primary)
-  color: var(--color-bg)
-  padding: 32px
+  background-image: linear-gradient(to bottom, var(--color-primary), var(--color-primary-100))
+  color: var(--color-text)
+  padding: var(--padding-vpage) var(--padding-hpage)
+  min-height: 100vh
 
   .experiences-container
     display: flex
     flex-direction: column
-    gap: 16px
+    margin-top: 8px
+    gap: 32px
+    padding: 0 var(--padding-hpage)
+    margin-left: 8px
+    border-left: 3px solid var(--color-text)
 
     .experience
 
-      .company
-        font-size: max(2vw, 1.4rem)
+      .exp-company
+        font-size: var(--font-size-title)
+        transition: 0.3s scale
+        width: fit-content
 
-      .title
-        color: var(--color-bg)
-        font-size: max(1.4vw, 1.2rem)
+      .exp-link:hover
+        cursor: pointer
+        scale: 1.05
+
+      .exp-title
+        font-size: var(--font-size-text)
+
+        .exp-position
+          color: var(--color-accent)
+
+        .exp-timeframe
+          color: var(--color-text-100)
+
+      .exp-points
+        margin-left: var(--padding-hpage)
+        font-size: var(--font-size-text)
+
+        .exp-point
+          font-size: var(--font-size-text)

@@ -71,7 +71,7 @@
           color: var(--color-primary-900)
 
     .mega-image
-      height: min(100vh, 120vw)
+      height: min(90vh, 120vw)
       position: absolute
       bottom: 0
       overflow: none
@@ -84,7 +84,6 @@
     transition: 8s all
     filter: blur(18vw)
     background-color: var(--color-accent)
-    // animation: blob-movement 10s infinite linear
 
   .blob-1
     border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%
@@ -123,18 +122,6 @@
   .hero-marquee
     color: var(--color-primary-700)
     z-index: 1
-
-@keyframes blob-movement
-  0%
-    transform: translate(0px, 30vw)
-  25%
-    transform: translate(30vw, 30vw)
-  50%
-    transform: translate(0px, -30vw)
-  75%
-    transform: translate(-30vw, 30vw)
-  100%
-    transform: translate(0px, 30vw)
 
 @keyframes planet-movement
   0%
